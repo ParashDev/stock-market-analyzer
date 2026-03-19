@@ -17,7 +17,7 @@ on:
       - 'requirements.txt'
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -62,6 +62,16 @@ jobs:
         run: |
           test -f data/dashboard_data.json
           echo "Dashboard JSON: $(wc -c < data/dashboard_data.json) bytes"
+
+      - name: Save picks history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/picks_history.json
+          git diff --cached --quiet || git commit -m "Update picks history [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepare Pages artifact
         run: |
