@@ -1146,6 +1146,116 @@ function renderAccuracy(acc) {
     </section>`;
 }
 
+function renderCatalystTimeline(ct) {
+    if (!ct || !ct.timeline || !ct.timeline.length) return '';
+    const dayColor = ct.day_change_pct >= 0 ? 'var(--up)' : 'var(--down)';
+    return `
+    <section class="mb-12 fade-up">
+        <p class="section-tag">Previous Session</p>
+        <h2 class="text-2xl font-editorial text-white mb-2">What Happened Yesterday</h2>
+        <p class="section-intro">An hour-by-hour breakdown of yesterday's S&P 500 (SPY) session, matched with news events that hit during each window. This helps you understand <em>what triggered</em> the market's moves and whether those catalysts carry into today.</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
+            <div class="card p-4 text-center">
+                <p class="text-xs text-slate-400 mb-1">Date</p>
+                <p class="text-base font-semibold text-white">${ct.date}</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-xs text-slate-400 mb-1">Day Change</p>
+                <p class="text-xl font-bold" style="color:${dayColor}">${ct.day_change_pct >= 0 ? '+' : ''}${ct.day_change_pct}%</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-xs text-slate-400 mb-1">Open</p>
+                <p class="text-base font-semibold text-white">${fmtPrice(ct.open)}</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-xs text-slate-400 mb-1">High</p>
+                <p class="text-base font-semibold" style="color:var(--up)">${fmtPrice(ct.high)}</p>
+                <p class="text-xs text-slate-400">${ct.high_time ? ct.high_time.split(' ').slice(1).join(' ') : ''}</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-xs text-slate-400 mb-1">Low</p>
+                <p class="text-base font-semibold" style="color:var(--down)">${fmtPrice(ct.low)}</p>
+                <p class="text-xs text-slate-400">${ct.low_time ? ct.low_time.split(' ').slice(1).join(' ') : ''}</p>
+            </div>
+        </div>
+
+        <div class="insight-box mb-4">
+            <p>${ct.narrative}</p>
+        </div>
+
+        <div class="card p-4 mb-4" style="min-height:150px">
+            <canvas id="catalystChart"></canvas>
+        </div>
+
+        <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wide mb-3">Hour-by-Hour Timeline</h3>
+        <div class="space-y-2">
+            ${ct.timeline.map(t => {
+                const time = t.time.split(' ').slice(1).join(' ');
+                const hc = t.hourly_change;
+                const barWidth = Math.min(Math.abs(hc) * 30, 100);
+                const barColor = hc >= 0 ? 'var(--up)' : 'var(--down)';
+                const bg = t.significant ? (hc >= 0 ? 'rgba(52,211,153,0.05)' : 'rgba(248,113,113,0.05)') : 'transparent';
+                return `
+                <div class="card p-3" style="background:${bg};${t.significant ? 'border-left:3px solid ' + barColor : ''}">
+                    <div class="flex items-center gap-4 mb-1">
+                        <span class="text-sm font-mono text-slate-300 w-20 shrink-0">${time}</span>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm text-white font-medium">${fmtPrice(t.close)}</span>
+                                <span class="text-sm font-medium" style="color:${barColor}">${hc >= 0 ? '+' : ''}${hc.toFixed(2)}%</span>
+                                <div style="height:4px;width:${barWidth}%;background:${barColor};border-radius:99px;opacity:0.6"></div>
+                            </div>
+                            <span class="text-xs text-slate-400">From open: ${t.change_from_open >= 0 ? '+' : ''}${t.change_from_open.toFixed(2)}%</span>
+                        </div>
+                        <span class="text-xs text-slate-400 shrink-0">${(t.volume / 1e6).toFixed(1)}M vol</span>
+                    </div>
+                    ${t.news.length ? t.news.map(n => `
+                        <div class="mt-2 ml-20 p-2 rounded" style="background:var(--surface-2)">
+                            <a href="${n.url}" target="_blank" class="text-sm text-slate-200 hover:text-blue-400 hover:underline">${n.headline}</a>
+                            <p class="text-xs text-slate-400">${n.source} &middot; ${n.time.split(' ').slice(1).join(' ')}</p>
+                        </div>
+                    `).join('') : ''}
+                </div>`;
+            }).join('')}
+        </div>
+    </section>`;
+}
+
+function drawCatalystChart(ct) {
+    if (!ct || !ct.timeline) return;
+    const canvas = document.getElementById('catalystChart');
+    if (!canvas) return;
+    new Chart(canvas, {
+        type: 'line',
+        data: {
+            labels: ct.timeline.map(t => t.time.split(' ').slice(1).join(' ')),
+            datasets: [{
+                data: ct.timeline.map(t => t.close),
+                borderColor: ct.day_change_pct >= 0 ? '#34D399' : '#F87171',
+                backgroundColor: ct.day_change_pct >= 0 ? 'rgba(52,211,153,0.1)' : 'rgba(248,113,113,0.1)',
+                fill: true,
+                tension: 0.3,
+                pointRadius: 4,
+                pointBackgroundColor: ct.timeline.map(t => t.significant ? (t.hourly_change >= 0 ? '#34D399' : '#F87171') : 'transparent'),
+                pointBorderColor: 'transparent',
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                title: { display: true, text: 'SPY Intraday Price - ' + ct.date, color: '#B0BEC5', font: { size: 13, family: 'Source Serif 4' } },
+                tooltip: { callbacks: { label: ctx => '$' + ctx.parsed.y.toFixed(2) } }
+            },
+            scales: {
+                x: { grid: { color: 'rgba(148,163,184,0.06)' }, ticks: { color: '#64748B', font: { size: 10 } } },
+                y: { grid: { color: 'rgba(148,163,184,0.06)' }, ticks: { color: '#64748B', callback: v => '$' + v } }
+            }
+        }
+    });
+}
+
 function renderRiskOverview(risk) {
     if (!risk) return '';
     return `
@@ -1193,6 +1303,7 @@ async function render() {
         '<div id="section-market"></div>',
         renderPulse(d.market_summary),
         renderSectors(d.sector_performance),
+        renderCatalystTimeline(d.catalyst_timeline),
 
         // ── TODAY'S RECOMMENDATIONS ──
         '<div id="section-picks"></div>',
@@ -1226,6 +1337,7 @@ async function render() {
     ].join('');
 
     drawSectorChart(d.sector_performance);
+    drawCatalystChart(d.catalyst_timeline);
     const sd = $('#scanner-desc');
     if (sd) sd.innerHTML = _scannerDescs['rsi_oversold'];
 

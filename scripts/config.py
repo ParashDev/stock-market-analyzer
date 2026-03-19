@@ -3,6 +3,9 @@ Single source of truth for all pipeline settings."""
 
 import os
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+TIMEZONE = ZoneInfo("America/Chicago")
 
 # ── Paths ──────────────────────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent.parent

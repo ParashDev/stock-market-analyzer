@@ -460,7 +460,7 @@ def build_dashboard(scored_df, data, scanners, market_summary, sector_perf):
         earnings = _sanitize_records(earn_df.head(30).to_dict("records"))
 
     dashboard = {
-        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "generated_at": datetime.now(config.TIMEZONE).strftime("%Y-%m-%d %I:%M %p CST"),
         "market_date": latest_date,
         "data_status": {
             "prices": True,
@@ -771,6 +771,121 @@ def calc_risk_metrics(prices):
     return results
 
 
+# ── Feature 6: Previous Day Catalyst Timeline ─────────────────────
+
+def build_catalyst_timeline(data):
+    """Build hourly timeline of market moves matched with news events."""
+    print("== Building catalyst timeline ==")
+    spy_df = load_csv("spy_hourly.csv")
+    if spy_df.empty:
+        print("   No SPY hourly data")
+        return {}
+
+    # Parse times and find the most recent full trading day
+    spy_df["dt"] = pd.to_datetime(spy_df["time"], format="%Y-%m-%d %I:%M %p")
+    spy_df["date"] = spy_df["dt"].dt.date
+    dates = sorted(spy_df["date"].unique())
+
+    # Find the last complete trading day (not today if market is still open)
+    # Use the second-to-last date if we have multiple days
+    target_date = dates[-1] if len(dates) == 1 else dates[-2] if len(dates) > 1 else None
+    if target_date is None:
+        return {}
+
+    day_data = spy_df[spy_df["date"] == target_date].sort_values("dt").reset_index(drop=True)
+    if day_data.empty:
+        return {}
+
+    # Build hourly timeline
+    open_price = float(day_data.iloc[0]["open"])
+    timeline = []
+    day_high = float(day_data["high"].max())
+    day_low = float(day_data["low"].min())
+    day_high_time = day_data.loc[day_data["high"].idxmax(), "time"]
+    day_low_time = day_data.loc[day_data["low"].idxmin(), "time"]
+
+    for _, row in day_data.iterrows():
+        change_from_open = (float(row["close"]) / open_price - 1) * 100
+        prev_close = float(timeline[-1]["close"]) if timeline else open_price
+        hourly_change = (float(row["close"]) / prev_close - 1) * 100
+
+        entry = {
+            "time": row["time"],
+            "open": round(float(row["open"]), 2),
+            "high": round(float(row["high"]), 2),
+            "low": round(float(row["low"]), 2),
+            "close": round(float(row["close"]), 2),
+            "volume": int(row["volume"]),
+            "change_from_open": round(change_from_open, 2),
+            "hourly_change": round(hourly_change, 2),
+            "significant": abs(hourly_change) > 0.3,
+            "news": [],
+        }
+        timeline.append(entry)
+
+    # Match news to hourly windows
+    if data["has_news"] and not data["market_news"].empty:
+        news_df = data["market_news"]
+        target_str = str(target_date)
+        for _, nrow in news_df.iterrows():
+            news_time = str(nrow.get("datetime", ""))
+            if target_str not in news_time:
+                continue
+            # Find which hourly bar this news falls into
+            try:
+                news_dt = pd.to_datetime(news_time, format="%Y-%m-%d %I:%M %p")
+                for entry in timeline:
+                    entry_dt = pd.to_datetime(entry["time"], format="%Y-%m-%d %I:%M %p")
+                    if entry_dt <= news_dt < entry_dt + pd.Timedelta(hours=1):
+                        entry["news"].append({
+                            "headline": nrow.get("headline", ""),
+                            "source": nrow.get("source", ""),
+                            "url": nrow.get("url", ""),
+                            "time": news_time,
+                        })
+                        break
+            except Exception:
+                continue
+
+    # Identify key moments
+    close_price = float(day_data.iloc[-1]["close"])
+    day_change = (close_price / open_price - 1) * 100
+
+    # Determine market narrative
+    if day_change > 0.5:
+        narrative = "The market had a positive session, closing higher than it opened."
+    elif day_change < -0.5:
+        narrative = "The market had a rough session, closing lower than it opened."
+    else:
+        narrative = "The market traded in a tight range, closing near where it opened."
+
+    # Find biggest hourly moves
+    significant_moves = [t for t in timeline if t["significant"]]
+    if significant_moves:
+        biggest = max(significant_moves, key=lambda x: abs(x["hourly_change"]))
+        if biggest["hourly_change"] > 0:
+            narrative += f" The biggest move was a {biggest['hourly_change']:+.2f}% surge around {biggest['time'].split(' ', 1)[1] if ' ' in biggest['time'] else biggest['time']}."
+        else:
+            narrative += f" The sharpest drop was {biggest['hourly_change']:+.2f}% around {biggest['time'].split(' ', 1)[1] if ' ' in biggest['time'] else biggest['time']}."
+        if biggest["news"]:
+            narrative += f" This coincided with: \"{biggest['news'][0]['headline']}\"."
+
+    result = {
+        "date": str(target_date),
+        "open": round(open_price, 2),
+        "close": round(close_price, 2),
+        "high": round(day_high, 2),
+        "low": round(day_low, 2),
+        "high_time": day_high_time,
+        "low_time": day_low_time,
+        "day_change_pct": round(day_change, 2),
+        "narrative": narrative,
+        "timeline": timeline,
+    }
+    print(f"   {str(target_date)}: SPY {day_change:+.2f}%, {len(timeline)} hourly bars, {len(significant_moves)} significant moves")
+    return _sanitize(result)
+
+
 def main():
     print("=" * 60)
     print("STOCK MARKET ANALYZER - Analysis & Transform")
@@ -808,10 +923,14 @@ def main():
     accuracy = track_picks_accuracy(scored_df, data["prices"])
 
     dashboard = build_dashboard(scored_df, data, scanners, market_summary, sector_perf)
+    # Feature 6: Catalyst timeline
+    catalyst = build_catalyst_timeline(data)
+
     dashboard["backtest"] = backtest
     dashboard["sector_leaders"] = sector_leaders
     dashboard["earnings_impact"] = earnings_impact
     dashboard["accuracy_tracking"] = accuracy
+    dashboard["catalyst_timeline"] = catalyst
 
     # Add risk summary
     top50_risk = [risk.get(s["ticker"], {}) for s in dashboard["top_50"]]

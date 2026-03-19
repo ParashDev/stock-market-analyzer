@@ -49,7 +49,7 @@ def fetch_market_news():
             headline = a.get("headline", "")
             summary = a.get("summary", "")
             rows.append({
-                "datetime": datetime.fromtimestamp(a.get("datetime", 0)).strftime("%Y-%m-%d %I:%M %p"),
+                "datetime": datetime.fromtimestamp(a.get("datetime", 0), tz=config.TIMEZONE).strftime("%Y-%m-%d %I:%M %p"),
                 "headline": headline,
                 "source": a.get("source", ""),
                 "url": a.get("url", ""),
@@ -87,7 +87,7 @@ def fetch_company_news(tickers):
                 headline = a.get("headline", "")
                 summary = a.get("summary", "")
                 all_rows.append({
-                    "datetime": datetime.fromtimestamp(a.get("datetime", 0)).strftime("%Y-%m-%d %I:%M %p"),
+                    "datetime": datetime.fromtimestamp(a.get("datetime", 0), tz=config.TIMEZONE).strftime("%Y-%m-%d %I:%M %p"),
                     "ticker": ticker,
                     "headline": headline,
                     "source": a.get("source", ""),

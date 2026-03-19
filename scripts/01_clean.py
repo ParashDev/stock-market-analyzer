@@ -327,6 +327,23 @@ def main():
     fundamentals = fetch_fundamentals(valid, wiki_meta)
     macro = fetch_macro()
 
+    # Fetch hourly SPY data for catalyst timeline
+    print("== Fetching hourly SPY data ==")
+    try:
+        spy_hourly = yf.download("SPY", period="5d", interval="1h", progress=False)
+        if not spy_hourly.empty:
+            spy_df = spy_hourly.reset_index()
+            spy_df.columns = [str(c[0]).lower() if isinstance(c, tuple) else str(c).lower() for c in spy_df.columns]
+            spy_df["datetime"] = pd.to_datetime(spy_df["datetime"]).dt.tz_convert(config.TIMEZONE).dt.strftime("%Y-%m-%d %I:%M %p")
+            spy_df = spy_df.rename(columns={"datetime": "time"})
+            spy_df = spy_df[["time", "open", "high", "low", "close", "volume"]].round(2)
+            spy_df.to_csv(config.CLEANED_DIR / "spy_hourly.csv", index=False)
+            print(f"   {len(spy_df)} hourly bars")
+        else:
+            print("   No SPY data returned")
+    except Exception as e:
+        print(f"   WARNING: SPY hourly fetch failed: {e}")
+
     # Save
     prices.to_csv(config.CLEANED_DIR / "daily_prices.csv", index=False)
     fundamentals.to_csv(config.CLEANED_DIR / "fundamentals.csv", index=False)
