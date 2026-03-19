@@ -110,3 +110,4 @@ NEGATIVE_WORDS = {
     "warning", "debt", "layoff", "bankruptcy", "fraud", "probe", "fine",
     "delay", "concern", "risk", "drop", "crash", "slump", "downturn",
 }
+# end
