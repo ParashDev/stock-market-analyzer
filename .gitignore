@@ -1,0 +1,12 @@
+data/raw/
+data/cleaned/
+.env
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Analyzer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="data/dashboard_data.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --surface-0: #0B1120;
+            --surface-1: #111827;
+            --surface-2: #1a2235;
+            --surface-3: #243049;
+            --accent: #60A5FA;
+            --accent-dim: #2563EB;
+            --up: #34D399;
+            --down: #F87171;
+            --gold: #FBBF24;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--surface-0); color: #CBD5E1; font-size: 15px; line-height: 1.6; }
+        h1, h2, h3, .font-editorial { font-family: 'Source Serif 4', serif; }
+        ::-webkit-scrollbar { width: 5px; height: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 99px; }
+
+        .grain { position: fixed; inset: 0; pointer-events: none; z-index: 999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        .card { background: var(--surface-1); border: 1px solid rgba(148,163,184,0.06); border-radius: 12px; }
+        .card-inner { background: var(--surface-2); border-radius: 8px; }
+
+        .score-bar { height: 6px; border-radius: 99px; background: var(--surface-3); overflow: hidden; }
+        .score-bar-fill { height: 100%; border-radius: 99px; transition: width 0.6s ease; }
+
+        .star-btn { cursor: pointer; transition: all 0.15s; font-size: 1rem; }
+        .star-btn:hover { transform: scale(1.3); }
+        .star-btn.active { color: var(--gold); }
+
+        .expand-row { overflow: hidden; transition: max-height 0.5s ease, opacity 0.3s ease; max-height: 0; opacity: 0; }
+        .expand-row.open { max-height: 2000px; opacity: 1; }
+
+        .tab-pill { padding: 6px 14px; border-radius: 99px; font-size: 0.8125rem; cursor: pointer; transition: all 0.2s;
+            background: var(--surface-2); color: #B0BEC5; border: 1px solid transparent; }
+        .tab-pill:hover { background: var(--surface-3); color: #E2E8F0; }
+        .tab-pill.active { background: var(--accent-dim); color: white; border-color: var(--accent); }
+
+        .section-intro { color: #B0BEC5; font-size: 0.95rem; line-height: 1.75; margin-bottom: 1.5rem; }
+        .insight-box { border-left: 3px solid var(--accent-dim); background: rgba(37,99,235,0.04); padding: 1rem 1.25rem; margin: 1rem 0 1.5rem; border-radius: 0 8px 8px 0; }
+        .insight-box p { font-size: 0.9rem; color: #B0BEC5; line-height: 1.7; }
+        .section-tag { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+        table { font-size: 0.875rem; }
+        table th { font-size: 0.75rem; }
+        table td { font-size: 0.85rem; }
+        .data-source-card { border-left: 3px solid var(--accent-dim); }
+        .cleaning-card { border-left: 3px solid #F59E0B; }
+        pre code { font-size: 0.8rem; line-height: 1.6; }
+        .section-intro em { color: #B0BEC5; font-style: italic; }
+
+        .glow-line { height: 1px; background: linear-gradient(90deg, transparent, var(--accent-dim), transparent); margin: 3rem 0; opacity: 0.4; }
+
+        .explain-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 6px;
+            font-size: 0.75rem; line-height: 1.4; }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-up { animation: fadeUp 0.5s ease forwards; opacity: 0; }
+
+        .sector-tile { position: relative; overflow: hidden; }
+        .sector-tile::before { content: ''; position: absolute; inset: 0; opacity: 0.07; border-radius: inherit; }
+        .nav-link.active { color: white; background: rgba(96,165,250,0.15); }
+        html { scroll-padding-top: 60px; }
+        .drawer-link { display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; padding: 14px 20px; transition: background 0.15s; border: none; background: none; cursor: pointer; }
+        .drawer-link:hover { background: rgba(255,255,255,0.03); }
+        .drawer-link:active { background: rgba(96,165,250,0.1); }
+        .drawer-icon { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 8px; background: var(--surface-2); color: var(--accent); font-size: 0.75rem; font-weight: 700; flex-shrink: 0; font-family: 'DM Sans', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen">
+<div class="grain"></div>
+
+<!-- Sticky Nav -->
+<nav id="nav" style="position:sticky;top:0;z-index:100;background:rgba(11,17,32,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(148,163,184,0.06);transition:box-shadow 0.3s">
+    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-12">
+        <a href="#" class="font-editorial font-bold text-white text-sm tracking-tight" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">Stock Market Analyzer</a>
+        <div class="hidden md:flex items-center gap-1 text-xs" id="nav-links">
+            <button class="nav-link px-2.5 py-1.5 rounded-md text-slate-400 hover:text-white hover:bg-white/5 transition-colors" onclick="scrollToSection('section-pipeline')">Pipeline</button>
+            <button class="nav-link px-2.5 py-1.5 rounded-md text-slate-400 hover:text-white hover:bg-white/5 transition-colors" onclick="scrollToSection('section-market')">Market</button>
+            <button class="nav-link px-2.5 py-1.5 rounded-md text-slate-400 hover:text-white hover:bg-white/5 transition-colors" onclick="scrollToSection('section-picks')">Picks</button>
+            <button class="nav-link px-2.5 py-1.5 rounded-md text-slate-400 hover:text-white hover:bg-white/5 transition-colors" onclick="scrollToSection('section-scanners')">Scanners</button>
+            <button class="nav-link px-2.5 py-1.5 rounded-md text-slate-400 hover:text-white hover:bg-white/5 transition-colors" onclick="scrollToSection('section-news')">News</button>
+            <button class="nav-link px-2.5 py-1.5 rounded-md text-slate-400 hover:text-white hover:bg-white/5 transition-colors" onclick="scrollToSection('section-analysis')">Analysis</button>
+            <button class="nav-link px-2.5 py-1.5 rounded-md text-slate-400 hover:text-white hover:bg-white/5 transition-colors" onclick="scrollToSection('section-glossary')">Learn</button>
+        </div>
+        <button class="md:hidden text-slate-300 text-xl px-2 py-1" onclick="openDrawer()">&#9776;</button>
+    </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div id="drawer-overlay" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);transition:opacity 0.3s;opacity:0" onclick="closeDrawer()"></div>
+<div id="drawer" style="position:fixed;top:0;right:-300px;width:280px;height:100%;z-index:201;background:var(--surface-1);border-left:1px solid rgba(148,163,184,0.08);transition:right 0.3s ease;overflow-y:auto">
+    <div class="flex justify-between items-center px-5 py-4" style="border-bottom:1px solid rgba(148,163,184,0.06)">
+        <span class="font-editorial font-bold text-white text-base">Navigate</span>
+        <button class="text-slate-400 text-2xl hover:text-white" onclick="closeDrawer()">&times;</button>
+    </div>
+    <div class="py-3">
+        <button class="drawer-link" onclick="navTo('section-pipeline')"><span class="drawer-icon">01</span><span><span class="text-white font-medium">Pipeline</span><br><span class="text-xs text-slate-400">Data sources, cleaning, ETL</span></span></button>
+        <button class="drawer-link" onclick="navTo('section-market')"><span class="drawer-icon">02</span><span><span class="text-white font-medium">Market</span><br><span class="text-xs text-slate-400">Pulse, sectors, breadth</span></span></button>
+        <button class="drawer-link" onclick="navTo('section-picks')"><span class="drawer-icon">03</span><span><span class="text-white font-medium">Picks</span><br><span class="text-xs text-slate-400">Top 50 stocks for tomorrow</span></span></button>
+        <button class="drawer-link" onclick="navTo('section-scanners')"><span class="drawer-icon">04</span><span><span class="text-white font-medium">Scanners</span><br><span class="text-xs text-slate-400">RSI, MACD, volume patterns</span></span></button>
+        <button class="drawer-link" onclick="navTo('section-news')"><span class="drawer-icon">05</span><span><span class="text-white font-medium">News</span><br><span class="text-xs text-slate-400">Headlines, earnings calendar</span></span></button>
+        <button class="drawer-link" onclick="navTo('section-analysis')"><span class="drawer-icon">06</span><span><span class="text-white font-medium">Analysis</span><br><span class="text-xs text-slate-400">Backtest, accuracy, risk</span></span></button>
+        <button class="drawer-link" onclick="navTo('section-glossary')"><span class="drawer-icon">07</span><span><span class="text-white font-medium">Learn</span><br><span class="text-xs text-slate-400">Glossary of every term</span></span></button>
+    </div>
+    <div class="px-5 py-4" style="border-top:1px solid rgba(148,163,184,0.06)">
+        <p class="text-xs text-slate-400">Stock Market Analyzer</p>
+        <p class="text-xs text-slate-400 mt-1">Not financial advice.</p>
+    </div>
+</div>
+
+<div id="app" class="max-w-6xl mx-auto px-5 py-10">
+    <div class="text-center py-24">
+        <div class="inline-block w-6 h-6 border-2 border-blue-400 border-t-transparent rounded-full animate-spin mb-4"></div>
+        <p class="text-slate-400">Loading market data...</p>
+    </div>
+</div>
+
+<script>
+const $ = (sel, ctx=document) => ctx.querySelector(sel);
+const $$ = (sel, ctx=document) => [...ctx.querySelectorAll(sel)];
+
+function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function openDrawer() {
+    const overlay = document.getElementById('drawer-overlay');
+    const drawer = document.getElementById('drawer');
+    overlay.style.display = 'block';
+    requestAnimationFrame(() => { overlay.style.opacity = '1'; drawer.style.right = '0'; });
+    document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+    const overlay = document.getElementById('drawer-overlay');
+    const drawer = document.getElementById('drawer');
+    overlay.style.opacity = '0';
+    drawer.style.right = '-300px';
+    setTimeout(() => { overlay.style.display = 'none'; }, 300);
+    document.body.style.overflow = '';
+}
+function navTo(id) {
+    closeDrawer();
+    setTimeout(() => scrollToSection(id), 350);
+}
+
+// Watchlist (localStorage)
+const WL_KEY = 'stock_watchlist';
+function getWatchlist() { try { return JSON.parse(localStorage.getItem(WL_KEY)) || []; } catch { return []; } }
+function toggleWatchlist(ticker) {
+    let wl = getWatchlist();
+    if (wl.includes(ticker)) wl = wl.filter(t => t !== ticker);
+    else wl.push(ticker);
+    localStorage.setItem(WL_KEY, JSON.stringify(wl));
+    return wl;
+}
+function isWatched(ticker) { return getWatchlist().includes(ticker); }
+
+// Formatting
+function fmt(n, dec=2) { return n == null ? '-' : Number(n).toFixed(dec); }
+function fmtPct(n) {
+    if (n == null) return '<span class="text-slate-400">-</span>';
+    const v = Number(n).toFixed(2), sign = n > 0 ? '+' : '';
+    const c = n > 0 ? 'color:var(--up)' : n < 0 ? 'color:var(--down)' : '';
+    return `<span style="${c}">${sign}${v}%</span>`;
+}
+function fmtPrice(n) { return n == null ? '-' : '$' + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2}); }
+function fmtCap(n) {
+    if (n == null) return '-';
+    if (n >= 1e12) return '$' + (n/1e12).toFixed(1) + 'T';
+    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + 'B';
+    if (n >= 1e6) return '$' + (n/1e6).toFixed(0) + 'M';
+    return '$' + n.toLocaleString();
+}
+function scorePill(n) {
+    if (n == null) return '-';
+    const v = Math.round(n);
+    const bg = v >= 70 ? 'background:#065F46;color:#6EE7B7' : v >= 50 ? 'background:#1E3A5F;color:#93C5FD' : v >= 30 ? 'background:#78350F;color:#FCD34D' : 'background:#7F1D1D;color:#FCA5A5';
+    return `<span style="display:inline-block;padding:2px 8px;border-radius:6px;font-size:0.75rem;font-weight:600;${bg}">${v}</span>`;
+}
+function rsiExplain(rsi) {
+    if (rsi == null) return 'No RSI data available.';
+    if (rsi < 30) return `RSI at ${fmt(rsi,1)} \u2014 This stock has been sold aggressively. When RSI drops below 30, it often means sellers have exhausted themselves and a bounce could be coming. Think of it like a rubber band stretched too far.`;
+    if (rsi < 40) return `RSI at ${fmt(rsi,1)} \u2014 Getting close to oversold territory. The selling pressure has been heavy but hasn't reached extreme levels yet. Worth watching for a potential entry point.`;
+    if (rsi > 70) return `RSI at ${fmt(rsi,1)} \u2014 This stock has been bought heavily. When RSI rises above 70, it suggests the price may have run up too fast. It doesn't mean it will drop, but the easy gains may be over.`;
+    return `RSI at ${fmt(rsi,1)} \u2014 In neutral territory. Neither overbought nor oversold. The stock is trading without extreme momentum in either direction.`;
+}
+function macdExplain(hist) {
+    if (hist == null) return 'No MACD data available.';
+    if (hist > 0) return `MACD histogram is positive (${fmt(hist,3)}) \u2014 Buying momentum is currently stronger than selling pressure. The trend is leaning bullish.`;
+    return `MACD histogram is negative (${fmt(hist,3)}) \u2014 Selling momentum is currently stronger. The trend is leaning bearish, but this can change quickly.`;
+}
+
+// Data loading
+async function loadData() {
+    if (window.__DASHBOARD_DATA__) return window.__DASHBOARD_DATA__;
+    try {
+        const r = await fetch('data/dashboard_data.json');
+        if (!r.ok) throw new Error();
+        return await r.json();
+    } catch {
+        $('#app').innerHTML = `<div class="text-center py-24"><h2 class="text-2xl text-slate-300 font-editorial mb-3">No Data Yet</h2><p class="text-slate-400 mb-6">Run the pipeline to generate your first report:</p><code class="block text-sm" style="color:var(--accent)">python scripts/01_clean.py && python scripts/02_fetch_news.py && python scripts/03_transform.py</code></div>`;
+        return null;
+    }
+}
+
+// ── Section Renderers ─────────────────────────────────────────────
+
+function renderHeader(d) {
+    const s = d.data_status;
+    const dot = (label, on) => `<span class="flex items-center gap-1.5 text-xs ${on ? 'text-slate-400' : 'text-slate-400'}"><span class="w-1.5 h-1.5 rounded-full ${on ? 'bg-emerald-400' : 'bg-slate-700'}"></span>${label}</span>`;
+    return `
+    <header class="mb-12 fade-up">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+            <div>
+                <p class="text-xs tracking-[0.2em] uppercase mb-2" style="color:var(--accent)">Daily Market Intelligence</p>
+                <h1 class="text-3xl sm:text-4xl font-bold text-white font-editorial leading-tight">Stock Market Analyzer</h1>
+            </div>
+            <div class="sm:text-right space-y-1">
+                <p class="text-white font-medium">${d.market_date}</p>
+                <p class="text-xs text-slate-400">Updated ${d.generated_at}</p>
+                <div class="flex gap-3 sm:justify-end mt-2">${dot('Prices',s.prices)}${dot('News',s.news)}${dot('Macro',s.macro)}${dot('Earnings',s.earnings)}</div>
+            </div>
+        </div>
+    </header>`;
+}
+
+function renderPulse(m) {
+    const bc = m.market_breadth === 'bullish' ? 'var(--up)' : m.market_breadth === 'bearish' ? 'var(--down)' : 'var(--gold)';
+    const kpi = (label, val, sub) => `<div class="card p-4 text-center"><p class="text-xs uppercase tracking-wider text-slate-400 mb-1">${label}</p><p class="text-xl font-semibold">${val}</p>${sub ? `<p class="text-xs text-slate-400 mt-1">${sub}</p>` : ''}</div>`;
+
+    let cards = [
+        kpi('Avg Change', fmtPct(m.avg_change_pct), 'across all stocks'),
+        kpi('Advancers', `<span style="color:var(--up)">${m.advancers}</span>`, 'stocks up today'),
+        kpi('Decliners', `<span style="color:var(--down)">${m.decliners}</span>`, 'stocks down today'),
+        kpi('Breadth', `<span style="color:${bc}" class="capitalize">${m.market_breadth}</span>`, `${Math.round(m.breadth_ratio*100)}% advancing`),
+    ];
+    if (m.vix != null) cards.push(kpi('VIX', `<span style="color:${m.vix>25?'var(--down)':m.vix>18?'var(--gold)':'var(--up)'}">${fmt(m.vix,1)}</span>`, 'fear gauge'));
+    if (m.treasury_10y != null) cards.push(kpi('10Y Yield', fmt(m.treasury_10y,2)+'%', 'bond market'));
+
+    return `
+    <section class="mb-12 fade-up" style="animation-delay:0.1s">
+        <h2 class="text-2xl font-editorial text-white mb-2">Market Pulse</h2>
+        <p class="section-intro">A snapshot of today's overall market health. When most stocks fall together (<em>bearish breadth</em>), even quality companies get dragged down \u2014 which often creates <em>buying opportunities</em> for patient investors.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">${cards.join('')}</div>
+    </section>`;
+}
+
+function renderSectors(sectors) {
+    if (!sectors || !sectors.length) return '';
+    return `
+    <section class="mb-12 fade-up" style="animation-delay:0.15s">
+        <h2 class="text-2xl font-editorial text-white mb-2">Sector Map</h2>
+        <p class="section-intro">The stock market is divided into 11 sectors. Energy companies and tech companies don't always move together \u2014 knowing <em>which sectors are strong or weak</em> today helps you understand the bigger picture.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            ${sectors.map(s => {
+                const border = s.avg_change >= 0 ? 'border-color:rgba(52,211,153,0.2)' : 'border-color:rgba(248,113,113,0.15)';
+                return `
+                <div class="card p-3.5 sector-tile" style="border:1px solid;${border}">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-2.5 h-2.5 rounded-full shrink-0" style="background:${s.color}"></span>
+                        <span class="text-sm font-medium text-slate-300 truncate">${s.sector}</span>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <span class="text-lg font-bold">${fmtPct(s.avg_change)}</span>
+                        <span class="text-xs text-slate-400">${s.advancers}/${s.stock_count} up</span>
+                    </div>
+                </div>`;
+            }).join('')}
+        </div>
+        <div class="card mt-4 p-4" style="min-height:200px"><canvas id="sectorChart"></canvas></div>
+    </section>`;
+}
+
+function renderTop50(stocks) {
+    if (!stocks || !stocks.length) return '';
+    const wl = getWatchlist();
+    const wlFilter = `<button class="tab-pill" id="wl-toggle" onclick="toggleWLFilter()">My Watchlist (${wl.length})</button>`;
+    return `
+    <section class="mb-12 fade-up" style="animation-delay:0.2s" id="top50-section">
+        <p class="section-tag">Today's Recommendations</p>
+        <h2 class="text-3xl font-editorial text-white mb-2">Stocks to Watch for Tomorrow</h2>
+        <p class="section-intro">Based on today's market close (${stocks[0] ? new Date().toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric', year:'numeric'}) : 'today'}), these are the <em>50 S&P 500 stocks with the highest upside potential</em> heading into tomorrow's session. Ranked by a composite score that combines analyst price targets, technical signals (RSI, MACD, Bollinger Bands), price momentum, volume activity, and news sentiment. The top 10 are the model's <em>strongest conviction picks</em>. Click the arrow on any stock to see exactly why it's recommended.</p>
+        <div class="insight-box mb-4">
+            <p><strong>How to use this list:</strong> These are not "buy right now" signals \u2014 they're stocks where multiple factors are aligned in a bullish direction. Use this as a <em>starting point for your own research</em>. The higher the composite score, the more factors agree that this stock has upside. Star stocks to track them in your watchlist.</p>
+        </div>
+        <div class="flex gap-2 mb-4">${wlFilter}</div>
+        <!-- Desktop table (hidden on mobile) -->
+        <div class="card overflow-hidden hidden md:block">
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm" id="top50-table">
+                    <thead>
+                        <tr style="background:var(--surface-2)">
+                            <th class="px-3 py-3 text-left text-xs uppercase tracking-wider text-slate-400 w-8"></th>
+                            <th class="px-2 py-3 text-left text-xs uppercase tracking-wider text-slate-400 w-8">#</th>
+                            <th class="px-3 py-3 text-left text-xs uppercase tracking-wider text-slate-400">Stock</th>
+                            <th class="px-3 py-3 text-left text-xs uppercase tracking-wider text-slate-400">Sector</th>
+                            <th class="px-3 py-3 text-right text-xs uppercase tracking-wider text-slate-400">Price</th>
+                            <th class="px-3 py-3 text-right text-xs uppercase tracking-wider text-slate-400">Today</th>
+                            <th class="px-3 py-3 text-right text-xs uppercase tracking-wider text-slate-400">Upside</th>
+                            <th class="px-3 py-3 text-right text-xs uppercase tracking-wider text-slate-400">Score</th>
+                            <th class="px-3 py-3 text-center text-xs uppercase tracking-wider text-slate-400 w-10"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${stocks.map((s, i) => renderStockRow(s, i)).join('')}
+                    </tbody>
+                </table>
+            </div>
+            <div class="px-4 py-3 text-center" style="background:var(--surface-2);border-top:1px solid rgba(96,165,250,0.15)">
+                <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--accent)">Top 10 Strongest Conviction Picks Shown Above</span>
+            </div>
+            <div class="p-4 text-center border-t border-white/[0.03]" id="show-more-wrap">
+                <button onclick="showMoreStocks()" id="show-more-btn" class="px-6 py-2.5 rounded-lg text-sm font-medium transition-all" style="background:var(--accent-dim);color:white;border:1px solid var(--accent)">
+                    Show Next 10 <span class="text-xs opacity-70 ml-1">(showing <span id="shown-count">10</span> of ${stocks.length})</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile cards (hidden on desktop) -->
+        <div class="md:hidden space-y-3" id="mobile-stocks">
+            ${stocks.map((s, i) => renderMobileCard(s, i)).join('')}
+            <div class="px-4 py-3 text-center" style="background:var(--surface-2);border-radius:8px">
+                <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--accent)">Top 10 Strongest Conviction Picks Above</span>
+            </div>
+            <div class="text-center" id="show-more-wrap-mobile">
+                <button onclick="showMoreStocksMobile()" id="show-more-btn-mobile" class="w-full px-6 py-3 rounded-lg text-sm font-medium" style="background:var(--accent-dim);color:white;border:1px solid var(--accent)">
+                    Show Next 10 <span class="text-xs opacity-70 ml-1">(showing <span id="shown-count-mobile">10</span> of ${stocks.length})</span>
+                </button>
+            </div>
+        </div>
+    </section>`;
+}
+
+function renderStockRow(s, i) {
+    const watched = isWatched(s.ticker);
+    return `
+        <tr class="border-t ${i < 10 ? 'border-blue-900/30' : 'border-white/[0.03]'} hover:bg-white/[0.02] stock-row" data-ticker="${s.ticker}" data-idx="${i}" id="row-${i}" ${i >= 10 ? 'style="display:none"' : ''} ${i === 0 ? 'style="border-top:2px solid rgba(96,165,250,0.3)"' : ''}>
+            <td class="px-3 py-2.5">
+                <span class="star-btn ${watched?'active':''}" onclick="onStar('${s.ticker}',this)" title="Add to watchlist">${watched?'\u2605':'\u2606'}</span>
+            </td>
+            <td class="px-2 py-2.5 text-xs">${i < 10 ? `<span style="color:var(--accent);font-weight:700">${s.rank}</span>` : `<span class="text-slate-400">${s.rank}</span>`}</td>
+            <td class="px-3 py-2.5">
+                <span class="font-semibold text-white">${s.ticker}</span>
+                <span class="block text-xs text-slate-400 truncate max-w-[180px]">${s.name}</span>
+            </td>
+            <td class="px-3 py-2.5 text-xs text-slate-400">${s.sector}</td>
+            <td class="px-3 py-2.5 text-right font-mono text-slate-300 text-xs">${fmtPrice(s.price)}</td>
+            <td class="px-3 py-2.5 text-right text-xs">${fmtPct(s.change_1d)}</td>
+            <td class="px-3 py-2.5 text-right text-xs">${s.upside_pct > 0 ? fmtPct(s.upside_pct) : '<span class="text-slate-400">-</span>'}</td>
+            <td class="px-3 py-2.5 text-right">${scorePill(s.composite_score)}</td>
+            <td class="px-3 py-2.5 text-center">
+                <button class="text-slate-400 hover:text-white transition-transform text-sm expand-arrow" onclick="toggleExpand(${i})" style="transition:transform 0.2s" id="arrow-${i}">\u25B6</button>
+            </td>
+        </tr>
+        <tr id="detail-${i}" ${i >= 10 ? 'style="display:none"' : ''}><td colspan="9" class="p-0">
+            <div class="expand-row" id="expand-${i}">
+                ${renderExpandCard(s)}
+            </div>
+        </td></tr>`;
+}
+
+function renderExpandCard(s) {
+    const bar = (label, val, color) => {
+        const w = Math.min(Math.max(val || 0, 0), 100);
+        return `<div class="mb-3"><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">${label}</span><span class="text-sm font-medium text-white">${Math.round(w)}/100</span></div><div class="score-bar" style="height:8px"><div class="score-bar-fill" style="width:${w}%;background:${color}"></div></div></div>`;
+    };
+
+    const techItem = (label, value, explain) => `
+        <div class="card-inner p-4 mb-3">
+            <div class="flex justify-between items-start mb-1.5">
+                <span class="text-sm font-semibold text-white">${label}</span>
+                <span class="text-sm font-mono font-semibold" style="color:var(--accent)">${value}</span>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed">${explain}</p>
+        </div>`;
+
+    return `
+    <div class="px-4 sm:px-6 py-5 sm:py-6" style="background:var(--surface-1);border-top:1px solid rgba(148,163,184,0.05)">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            <!-- LEFT COLUMN: Score Breakdown + Why This Stock (stacked) -->
+            <div>
+                <h4 class="text-sm uppercase tracking-wider text-slate-300 mb-3 font-bold">Score Breakdown</h4>
+                <p class="text-sm text-slate-400 mb-4">Each stock is scored on these factors. Higher bars = stronger signal in that category.</p>
+                ${bar('Analyst Upside', s.score_analyst, '#60A5FA')}
+                ${bar('Technical Signals', s.score_technical, '#A78BFA')}
+                ${bar('Momentum', s.score_momentum, '#34D399')}
+                ${bar('Volume Activity', s.score_volume, '#FBBF24')}
+                <div class="mt-4 card-inner p-3">
+                    <div class="flex justify-between items-center"><span class="text-sm text-slate-300">Composite Score</span><span class="text-xl font-bold text-white">${Math.round(s.composite_score)}/100</span></div>
+                </div>
+
+                ${s.sector_rank ? `
+                <div class="mt-5 card-inner p-3">
+                    <h4 class="text-sm font-semibold text-white mb-1">Sector Position</h4>
+                    <p class="text-sm text-slate-300">Ranked <strong>#${s.sector_rank}</strong> of ${s.sector_count} in <strong>${s.sector}</strong></p>
+                    ${s.sector_pe_avg ? `<p class="text-sm text-slate-400 mt-1">Sector median P/E: ${fmt(s.sector_pe_avg,1)} vs this stock: ${s.pe_ratio ? fmt(s.pe_ratio,1) : '-'}</p>` : ''}
+                </div>` : ''}
+
+                ${s.annual_volatility ? `
+                <div class="mt-3 card-inner p-3">
+                    <h4 class="text-sm font-semibold text-white mb-1">Risk Profile</h4>
+                    <div class="grid grid-cols-3 gap-2 text-sm mt-2">
+                        <div><span class="text-slate-400">Volatility</span><br><span class="text-white font-medium">${fmt(s.annual_volatility,0)}%</span></div>
+                        <div><span class="text-slate-400">Sharpe</span><br><span class="font-medium" style="color:${s.sharpe_ratio>1?'var(--up)':s.sharpe_ratio>0?'var(--gold)':'var(--down)'}">${fmt(s.sharpe_ratio,2)}</span></div>
+                        <div><span class="text-slate-400">Max Drop</span><br><span class="font-medium" style="color:var(--down)">${fmt(s.max_drawdown_pct,0)}%</span></div>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-2">${s.sharpe_ratio > 1 ? 'Good risk-adjusted returns \u2014 the volatility is justified by performance.' : s.sharpe_ratio > 0 ? 'Positive returns but risk is elevated. Watch position size.' : 'Negative Sharpe \u2014 this stock has been losing value despite upside potential. Higher risk entry.'}</p>
+                </div>` : ''}
+
+                <div class="mt-8">
+                    <h4 class="text-sm uppercase tracking-wider text-slate-300 mb-3 font-bold">Why This Stock</h4>
+                    <p class="text-sm text-slate-400 mb-4">The key reasons our scoring model flagged this stock as having upside potential:</p>
+                    <div class="space-y-2.5">
+                        ${s.reasons.map(r => `<div class="p-3 rounded-lg" style="background:var(--surface-2)"><span class="text-sm text-slate-200 leading-relaxed">\u2192 ${r}</span></div>`).join('')}
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 mt-5">
+                        <div class="card-inner p-3"><span class="text-sm text-slate-400">Target Price</span><br><span class="text-base text-white font-semibold">${s.target_mean ? fmtPrice(s.target_mean) : '-'}</span></div>
+                        <div class="card-inner p-3"><span class="text-sm text-slate-400">Market Cap</span><br><span class="text-base text-white font-semibold">${fmtCap(s.market_cap)}</span></div>
+                        <div class="card-inner p-3"><span class="text-sm text-slate-400">P/E Ratio</span><br><span class="text-base text-white font-semibold">${s.pe_ratio ? fmt(s.pe_ratio,1) : '-'}</span></div>
+                        <div class="card-inner p-3"><span class="text-sm text-slate-400">Wall St. Rating</span><br><span class="text-base text-white font-semibold capitalize">${s.recommendation || '-'}</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Technical Indicators Explained -->
+            <div>
+                <h4 class="text-sm uppercase tracking-wider text-slate-300 mb-3 font-bold">Technical Indicators Explained</h4>
+                <p class="text-sm text-slate-400 mb-4">Here's what the technical data is telling us about this stock right now:</p>
+                ${techItem('RSI (Relative Strength)', s.rsi != null ? fmt(s.rsi,1) : '-', rsiExplain(s.rsi))}
+                ${techItem('MACD Momentum', s.macd_hist != null ? fmt(s.macd_hist,3) : '-', macdExplain(s.macd_hist))}
+                ${techItem('Moving Averages', s.sma_50 ? `50d: ${fmtPrice(s.sma_50)} / 200d: ${s.sma_200 ? fmtPrice(s.sma_200) : '-'}` : '-',
+                    s.sma_50 && s.sma_200 ? (s.price > s.sma_50 ? 'Price is above the 50-day average \u2014 short-term trend is positive.' : 'Price is below the 50-day average \u2014 short-term trend is weak, but this can signal value.') : 'Moving averages help identify trend direction by smoothing out daily price noise.')}
+                ${techItem('Volume', s.vol_ratio ? fmt(s.vol_ratio,1)+'x avg' : '-',
+                    s.vol_ratio >= 2 ? 'Volume is significantly above average \u2014 big players are active. High volume confirms the current price move is meaningful.' : 'Volume is near normal levels \u2014 no unusual buying or selling activity detected.')}
+
+                ${s.year_high && s.year_low ? (() => {
+                    const range = s.year_high - s.year_low;
+                    const pos = range > 0 ? ((s.price - s.year_low) / range * 100) : 50;
+                    const zone = pos < 25 ? 'near the bottom of its yearly range \u2014 either a value opportunity or a stock in trouble. Check the reasons above.' : pos > 75 ? 'near the top of its yearly range \u2014 strong momentum, but less room to run before hitting resistance.' : 'in the middle of its yearly range \u2014 no extreme in either direction.';
+                    return techItem('52-Week Range', fmtPrice(s.year_low) + ' \u2014 ' + fmtPrice(s.year_high),
+                        '<div style="margin:8px 0"><div style="height:8px;border-radius:99px;background:var(--surface-3);position:relative"><div style="position:absolute;left:' + pos.toFixed(0) + '%;top:-3px;width:14px;height:14px;border-radius:50%;background:var(--accent);transform:translateX(-50%)"></div></div><div style="display:flex;justify-content:space-between;margin-top:4px;font-size:0.75rem"><span>' + fmtPrice(s.year_low) + '</span><span style="color:var(--accent)">' + fmtPrice(s.price) + ' (now)</span><span>' + fmtPrice(s.year_high) + '</span></div></div>The current price is ' + zone);
+                })() : ''}
+
+                ${s.bb_upper && s.bb_lower ? (() => {
+                    const inside = s.price >= s.bb_lower && s.price <= s.bb_upper;
+                    const below = s.price < s.bb_lower;
+                    const above = s.price > s.bb_upper;
+                    const msg = below ? 'Price is BELOW the lower Bollinger Band (' + fmtPrice(s.bb_lower) + '). This is statistically unusual \u2014 like a ball bouncing below the floor. It often signals the stock has been oversold and may snap back. About 95% of price action normally stays within the bands.' : above ? 'Price is ABOVE the upper Bollinger Band (' + fmtPrice(s.bb_upper) + '). The stock has broken out above normal trading range. This could signal strong momentum, but also means it may be stretched too far and could pull back.' : 'Price is within the Bollinger Bands (' + fmtPrice(s.bb_lower) + ' \u2014 ' + fmtPrice(s.bb_upper) + '). Trading in normal range \u2014 no extreme signal here.';
+                    return techItem('Bollinger Bands', below ? 'Below Lower Band' : above ? 'Above Upper Band' : 'Within Bands', msg);
+                })() : ''}
+
+                ${s.sma_50 && s.sma_200 ? (() => {
+                    const bullish = s.sma_50 > s.sma_200;
+                    const priceAbove50 = s.price > s.sma_50;
+                    const trend = bullish && priceAbove50 ? 'Uptrend' : !bullish && !priceAbove50 ? 'Downtrend' : 'Mixed';
+                    const tColor = trend === 'Uptrend' ? 'var(--up)' : trend === 'Downtrend' ? 'var(--down)' : 'var(--gold)';
+                    const msg = trend === 'Uptrend' ? 'Both short-term (50-day) and long-term (200-day) moving averages point upward, and price is above both. This is the textbook definition of a healthy uptrend.' : trend === 'Downtrend' ? 'Price is below both moving averages, and the short-term average is below the long-term. This indicates sustained selling pressure. Upside picks in a downtrend are contrarian bets \u2014 higher risk, but potentially higher reward if the trend reverses.' : 'Mixed signals \u2014 the short and long-term trends disagree. The stock may be transitioning between an uptrend and downtrend. Watch for a clear breakout in either direction.';
+                    return techItem('Trend Direction', '<span style="color:' + tColor + '">' + trend + '</span>', msg);
+                })() : ''}
+
+                ${s.return_1y != null ? techItem('1-Year Return', (s.return_1y >= 0 ? '+' : '') + fmt(s.return_1y, 1) + '%',
+                    s.return_1y > 20 ? 'Strong performer over the past year. Stocks with positive momentum tend to continue performing \u2014 this is known as the "momentum factor" in finance.' : s.return_1y > 0 ? 'Positive but modest returns over the past year. The stock has held up but hasn\'t broken out significantly.' : 'Negative returns over the past year. This stock has been losing value, which is why it may show up as having upside potential \u2014 it has room to recover if conditions improve.') : ''}
+
+                <div class="flex gap-3 mt-3">
+                    <div class="card-inner p-3 flex-1"><span class="text-sm text-slate-400">5-Day Change</span><br><span class="text-base font-medium">${fmtPct(s.change_5d)}</span></div>
+                    <div class="card-inner p-3 flex-1"><span class="text-sm text-slate-400">20-Day Change</span><br><span class="text-base font-medium">${fmtPct(s.change_20d)}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>`;
+}
+
+function renderMobileCard(s, i) {
+    const watched = isWatched(s.ticker);
+    const topPick = i < 10;
+    return `
+    <div class="card p-4 mobile-stock-card" data-midx="${i}" ${i >= 10 ? 'style="display:none"' : ''} ${topPick ? 'style="border-left:3px solid var(--accent-dim)"' : ''}>
+        <div class="flex justify-between items-start mb-3">
+            <div class="flex items-center gap-2">
+                <span class="star-btn ${watched?'active':''}" onclick="onStar('${s.ticker}',this)">${watched?'\u2605':'\u2606'}</span>
+                <div>
+                    <span class="font-bold text-white text-base">${s.ticker}</span>
+                    <span class="text-sm text-slate-400 ml-1">${s.name}</span>
+                    ${topPick ? '<span class="ml-2 text-xs px-1.5 py-0.5 rounded" style="background:var(--accent-dim);color:var(--accent)">Top 10</span>' : ''}
+                </div>
+            </div>
+            <span class="text-xs text-slate-400">#${s.rank}</span>
+        </div>
+        <div class="grid grid-cols-2 gap-3 mb-3 text-sm">
+            <div>
+                <span class="text-slate-400 text-xs">Price</span>
+                <p class="text-white font-medium">${fmtPrice(s.price)}</p>
+            </div>
+            <div class="text-right">
+                <span class="text-slate-400 text-xs">Today</span>
+                <p class="font-medium">${fmtPct(s.change_1d)}</p>
+            </div>
+            <div>
+                <span class="text-slate-400 text-xs">Upside</span>
+                <p class="font-medium">${s.upside_pct > 0 ? fmtPct(s.upside_pct) : '-'}</p>
+            </div>
+            <div class="text-right">
+                <span class="text-slate-400 text-xs">Score</span>
+                <p>${scorePill(s.composite_score)}</p>
+            </div>
+        </div>
+        <div class="flex justify-between items-center text-xs text-slate-400">
+            <span>${s.sector}</span>
+            <button class="px-3 py-1.5 rounded text-sm" style="background:var(--surface-2);color:var(--accent)" onclick="toggleMobileExpand(${i})">Details \u25BC</button>
+        </div>
+        <div class="mobile-expand" id="m-expand-${i}" style="display:none;margin-top:12px">
+            ${renderMobileExpandContent(s)}
+        </div>
+    </div>`;
+}
+
+function renderMobileExpandContent(s) {
+    const bar = (label, val, color) => {
+        const w = Math.min(Math.max(val || 0, 0), 100);
+        return `<div class="mb-2"><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">${label}</span><span class="text-sm text-white font-medium">${Math.round(w)}</span></div><div class="score-bar" style="height:6px"><div class="score-bar-fill" style="width:${w}%;background:${color}"></div></div></div>`;
+    };
+    const item = (label, val, explain) => `<div class="card-inner p-3 mb-2"><div class="flex justify-between mb-1"><span class="text-sm font-medium text-white">${label}</span><span class="text-sm font-mono" style="color:var(--accent)">${val}</span></div><p class="text-sm text-slate-300 leading-relaxed">${explain}</p></div>`;
+
+    return `
+    <div class="space-y-4">
+        <div>
+            <h4 class="text-xs uppercase tracking-wider text-slate-400 mb-2 font-bold">Score Breakdown</h4>
+            ${bar('Analyst Upside', s.score_analyst, '#60A5FA')}
+            ${bar('Technical', s.score_technical, '#A78BFA')}
+            ${bar('Momentum', s.score_momentum, '#34D399')}
+            ${bar('Volume', s.score_volume, '#FBBF24')}
+            <div class="card-inner p-2 mt-2"><div class="flex justify-between"><span class="text-sm text-slate-300">Composite</span><span class="text-lg font-bold text-white">${Math.round(s.composite_score)}/100</span></div></div>
+        </div>
+
+        ${s.sector_rank ? `<div class="card-inner p-3"><p class="text-sm text-slate-300">Ranked <strong class="text-white">#${s.sector_rank}</strong> of ${s.sector_count} in <strong class="text-white">${s.sector}</strong></p></div>` : ''}
+
+        ${s.annual_volatility ? `<div class="card-inner p-3"><h4 class="text-xs uppercase text-slate-400 mb-2 font-bold">Risk</h4><div class="grid grid-cols-3 gap-2 text-sm"><div><span class="text-slate-400">Vol</span><br><span class="text-white">${fmt(s.annual_volatility,0)}%</span></div><div><span class="text-slate-400">Sharpe</span><br><span style="color:${s.sharpe_ratio>1?'var(--up)':s.sharpe_ratio>0?'var(--gold)':'var(--down)'}">${fmt(s.sharpe_ratio,2)}</span></div><div><span class="text-slate-400">Max Drop</span><br><span style="color:var(--down)">${fmt(s.max_drawdown_pct,0)}%</span></div></div></div>` : ''}
+
+        <div>
+            <h4 class="text-xs uppercase tracking-wider text-slate-400 mb-2 font-bold">Why This Stock</h4>
+            ${s.reasons.map(r => `<div class="p-2.5 rounded-lg mb-1.5" style="background:var(--surface-2)"><span class="text-sm text-slate-200">\u2192 ${r}</span></div>`).join('')}
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+            <div class="card-inner p-2.5"><span class="text-xs text-slate-400">Target</span><br><span class="text-sm text-white font-medium">${s.target_mean ? fmtPrice(s.target_mean) : '-'}</span></div>
+            <div class="card-inner p-2.5"><span class="text-xs text-slate-400">Mkt Cap</span><br><span class="text-sm text-white font-medium">${fmtCap(s.market_cap)}</span></div>
+            <div class="card-inner p-2.5"><span class="text-xs text-slate-400">P/E</span><br><span class="text-sm text-white font-medium">${s.pe_ratio ? fmt(s.pe_ratio,1) : '-'}</span></div>
+            <div class="card-inner p-2.5"><span class="text-xs text-slate-400">Rating</span><br><span class="text-sm text-white font-medium capitalize">${s.recommendation || '-'}</span></div>
+        </div>
+
+        <div>
+            <h4 class="text-xs uppercase tracking-wider text-slate-400 mb-2 font-bold">Technicals</h4>
+            ${item('RSI', s.rsi != null ? fmt(s.rsi,1) : '-', rsiExplain(s.rsi))}
+            ${item('MACD', s.macd_hist != null ? fmt(s.macd_hist,3) : '-', macdExplain(s.macd_hist))}
+            ${item('Moving Avg', s.sma_50 ? '50d: ' + fmtPrice(s.sma_50) + (s.sma_200 ? ' / 200d: ' + fmtPrice(s.sma_200) : '') : '-', s.sma_50 ? (s.price > s.sma_50 ? 'Price above 50-day avg \u2014 short-term trend positive.' : 'Price below 50-day avg \u2014 short-term trend weak, but can signal value.') : 'Not enough data.')}
+            ${item('Volume', s.vol_ratio ? fmt(s.vol_ratio,1)+'x avg' : '-', s.vol_ratio >= 2 ? 'Volume significantly above average \u2014 big players are active. High volume confirms the price move is meaningful.' : 'Volume near normal levels \u2014 no unusual activity detected.')}
+            ${s.year_high && s.year_low ? (() => {
+                const range = s.year_high - s.year_low;
+                const pos = range > 0 ? ((s.price - s.year_low) / range * 100) : 50;
+                const zone = pos < 25 ? 'Near the bottom of its yearly range \u2014 could be value or trouble.' : pos > 75 ? 'Near the top \u2014 strong momentum but less room to run.' : 'Mid-range \u2014 no extreme in either direction.';
+                return item('52-Week Range', fmtPrice(s.year_low) + ' \u2014 ' + fmtPrice(s.year_high),
+                    '<div style="margin:6px 0"><div style="height:6px;border-radius:99px;background:var(--surface-3);position:relative"><div style="position:absolute;left:' + pos.toFixed(0) + '%;top:-2px;width:10px;height:10px;border-radius:50%;background:var(--accent);transform:translateX(-50%)"></div></div></div>' + zone);
+            })() : ''}
+            ${s.bb_upper && s.bb_lower ? (() => {
+                const below = s.price < s.bb_lower;
+                const above = s.price > s.bb_upper;
+                return item('Bollinger Bands', below ? 'Below Lower' : above ? 'Above Upper' : 'Within Bands',
+                    below ? 'Below lower band \u2014 statistically oversold, bounce likely.' : above ? 'Above upper band \u2014 strong breakout but may be stretched.' : 'Within normal trading range.');
+            })() : ''}
+            ${s.sma_50 && s.sma_200 ? (() => {
+                const trend = s.sma_50 > s.sma_200 && s.price > s.sma_50 ? 'Uptrend' : s.sma_50 < s.sma_200 && s.price < s.sma_50 ? 'Downtrend' : 'Mixed';
+                const tColor = trend === 'Uptrend' ? 'var(--up)' : trend === 'Downtrend' ? 'var(--down)' : 'var(--gold)';
+                return item('Trend', '<span style="color:' + tColor + '">' + trend + '</span>',
+                    trend === 'Uptrend' ? 'Price above both MAs, short-term above long-term. Healthy uptrend.' : trend === 'Downtrend' ? 'Price below both MAs. Sustained selling pressure. Contrarian bet.' : 'Mixed signals \u2014 short and long-term trends disagree.');
+            })() : ''}
+            ${s.return_1y != null ? item('1-Year Return', (s.return_1y >= 0 ? '+' : '') + fmt(s.return_1y,1) + '%',
+                s.return_1y > 20 ? 'Strong performer. Momentum tends to persist.' : s.return_1y > 0 ? 'Positive but modest returns over the past year.' : 'Negative returns \u2014 has room to recover if conditions improve.') : ''}
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+            <div class="card-inner p-2.5"><span class="text-xs text-slate-400">5-Day</span><br>${fmtPct(s.change_5d)}</div>
+            <div class="card-inner p-2.5"><span class="text-xs text-slate-400">20-Day</span><br>${fmtPct(s.change_20d)}</div>
+        </div>
+    </div>`;
+}
+
+function toggleMobileExpand(i) {
+    const el = document.getElementById('m-expand-' + i);
+    const isOpen = el.style.display !== 'none';
+    el.style.display = isOpen ? 'none' : 'block';
+}
+
+let _mobileShown = 10;
+function showMoreStocksMobile() {
+    _mobileShown += 10;
+    $$('.mobile-stock-card').forEach(c => {
+        if (parseInt(c.dataset.midx) < _mobileShown) c.style.display = '';
+    });
+    const total = $$('.mobile-stock-card').length;
+    const shown = Math.min(_mobileShown, total);
+    const ct = document.getElementById('shown-count-mobile');
+    if (ct) ct.textContent = shown;
+    if (shown >= total) {
+        const wrap = document.getElementById('show-more-wrap-mobile');
+        if (wrap) wrap.style.display = 'none';
+    }
+}
+
+function toggleExpand(i) {
+    const el = $(`#expand-${i}`);
+    const arrow = $(`#arrow-${i}`);
+    const open = el.classList.toggle('open');
+    arrow.style.transform = open ? 'rotate(90deg)' : '';
+}
+
+function onStar(ticker, el) {
+    const wl = toggleWatchlist(ticker);
+    el.classList.toggle('active');
+    el.textContent = el.classList.contains('active') ? '\u2605' : '\u2606';
+    const ct = $('#wl-toggle');
+    if (ct) ct.textContent = `My Watchlist (${wl.length})`;
+}
+
+let _shownCount = 10;
+function showMoreStocks() {
+    _shownCount += 10;
+    $$('.stock-row').forEach(row => {
+        const idx = parseInt(row.dataset.idx);
+        if (idx < _shownCount) {
+            row.style.display = '';
+            const detail = row.nextElementSibling;
+            if (detail) detail.style.display = '';
+        }
+    });
+    const total = $$('.stock-row').length;
+    const shown = Math.min(_shownCount, total);
+    $('#shown-count').textContent = shown;
+    if (shown >= total) {
+        $('#show-more-wrap').style.display = 'none';
+    }
+}
+
+let _wlActive = false;
+function toggleWLFilter() {
+    _wlActive = !_wlActive;
+    const btn = $('#wl-toggle');
+    btn.classList.toggle('active', _wlActive);
+    const wl = getWatchlist();
+    $$('.stock-row').forEach(row => {
+        const t = row.dataset.ticker;
+        const detail = row.nextElementSibling;
+        if (_wlActive && !wl.includes(t)) { row.style.display = 'none'; if (detail) detail.style.display = 'none'; }
+        else { row.style.display = ''; if (detail) detail.style.display = ''; }
+    });
+}
+
+function renderScanners(scanners) {
+    if (!scanners) return '';
+    const tabs = [
+        { key:'rsi_oversold', label:'RSI Oversold' },
+        { key:'macd_bullish', label:'MACD Bullish' },
+        { key:'golden_cross', label:'Golden Cross' },
+        { key:'volume_breakout', label:'Volume Spike' },
+        { key:'bollinger_oversold', label:'Bollinger Oversold' },
+        { key:'near_52w_low', label:'Near 52W Low' },
+        { key:'biggest_gainers', label:'Top Gainers' },
+        { key:'biggest_losers', label:'Top Losers' },
+    ];
+    return `
+    <section class="mb-12 fade-up" style="animation-delay:0.25s">
+        <h2 class="text-2xl font-editorial text-white mb-2">Technical Scanners</h2>
+        <p class="section-intro">Scanners automatically detect stocks hitting specific <em>technical patterns</em>. Each pattern is a different lens on the market \u2014 click a tab to see what it found today and read a full explanation of what the pattern means and how to interpret it.</p>
+        <div class="flex flex-wrap gap-2 mb-4" id="scanner-tabs">
+            ${tabs.map((t,i) => `<button class="tab-pill ${i===0?'active':''}" onclick="switchScanner('${t.key}',this)">${t.label} <span class="opacity-50">(${(scanners[t.key]||[]).length})</span></button>`).join('')}
+        </div>
+        <div class="card-inner p-4 mb-4 text-sm text-slate-300 leading-relaxed" id="scanner-desc"></div>
+        <div id="scanner-content" class="card overflow-hidden">${renderScannerTable(scanners[tabs[0].key]||[])}</div>
+    </section>`;
+}
+
+function renderScannerTable(stocks) {
+    if (!stocks.length) return '<p class="p-8 text-slate-400 text-center">No stocks match this pattern today.</p>';
+    return `<div class="overflow-x-auto"><table class="w-full text-sm">
+        <thead><tr style="background:var(--surface-2)">
+            <th class="px-3 py-2.5 text-left text-xs uppercase tracking-wider text-slate-400">Stock</th>
+            <th class="px-3 py-2.5 text-left text-xs uppercase tracking-wider text-slate-400">Sector</th>
+            <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">Price</th>
+            <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">Today</th>
+            <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">RSI</th>
+            <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">Score</th>
+        </tr></thead>
+        <tbody>${stocks.map(s => `
+            <tr class="border-t border-white/[0.03] hover:bg-white/[0.02]">
+                <td class="px-3 py-2"><span class="font-medium text-white">${s.ticker}</span> <span class="text-xs text-slate-400">${s.name||''}</span></td>
+                <td class="px-3 py-2 text-xs text-slate-400">${s.sector||''}</td>
+                <td class="px-3 py-2 text-right font-mono text-xs text-slate-300">${fmtPrice(s.close)}</td>
+                <td class="px-3 py-2 text-right text-xs">${fmtPct(s.change_1d)}</td>
+                <td class="px-3 py-2 text-right font-mono text-xs" style="color:${s.rsi<30?'var(--up)':s.rsi>70?'var(--down)':'inherit'}">${s.rsi!=null?fmt(s.rsi,1):'-'}</td>
+                <td class="px-3 py-2 text-right">${scorePill(s.composite_score)}</td>
+            </tr>`).join('')}</tbody></table></div>`;
+}
+
+let _scanners = null;
+const _scannerDescs = {
+    rsi_oversold: '<strong>What is RSI?</strong> The Relative Strength Index measures how aggressively a stock has been bought or sold on a scale of 0\u2013100. <strong>What does "oversold" mean?</strong> When RSI drops below 30, it means sellers have been dumping the stock so heavily that it may have gone too far. Think of a rubber band stretched to its limit \u2014 the further it stretches, the harder it snaps back. These stocks have the highest probability of a short-term bounce. <strong>Caution:</strong> Some stocks are oversold for good reason. Always check the fundamentals before acting.',
+    macd_bullish: '<strong>What is MACD?</strong> Moving Average Convergence Divergence tracks momentum by comparing two moving averages. <strong>What is a "bullish crossover"?</strong> It happens when the faster-moving average crosses above the slower one. Imagine two runners \u2014 when the sprinter overtakes the jogger, it means the pace is picking up. These stocks just had that crossover, suggesting buying pressure is building. <strong>Best used:</strong> As confirmation alongside other signals like RSI or analyst targets.',
+    golden_cross: '<strong>What is a Golden Cross?</strong> One of the most famous signals on Wall Street. It happens when a stock\'s 50-day moving average crosses above its 200-day moving average. The 50-day represents the short-term trend, the 200-day represents the long-term. When short-term overtakes long-term, it means recent momentum has shifted the entire trajectory upward. Historically, golden crosses have preceded significant rallies. <strong>The opposite</strong> (50-day crossing below 200-day) is called a "Death Cross."',
+    volume_breakout: '<strong>What is a volume spike?</strong> When today\'s volume is 2x or more above the 20-day average. Most daily trading is routine \u2014 small investors, algorithms, regular rebalancing. When volume suddenly doubles or triples, it means big institutional players (hedge funds, pension funds) are making moves. High volume confirms that a price move is "real" and not just noise. A stock rising on low volume is suspicious; a stock rising on huge volume is meaningful.',
+    bollinger_oversold: '<strong>What are Bollinger Bands?</strong> A channel drawn around a stock\'s 20-day moving average, set at 2 standard deviations. About 95% of all price action normally stays within this channel. When a stock drops below the lower band, it has moved further from its average than is statistically normal. Like a ball bouncing below the floor, this is usually temporary. <strong>Pro tip:</strong> Bollinger oversold + RSI oversold together is a stronger signal than either alone.',
+    near_52w_low: '<strong>What does this mean?</strong> These stocks are within 5% of their lowest price in the past year. <strong>Bull case:</strong> The stock has been beaten down so much that it represents deep value \u2014 if the business is solid, this could be a buying opportunity while everyone else is scared. <strong>Bear case:</strong> Some stocks are near their low because the company is in real trouble. This is called "catching a falling knife." Always check the reasons and fundamentals before acting.',
+    biggest_gainers: '<strong>What are these?</strong> The 20 stocks that rose the most today. Big single-day moves often happen for a reason \u2014 earnings beats, analyst upgrades, positive news. Sometimes a big gain is the start of a multi-day trend (momentum tends to persist). <strong>What to look for:</strong> Gainers with high volume are more meaningful than gainers on low volume. Check if the move was driven by news or just random volatility.',
+    biggest_losers: '<strong>What are these?</strong> The 20 stocks that fell the most today. <strong>Why look at losers?</strong> To find potential bounce candidates. When a good company drops sharply on an overreaction, it can create a buying opportunity. <strong>The key question:</strong> Was the drop caused by a temporary scare or a fundamental problem? If the business is still healthy, today\'s biggest losers can be tomorrow\'s biggest gainers.',
+};
+function switchScanner(key, btn) {
+    $$('#scanner-tabs .tab-pill').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    $('#scanner-desc').innerHTML = _scannerDescs[key] || '';
+    $('#scanner-content').innerHTML = renderScannerTable(_scanners[key]||[]);
+}
+
+function renderNews(news) {
+    if (!news || (!news.market.length && !news.company.length)) return '';
+    const article = (a, showTicker) => `
+        <div class="border-b border-white/[0.03] py-3">
+            <div>
+                ${showTicker ? `<span class="inline-block px-1.5 py-0.5 rounded text-xs font-semibold mr-1.5" style="background:var(--accent-dim);color:var(--accent)">${a.ticker}</span>` : ''}
+                <a href="${a.url}" target="_blank" class="text-sm text-slate-300 hover:text-white">${a.headline}</a>
+                <p class="text-xs text-slate-400 mt-0.5">${a.source} \u00B7 ${a.datetime}</p>
+            </div>
+        </div>`;
+    return `
+    <section class="mb-12 fade-up" style="animation-delay:0.3s">
+        <h2 class="text-2xl font-editorial text-white mb-2">News & Catalysts</h2>
+        <p class="section-intro">Recent headlines that could influence tomorrow's market. These are pulled from Finnhub \u2014 market-wide news on the left, company-specific news for today's biggest movers on the right.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            ${news.market.length ? `<div class="card p-4"><h3 class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Market News</h3><div class="max-h-80 overflow-y-auto">${news.market.map(a=>article(a,false)).join('')}</div></div>` : ''}
+            ${news.company.length ? `<div class="card p-4"><h3 class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Company News</h3><div class="max-h-80 overflow-y-auto">${news.company.map(a=>article(a,true)).join('')}</div></div>` : ''}
+        </div>
+    </section>`;
+}
+
+function renderEarnings(earnings) {
+    if (!earnings || !earnings.length) return '';
+    return `
+    <section class="mb-12 fade-up" style="animation-delay:0.3s">
+        <h2 class="text-2xl font-editorial text-white mb-2">Upcoming Earnings</h2>
+        <p class="section-intro">Stocks tend to make their biggest moves around <em>earnings announcements</em>. This calendar shows which companies report this week. "BMO" means before market open, "AMC" means after market close.</p>
+        <div class="card overflow-hidden"><div class="overflow-x-auto"><table class="w-full text-sm">
+            <thead><tr style="background:var(--surface-2)">
+                <th class="px-3 py-2.5 text-left text-xs uppercase tracking-wider text-slate-400">Date</th>
+                <th class="px-3 py-2.5 text-left text-xs uppercase tracking-wider text-slate-400">Stock</th>
+                <th class="px-3 py-2.5 text-left text-xs uppercase tracking-wider text-slate-400">When</th>
+                <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">EPS Est.</th>
+            </tr></thead>
+            <tbody>${earnings.slice(0,20).map(e => `
+                <tr class="border-t border-white/[0.03] hover:bg-white/[0.02]">
+                    <td class="px-3 py-2 text-slate-400">${e.date}</td>
+                    <td class="px-3 py-2"><span class="font-medium text-white">${e.ticker}</span> <span class="text-sm text-slate-400">${e.name||''}</span></td>
+                    <td class="px-3 py-2 text-sm text-slate-400">${e.hour==='bmo'?'Before Open':e.hour==='amc'?'After Close':e.hour||'-'}</td>
+                    <td class="px-3 py-2 text-right font-mono">${e.estimate_eps!=null && !isNaN(e.estimate_eps)?'$'+fmt(e.estimate_eps):'-'}</td>
+                </tr>`).join('')}</tbody></table></div></div>
+    </section>`;
+}
+
+function renderPipeline() {
+    return `
+    <section class="mb-16 fade-up" style="animation-delay:0.35s">
+        <p class="section-tag">Section 01</p>
+        <h2 class="text-3xl font-editorial text-white mb-3">The Raw Data</h2>
+        <p class="section-intro">Three independent data sources, each with their own API, format, and limitations. The pipeline normalizes all of this into one consistent dataset every evening.</p>
+
+        <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wide mb-4">Data Sources</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <div class="card p-5 data-source-card">
+                <p class="text-xs font-bold uppercase mb-2" style="color:var(--accent)">Primary Source</p>
+                <h4 class="text-base font-semibold text-white mb-2">Yahoo Finance (yfinance)</h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-3">Daily OHLCV prices, fundamentals, analyst price targets, market cap, P/E ratios, 52-week ranges for all S&P 500 stocks.</p>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div><span class="text-slate-400">API Key:</span> <span class="text-white">Not needed</span></div>
+                    <div><span class="text-slate-400">Rate Limit:</span> <span class="text-white">~160/min</span></div>
+                    <div><span class="text-slate-400">Coverage:</span> <span class="text-white">500+ stocks</span></div>
+                    <div><span class="text-slate-400">History:</span> <span class="text-white">1 year daily</span></div>
+                </div>
+            </div>
+            <div class="card p-5 data-source-card">
+                <p class="text-xs font-bold uppercase mb-2" style="color:var(--accent)">Enrichment</p>
+                <h4 class="text-base font-semibold text-white mb-2">Finnhub API</h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-3">Market news, company-specific headlines, sentiment keywords, upcoming earnings calendar. Adds the "news & catalysts" layer to scoring.</p>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div><span class="text-slate-400">API Key:</span> <span class="text-white">Free tier</span></div>
+                    <div><span class="text-slate-400">Rate Limit:</span> <span class="text-white">60/min</span></div>
+                    <div><span class="text-slate-400">Coverage:</span> <span class="text-white">Top 50 movers</span></div>
+                    <div><span class="text-slate-400">Fallback:</span> <span class="text-white">Graceful skip</span></div>
+                </div>
+            </div>
+            <div class="card p-5 data-source-card">
+                <p class="text-xs font-bold uppercase mb-2" style="color:var(--accent)">Macro Context</p>
+                <h4 class="text-base font-semibold text-white mb-2">FRED (Federal Reserve)</h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-3">VIX (fear gauge), 10-year Treasury yield, 2-year yield, Fed funds rate. Adds macroeconomic context to the market pulse section.</p>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div><span class="text-slate-400">API Key:</span> <span class="text-white">Free tier</span></div>
+                    <div><span class="text-slate-400">Rate Limit:</span> <span class="text-white">Generous</span></div>
+                    <div><span class="text-slate-400">Coverage:</span> <span class="text-white">4 series</span></div>
+                    <div><span class="text-slate-400">Fallback:</span> <span class="text-white">Graceful skip</span></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wide mb-4">Data Quality Issues & Cleaning Decisions</h3>
+        <p class="text-sm text-slate-400 mb-4">Raw financial data is messy. Here are the issues the pipeline handles automatically:</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
+            <div class="card p-4 cleaning-card">
+                <span class="inline-block px-2 py-0.5 rounded text-xs font-bold mb-2" style="background:rgba(245,158,11,0.15);color:#FBBF24">Ticker Format</span>
+                <p class="text-sm font-medium text-white">BRK.B \u2192 BRK-B normalization</p>
+                <p class="text-sm text-slate-400 mt-1">Wikipedia uses dots in tickers, yfinance uses dashes. The pipeline normalizes on download to prevent lookup failures.</p>
+            </div>
+            <div class="card p-4 cleaning-card">
+                <span class="inline-block px-2 py-0.5 rounded text-xs font-bold mb-2" style="background:rgba(245,158,11,0.15);color:#FBBF24">Wikipedia 403</span>
+                <p class="text-sm font-medium text-white">User-Agent header required</p>
+                <p class="text-sm text-slate-400 mt-1">Wikipedia blocks requests without a User-Agent header. The pipeline sends a browser-like header. If it still fails, a hardcoded fallback list of 100 stocks with sectors is used.</p>
+            </div>
+            <div class="card p-4 cleaning-card">
+                <span class="inline-block px-2 py-0.5 rounded text-xs font-bold mb-2" style="background:rgba(245,158,11,0.15);color:#FBBF24">Missing Fundamentals</span>
+                <p class="text-sm font-medium text-white">Null-safe scoring with neutral fallbacks</p>
+                <p class="text-sm text-slate-400 mt-1">If yfinance .info fails for a ticker, Wikipedia metadata (sector, name) is used instead. Financial fields remain null \u2014 the scoring model assigns neutral scores (50/100) for missing data.</p>
+            </div>
+            <div class="card p-4 cleaning-card">
+                <span class="inline-block px-2 py-0.5 rounded text-xs font-bold mb-2" style="background:rgba(245,158,11,0.15);color:#FBBF24">Minimum History</span>
+                <p class="text-sm font-medium text-white">100 trading days required</p>
+                <p class="text-sm text-slate-400 mt-1">Stocks with fewer than 100 days of price history are filtered out. This ensures enough data for 50-day moving average calculations. Drops recent IPOs and delistings.</p>
+            </div>
+            <div class="card p-4 cleaning-card">
+                <span class="inline-block px-2 py-0.5 rounded text-xs font-bold mb-2" style="background:rgba(245,158,11,0.15);color:#FBBF24">NaN / Inf Values</span>
+                <p class="text-sm font-medium text-white">JSON serialization safety</p>
+                <p class="text-sm text-slate-400 mt-1">NumPy NaN and Inf values break JSON. Every value is sanitized through a recursive cleaner before writing dashboard_data.json. NaN becomes null, numpy types become Python natives.</p>
+            </div>
+            <div class="card p-4 cleaning-card">
+                <span class="inline-block px-2 py-0.5 rounded text-xs font-bold mb-2" style="background:rgba(245,158,11,0.15);color:#FBBF24">Score Reweighting</span>
+                <p class="text-sm font-medium text-white">Dynamic weights when data is missing</p>
+                <p class="text-sm text-slate-400 mt-1">When Finnhub news isn't available, the 15% news_sentiment weight is redistributed to analyst_upside (+5%) and technical (+5%). Total always sums to 100%.</p>
+            </div>
+        </div>
+
+        <p class="section-tag">Section 02</p>
+        <h2 class="text-3xl font-editorial text-white mb-3">The Pipeline</h2>
+        <p class="section-intro">Three Python scripts run in sequence every weekday at 8 PM ET via GitHub Actions. Each script is independent \u2014 if one fails, the others still produce useful output.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="card p-5">
+                <div class="text-3xl font-editorial mb-3" style="color:var(--accent)">01</div>
+                <h3 class="text-base font-semibold text-white mb-2">Extract + Clean</h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-3">Fetches S&P 500 list from Wikipedia, batch-downloads 1 year of daily prices via yfinance, iterates through ~500 tickers for fundamentals (.info API calls), and pulls macro indicators from FRED.</p>
+                <p class="text-xs text-slate-400 font-mono">01_clean.py \u2192 ~3 min</p>
+                <div class="mt-3 text-xs text-slate-400">
+                    <p class="font-medium text-slate-300 mb-1">Outputs:</p>
+                    <p>\u2022 daily_prices.csv (126K rows)</p>
+                    <p>\u2022 fundamentals.csv (502 rows)</p>
+                    <p>\u2022 macro.csv (30 rows)</p>
+                </div>
+            </div>
+            <div class="card p-5">
+                <div class="text-3xl font-editorial mb-3" style="color:var(--accent)">02</div>
+                <h3 class="text-base font-semibold text-white mb-2">Enrich (News)</h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-3">Identifies top 50 movers from price data, fetches company-specific news for each, scores sentiment with keyword matching (positive/negative word counts), and pulls the 7-day earnings calendar.</p>
+                <p class="text-xs text-slate-400 font-mono">02_fetch_news.py \u2192 ~2 min</p>
+                <div class="mt-3 text-xs text-slate-400">
+                    <p class="font-medium text-slate-300 mb-1">Outputs:</p>
+                    <p>\u2022 market_news.csv</p>
+                    <p>\u2022 company_news.csv</p>
+                    <p>\u2022 earnings_calendar.csv</p>
+                </div>
+            </div>
+            <div class="card p-5">
+                <div class="text-3xl font-editorial mb-3" style="color:var(--accent)">03</div>
+                <h3 class="text-base font-semibold text-white mb-2">Transform + Score</h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-3">Calculates RSI, MACD, Bollinger Bands, and moving averages for every stock. Scores each on 5 weighted dimensions, ranks the top 50, builds scanner results, and generates this dashboard.</p>
+                <p class="text-xs text-slate-400 font-mono">03_transform.py \u2192 ~5 sec</p>
+                <div class="mt-3 text-xs text-slate-400">
+                    <p class="font-medium text-slate-300 mb-1">Output:</p>
+                    <p>\u2022 dashboard_data.json (73 KB)</p>
+                    <p>\u2022 dashboard_data.js (script tag)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card overflow-hidden mb-6">
+            <div class="flex items-center gap-2 px-4 py-2" style="background:rgba(0,0,0,0.3);border-bottom:1px solid rgba(255,255,255,0.05)">
+                <span class="text-xs text-slate-400 font-mono">scripts/config.py -- scoring weights configuration</span>
+            </div>
+            <pre class="p-4 font-mono text-slate-300 overflow-x-auto" style="background:var(--surface-2)"><code># When news data is available
+WEIGHTS = {
+    "analyst_upside": 0.30,   # 30% - distance from analyst consensus target
+    "technical":      0.25,   # 25% - RSI, MACD, MA positioning, Bollinger
+    "momentum":       0.20,   # 20% - 5-day (60%) and 20-day (40%) price change
+    "volume_signal":  0.10,   # 10% - volume vs 20-day average
+    "news_sentiment": 0.15,   # 15% - keyword sentiment from headlines
+}
+
+# When news is unavailable, weights redistribute automatically
+WEIGHTS_NO_NEWS = {
+    "analyst_upside": 0.35,   # +5%
+    "technical":      0.30,   # +5%
+    "momentum":       0.20,
+    "volume_signal":  0.15,   # +5%
+}</code></pre>
+        </div>
+
+        <div class="insight-box">
+            <p><strong>Why no machine learning?</strong> The scoring model uses transparent weighted formulas, not black-box ML. Every score can be traced back to specific inputs \u2014 you can see exactly why a stock ranks where it does. ML models often overfit to historical patterns that don't repeat. Simple, interpretable models are better for daily screening.</p>
+        </div>
+    </section>`;
+}
+
+function renderMethodology(m) {
+    if (!m) return '';
+    return `
+    <section class="mb-12 fade-up" style="animation-delay:0.35s">
+        <h2 class="text-2xl font-editorial text-white mb-2">Scoring Methodology</h2>
+        <p class="section-intro">Every stock gets a composite score from 0-100 based on these weighted factors. The weights shift when news data isn't available.</p>
+        <div class="card p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-4">Factor Weights</h3>
+                    ${Object.entries(m.weights).map(([k,v]) => {
+                        const colors = {analyst_upside:'#60A5FA',technical:'#A78BFA',momentum:'#34D399',volume_signal:'#FBBF24',news_sentiment:'#F472B6'};
+                        return `<div class="mb-3"><div class="flex justify-between text-xs mb-1"><span class="text-slate-400 capitalize">${k.replace(/_/g,' ')}</span><span class="text-slate-300">${(v*100).toFixed(0)}%</span></div><div class="score-bar"><div class="score-bar-fill" style="width:${v*100}%;background:${colors[k]||'#60A5FA'}"></div></div></div>`;
+                    }).join('')}
+                </div>
+                <div>
+                    <h3 class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-4">What Each Factor Measures</h3>
+                    <div class="space-y-3">
+                        ${Object.entries(m.factors).filter(([,v])=>v).map(([k,v]) => `<div class="text-xs"><span class="text-slate-300 capitalize font-medium">${k.replace(/_/g,' ')}</span><p class="text-slate-400 mt-0.5">${v}</p></div>`).join('')}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>`;
+}
+
+function renderGlossary() {
+    const terms = [
+        ['RSI (Relative Strength Index)', 'Measures how fast a stock price has been moving up or down on a scale of 0-100. Below 30 = oversold (the stock may have dropped too far too fast, like a rubber band stretched too tight). Above 70 = overbought (it may have risen too quickly). It\'s a momentum thermometer.'],
+        ['MACD', 'Moving Average Convergence Divergence \u2014 compares two moving averages to spot changes in momentum. When the MACD line crosses above the signal line, it\'s a bullish signal (buying pressure is building). Think of it like detecting when a car starts accelerating after slowing down.'],
+        ['Bollinger Bands', 'A channel drawn around a stock\'s moving average, showing where the price "should" be trading based on recent volatility. When price drops below the lower band, it\'s like a ball bouncing below the floor \u2014 statistically unusual and often temporary.'],
+        ['Golden Cross', 'When the 50-day moving average crosses above the 200-day moving average. It\'s one of Wall Street\'s most-watched bullish signals. It means the stock\'s recent trend has turned more positive than its longer-term trend.'],
+        ['Analyst Target', 'The average price that Wall Street analysts think a stock will reach in the next 12 months. If the current price is well below the target, there\'s "upside" potential. Not a guarantee \u2014 analysts are often wrong \u2014 but it shows professional consensus.'],
+        ['Volume Spike', 'When a stock trades significantly more shares than usual (2x+ its average). High volume means big institutional players are buying or selling. It confirms that a price move is "real" rather than just noise.'],
+        ['P/E Ratio', 'Price-to-Earnings ratio \u2014 how much investors pay for each dollar of profit. A P/E of 20 means investors pay $20 for every $1 of annual earnings. Lower P/E can mean "cheaper," but some fast-growing companies deserve higher P/Es.'],
+        ['Market Breadth', 'The ratio of stocks going up vs. going down. If 80% of stocks are rising, breadth is strong (bullish). If 80% are falling, breadth is weak (bearish). It tells you whether the whole market is moving together or just a few big names.'],
+    ];
+    return `
+    <section class="mb-12 fade-up" style="animation-delay:0.4s">
+        <h2 class="text-2xl font-editorial text-white mb-2">Learn the Terms</h2>
+        <p class="section-intro">New to stock analysis? Here's a plain-English guide to every metric and indicator used in this dashboard.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            ${terms.map(([term, def]) => `
+                <div class="card p-4">
+                    <h3 class="text-sm font-semibold text-white mb-1.5">${term}</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">${def}</p>
+                </div>
+            `).join('')}
+        </div>
+    </section>`;
+}
+
+function drawSectorChart(sectors) {
+    const canvas = document.getElementById('sectorChart');
+    if (!canvas || !sectors.length) return;
+    new Chart(canvas, {
+        type: 'bar',
+        data: {
+            labels: sectors.map(s => s.sector),
+            datasets: [{ data: sectors.map(s => s.avg_change), backgroundColor: sectors.map(s => s.avg_change >= 0 ? 'rgba(52,211,153,0.7)' : 'rgba(248,113,113,0.6)'), borderRadius: 4 }],
+        },
+        options: {
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+            plugins: { legend:{display:false}, tooltip:{ callbacks:{ label: ctx => (ctx.parsed.x>0?'+':'')+ctx.parsed.x.toFixed(2)+'%' }}},
+            scales: {
+                x: { grid:{color:'rgba(148,163,184,0.06)'}, ticks:{color:'#64748B', callback:v=>v+'%'} },
+                y: { grid:{display:false}, ticks:{color:'#B0BEC5', font:{size:11, family:'DM Sans'}} }
+            }
+        }
+    });
+}
+
+// ── Main ─────────────────────────────────────────────────────────
+
+// ── Analysis Feature Renderers ────────────────────────────────
+
+function renderBacktest(bt) {
+    if (!bt || !bt.picks || !bt.picks.length) return '';
+    const won = bt.outperformance_pct > 0;
+    return `
+    <section class="mb-12 fade-up">
+        <p class="section-tag">Analysis</p>
+        <h2 class="text-2xl font-editorial text-white mb-2">Backtest: Did Our Picks Work?</h2>
+        <p class="section-intro">We looked back ${bt.lookback_days} trading days and asked: <em>if we had used our scoring model to pick the top 10 stocks on ${bt.sim_start_date}, what would have happened?</em> This is how we test whether the model has real predictive value, not just fancy math.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div class="card p-5 text-center">
+                <p class="text-sm text-slate-400 mb-1">Our Top 10 Picks</p>
+                <p class="text-3xl font-bold" style="color:${bt.portfolio_return_pct>=0?'var(--up)':'var(--down)'}">${bt.portfolio_return_pct>=0?'+':''}${bt.portfolio_return_pct}%</p>
+                <p class="text-xs text-slate-400 mt-1">equal-weight portfolio return</p>
+            </div>
+            <div class="card p-5 text-center">
+                <p class="text-sm text-slate-400 mb-1">S&P 500 Average</p>
+                <p class="text-3xl font-bold" style="color:${bt.benchmark_return_pct>=0?'var(--up)':'var(--down)'}">${bt.benchmark_return_pct>=0?'+':''}${bt.benchmark_return_pct}%</p>
+                <p class="text-xs text-slate-400 mt-1">average of all stocks</p>
+            </div>
+            <div class="card p-5 text-center">
+                <p class="text-sm text-slate-400 mb-1">Outperformance</p>
+                <p class="text-3xl font-bold" style="color:${won?'var(--up)':'var(--down)'}">${bt.outperformance_pct>=0?'+':''}${bt.outperformance_pct}%</p>
+                <p class="text-xs text-slate-400 mt-1">${won?'model beat the market':'model underperformed'}</p>
+            </div>
+        </div>
+        <div class="card overflow-hidden">
+            <div class="overflow-x-auto"><table class="w-full text-sm">
+                <thead><tr style="background:var(--surface-2)">
+                    <th class="px-3 py-2.5 text-left text-xs uppercase tracking-wider text-slate-400">Stock</th>
+                    <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">Buy Price (${bt.sim_start_date})</th>
+                    <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">Current Price</th>
+                    <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">Return</th>
+                </tr></thead>
+                <tbody>${bt.picks.map(p => `
+                    <tr class="border-t border-white/[0.03]">
+                        <td class="px-3 py-2"><span class="font-medium text-white">${p.ticker}</span> <span class="text-sm text-slate-400">${p.name||''}</span></td>
+                        <td class="px-3 py-2 text-right font-mono text-slate-300">${fmtPrice(p.start_price)}</td>
+                        <td class="px-3 py-2 text-right font-mono text-slate-300">${fmtPrice(p.end_price)}</td>
+                        <td class="px-3 py-2 text-right font-semibold">${fmtPct(p.return_pct)}</td>
+                    </tr>`).join('')}</tbody>
+            </table></div>
+        </div>
+        <div class="insight-box mt-4">
+            <p><strong>How to read this:</strong> A backtest simulates what would have happened if you followed the model's recommendations. ${won ? 'Our model outperformed the market by ' + bt.outperformance_pct + ' percentage points over ' + bt.lookback_days + ' days. This suggests the scoring system is identifying genuine upside.' : 'The model underperformed this period. No model wins every time \u2014 the value is in long-term consistency.'} Remember: past performance doesn't guarantee future results, but backtesting is the best tool we have to validate a model.</p>
+            <p style="margin-top:0.75rem"><strong>Known limitation:</strong> This backtest uses today's analyst price targets and fundamentals when scoring the historical picks, because we only have a current snapshot of that data. The price data is properly historical, but analyst targets may have changed over the past ${bt.lookback_days} days. This introduces a small "lookahead bias" \u2014 the real-time accuracy may be slightly different. For a ${bt.lookback_days}-day window, this effect is minor, but it's not a perfect simulation.</p>
+        </div>
+    </section>`;
+}
+
+function renderEarningsImpact(ei) {
+    if (!ei || !ei.total_events) return '';
+    return `
+    <section class="mb-12 fade-up">
+        <p class="section-tag">Analysis</p>
+        <h2 class="text-2xl font-editorial text-white mb-2">Earnings Impact Analysis</h2>
+        <p class="section-intro">When companies report quarterly earnings, their stock price often makes a big move. We analyzed <em>${ei.total_events} recent earnings reports</em> from S&P 500 companies to measure exactly how much stocks moved when they beat or missed Wall Street's expectations.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="card p-4 text-center">
+                <p class="text-sm text-slate-400 mb-1">Beat Rate</p>
+                <p class="text-2xl font-bold text-white">${ei.beat_rate_pct}%</p>
+                <p class="text-xs text-slate-400">${ei.beat_count} of ${ei.total_events}</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-sm text-slate-400 mb-1">Avg Beat Move</p>
+                <p class="text-2xl font-bold" style="color:${ei.avg_beat_move_pct>=0?'var(--up)':'var(--down)'}">${ei.avg_beat_move_pct>=0?'+':''}${ei.avg_beat_move_pct}%</p>
+                <p class="text-xs text-slate-400">on earnings day</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-sm text-slate-400 mb-1">Avg Miss Move</p>
+                <p class="text-2xl font-bold" style="color:var(--down)">${ei.avg_miss_move_pct}%</p>
+                <p class="text-xs text-slate-400">on earnings day</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-sm text-slate-400 mb-1">Events Analyzed</p>
+                <p class="text-2xl font-bold text-white">${ei.total_events}</p>
+                <p class="text-xs text-slate-400">last 90 days</p>
+            </div>
+        </div>
+        ${ei.recent_events && ei.recent_events.length ? `
+        <div class="card overflow-hidden">
+            <div class="overflow-x-auto"><table class="w-full text-sm">
+                <thead><tr style="background:var(--surface-2)">
+                    <th class="px-3 py-2.5 text-left text-xs uppercase tracking-wider text-slate-400">Date</th>
+                    <th class="px-3 py-2.5 text-left text-xs uppercase tracking-wider text-slate-400">Ticker</th>
+                    <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">EPS Est.</th>
+                    <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">EPS Actual</th>
+                    <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">Surprise</th>
+                    <th class="px-3 py-2.5 text-right text-xs uppercase tracking-wider text-slate-400">Price Move</th>
+                </tr></thead>
+                <tbody>${ei.recent_events.slice(0,10).map(e => `
+                    <tr class="border-t border-white/[0.03]">
+                        <td class="px-3 py-2 text-slate-400">${e.date}</td>
+                        <td class="px-3 py-2 font-medium text-white">${e.ticker}</td>
+                        <td class="px-3 py-2 text-right font-mono text-slate-300">$${fmt(e.eps_estimate)}</td>
+                        <td class="px-3 py-2 text-right font-mono text-white">$${fmt(e.eps_actual)}</td>
+                        <td class="px-3 py-2 text-right">${fmtPct(e.surprise_pct)}</td>
+                        <td class="px-3 py-2 text-right font-semibold">${fmtPct(e.move_pct)}</td>
+                    </tr>`).join('')}</tbody>
+            </table></div>
+        </div>` : ''}
+        <div class="insight-box mt-4">
+            <p><strong>What this tells us:</strong> ${ei.beat_rate_pct > 60 ? 'Companies beat expectations ' + ei.beat_rate_pct + '% of the time \u2014 Wall Street analysts tend to set conservative estimates. ' : ''}The average stock moved ${Math.abs(ei.avg_beat_move_pct).toFixed(1)}% on a beat and ${Math.abs(ei.avg_miss_move_pct).toFixed(1)}% on a miss. ${Math.abs(ei.avg_miss_move_pct) > Math.abs(ei.avg_beat_move_pct) ? 'Notice that misses tend to hurt more than beats help \u2014 the market punishes disappointment harder than it rewards success.' : ''} This is why the earnings calendar matters: knowing when a stock reports helps you prepare for potential volatility.</p>
+        </div>
+    </section>`;
+}
+
+function renderAccuracy(acc) {
+    if (!acc) return '';
+    return `
+    <section class="mb-12 fade-up">
+        <p class="section-tag">Analysis</p>
+        <h2 class="text-2xl font-editorial text-white mb-2">Model Accuracy Tracker</h2>
+        <p class="section-intro">Every time this pipeline runs, it saves the top 10 picks. On subsequent runs, it checks how those picks performed. Over time, this builds a <em>track record</em> that shows whether the scoring model consistently identifies winners.</p>
+        ${acc.first_run ? `
+        <div class="card p-6 text-center">
+            <p class="text-lg text-slate-300 mb-2">Tracking Started</p>
+            <p class="text-sm text-slate-400">This is the first run. Today's top 10 picks have been saved. Check back after the pipeline runs a few more times to see how they performed.</p>
+            <p class="text-sm text-slate-400 mt-2">${acc.total_days_tracked} day(s) of history recorded.</p>
+        </div>` : `
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="card p-4 text-center">
+                <p class="text-sm text-slate-400 mb-1">Win Rate</p>
+                <p class="text-2xl font-bold" style="color:${acc.win_rate_pct>=50?'var(--up)':'var(--down)'}">${acc.win_rate_pct}%</p>
+                <p class="text-xs text-slate-400">${acc.win_count} of ${acc.total_picks_evaluated} picks</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-sm text-slate-400 mb-1">Avg Return</p>
+                <p class="text-2xl font-bold">${fmtPct(acc.avg_return_pct)}</p>
+                <p class="text-xs text-slate-400">per pick batch</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-sm text-slate-400 mb-1">Picks Evaluated</p>
+                <p class="text-2xl font-bold text-white">${acc.total_picks_evaluated}</p>
+                <p class="text-xs text-slate-400">since tracking began</p>
+            </div>
+            <div class="card p-4 text-center">
+                <p class="text-sm text-slate-400 mb-1">Days Tracked</p>
+                <p class="text-2xl font-bold text-white">${acc.total_days_tracked}</p>
+                <p class="text-xs text-slate-400">pipeline runs</p>
+            </div>
+        </div>
+        <div class="insight-box">
+            <p><strong>How accuracy tracking works:</strong> Each run saves the top 10 picks with their prices. After 5+ trading days, we check if each pick went up (win) or down (loss). A win rate above 50% means the model picks winners more often than losers. The longer we track, the more statistically meaningful the results become.</p>
+        </div>`}
+    </section>`;
+}
+
+function renderRiskOverview(risk) {
+    if (!risk) return '';
+    return `
+    <section class="mb-12 fade-up">
+        <p class="section-tag">Analysis</p>
+        <h2 class="text-2xl font-editorial text-white mb-2">Risk Profile of Top 50</h2>
+        <p class="section-intro">High returns often come with high risk. These metrics measure <em>how wild the ride is</em> for our top-ranked stocks. The ideal stock has high returns with low volatility (a high Sharpe ratio).</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="card p-5">
+                <h4 class="text-sm font-semibold text-white mb-2">Average Volatility</h4>
+                <p class="text-2xl font-bold text-white mb-2">${risk.avg_volatility}%</p>
+                <p class="text-sm text-slate-400 leading-relaxed">Annualized volatility measures how much a stock's price swings up and down. Higher volatility = more risk. The S&P 500's long-term average is ~15-20%. Our top 50 average ${risk.avg_volatility > 30 ? 'is above that, meaning these are higher-risk picks' : 'is moderate, suggesting reasonable risk levels'}.</p>
+            </div>
+            <div class="card p-5">
+                <h4 class="text-sm font-semibold text-white mb-2">Average Sharpe Ratio</h4>
+                <p class="text-2xl font-bold text-white mb-2">${risk.avg_sharpe}</p>
+                <p class="text-sm text-slate-400 leading-relaxed">The Sharpe ratio measures return per unit of risk. Above 1.0 = good (you're being rewarded for the risk). Above 2.0 = excellent. Below 0 = the stock lost money. ${risk.avg_sharpe > 1 ? 'Our top 50 show strong risk-adjusted returns.' : risk.avg_sharpe > 0 ? 'Positive but modest \u2014 returns are there but risk is elevated.' : 'Negative Sharpe means these stocks have been declining despite their upside potential.'}</p>
+            </div>
+            <div class="card p-5">
+                <h4 class="text-sm font-semibold text-white mb-2">Average Max Drawdown</h4>
+                <p class="text-2xl font-bold" style="color:var(--down)">${risk.avg_drawdown}%</p>
+                <p class="text-sm text-slate-400 leading-relaxed">Max drawdown is the worst peak-to-trough drop this year. It answers: "How much could I have lost at the worst possible moment?" An average drawdown of ${Math.abs(risk.avg_drawdown).toFixed(0)}% means these stocks experienced significant dips \u2014 ${Math.abs(risk.avg_drawdown) > 25 ? 'you need stomach for volatility to hold them.' : 'but within normal range for individual stocks.'}</p>
+            </div>
+        </div>
+    </section>`;
+}
+
+async function render() {
+    const d = await loadData();
+    if (!d) return;
+    _scanners = d.scanners;
+
+    $('#app').innerHTML = [
+        renderHeader(d),
+        '<div class="glow-line"></div>',
+
+        // ── HOW IT WORKS (the case study — lead with the process) ──
+        '<div id="section-pipeline"></div>',
+        renderPipeline(),
+        renderMethodology(d.methodology),
+
+        '<div class="glow-line"></div>',
+
+        // ── TODAY'S MARKET ──
+        '<div id="section-market"></div>',
+        renderPulse(d.market_summary),
+        renderSectors(d.sector_performance),
+
+        // ── TODAY'S RECOMMENDATIONS ──
+        '<div id="section-picks"></div>',
+        renderTop50(d.top_50),
+        renderRiskOverview(d.risk_summary),
+        '<div id="section-scanners"></div>',
+        renderScanners(d.scanners),
+
+        // ── TOMORROW'S WATCH ──
+        '<div id="section-news"></div>',
+        renderNews(d.news),
+        renderEarnings(d.earnings_calendar),
+
+        '<div class="glow-line"></div>',
+
+        // ── DEEP ANALYSIS (model validation) ──
+        '<div id="section-analysis"></div>',
+        renderBacktest(d.backtest),
+        renderEarningsImpact(d.earnings_impact),
+        renderAccuracy(d.accuracy_tracking),
+
+        '<div class="glow-line"></div>',
+
+        // ── LEARN ──
+        '<div id="section-glossary"></div>',
+        renderGlossary(),
+        `<footer class="text-center py-10 space-y-2">
+            <p class="text-xs text-slate-400">Data: yfinance + Finnhub + FRED &middot; ${d.stats.total_analyzed} stocks analyzed &middot; ${d.stats.with_analyst_targets} with analyst targets</p>
+            <p class="text-xs text-slate-700">This is an educational tool, not financial advice. Past performance does not guarantee future results.</p>
+        </footer>`
+    ].join('');
+
+    drawSectorChart(d.sector_performance);
+    const sd = $('#scanner-desc');
+    if (sd) sd.innerHTML = _scannerDescs['rsi_oversold'];
+
+    // Scroll spy for nav
+    const sections = ['pipeline','market','picks','scanners','news','analysis','glossary'];
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const id = e.target.id;
+                $$('.nav-link').forEach(l => {
+                    const onclick = l.getAttribute('onclick') || '';
+                    l.classList.toggle('active', onclick.includes(id));
+                });
+            }
+        });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => { const el = document.getElementById('section-'+s); if (el) observer.observe(el); });
+
+    // Nav shadow on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('nav');
+        if (nav) nav.style.boxShadow = window.scrollY > 10 ? '0 4px 20px rgba(0,0,0,0.4)' : 'none';
+    });
+}
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Custom Watchlist - Add tickers here (one per line)
+# These are analyzed alongside S&P 500 stocks
+# Example: uncomment lines below to add them
+# PLTR
+# SOFI
+# COIN
+# HOOD
+# RKLB

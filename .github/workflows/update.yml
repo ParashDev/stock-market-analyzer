@@ -1,0 +1,80 @@
+name: Update Dashboard
+
+on:
+  schedule:
+    - cron: '0 12 * * 1-5'   # 6 AM CST Mon-Fri = 12 PM UTC (before market open)
+  workflow_dispatch:
+    inputs:
+      force_refresh:
+        description: 'Force full data refresh'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'index.html'
+      - 'requirements.txt'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch market data
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python scripts/01_clean.py
+
+      - name: Fetch news and sentiment
+        continue-on-error: true
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: python scripts/02_fetch_news.py
+
+      - name: Run analysis
+        run: python scripts/03_transform.py
+
+      - name: Verify output
+        run: |
+          test -f data/dashboard_data.json
+          echo "Dashboard JSON: $(wc -c < data/dashboard_data.json) bytes"
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p _site/data
+          cp index.html _site/
+          cp data/dashboard_data.json _site/data/
+          cp data/dashboard_data.js _site/data/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

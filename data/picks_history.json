@@ -1,0 +1,47 @@
+[
+  {
+    "date": "2026-03-18",
+    "picks": [
+      {
+        "ticker": "VST",
+        "price": 170.12
+      },
+      {
+        "ticker": "COIN",
+        "price": 202.29
+      },
+      {
+        "ticker": "DDOG",
+        "price": 131.26
+      },
+      {
+        "ticker": "INTU",
+        "price": 446.79
+      },
+      {
+        "ticker": "AXON",
+        "price": 508.41
+      },
+      {
+        "ticker": "APP",
+        "price": 442.57
+      },
+      {
+        "ticker": "CEG",
+        "price": 317.22
+      },
+      {
+        "ticker": "FDS",
+        "price": 207.82
+      },
+      {
+        "ticker": "UBER",
+        "price": 76.66
+      },
+      {
+        "ticker": "NWSA",
+        "price": 24.1
+      }
+    ]
+  }
+]
