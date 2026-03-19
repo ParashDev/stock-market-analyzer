@@ -229,8 +229,8 @@ function renderHeader(d) {
                 <h1 class="text-3xl sm:text-4xl font-bold text-white font-editorial leading-tight">Stock Market Analyzer</h1>
             </div>
             <div class="sm:text-right space-y-1">
-                <p class="text-white font-medium">${d.market_date}</p>
-                <p class="text-xs text-slate-400">Updated ${d.generated_at}</p>
+                <p class="text-white font-medium">Market Date: ${d.market_date}</p>
+                <p class="text-xs text-slate-400">Last Updated: ${d.generated_at}</p>
                 <div class="flex gap-3 sm:justify-end mt-2">${dot('Prices',s.prices)}${dot('News',s.news)}${dot('Macro',s.macro)}${dot('Earnings',s.earnings)}</div>
             </div>
         </div>

@@ -786,9 +786,14 @@ def build_catalyst_timeline(data):
     spy_df["date"] = spy_df["dt"].dt.date
     dates = sorted(spy_df["date"].unique())
 
-    # Find the last complete trading day (not today if market is still open)
-    # Use the second-to-last date if we have multiple days
-    target_date = dates[-1] if len(dates) == 1 else dates[-2] if len(dates) > 1 else None
+    # Pick the most recent COMPLETE trading day (7 hourly bars = full session).
+    # Pre-market: dates[-1] is yesterday (full). During market hours: dates[-1]
+    # is today (partial), so fall back to the previous day.
+    target_date = None
+    for d in reversed(dates):
+        if len(spy_df[spy_df["date"] == d]) >= 7:
+            target_date = d
+            break
     if target_date is None:
         return {}
 
