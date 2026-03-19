@@ -43,5 +43,50 @@
         "price": 76.66
       }
     ]
+  },
+  {
+    "date": "2026-03-19",
+    "picks": [
+      {
+        "ticker": "VST",
+        "price": 165.98
+      },
+      {
+        "ticker": "INTU",
+        "price": 462.5
+      },
+      {
+        "ticker": "EPAM",
+        "price": 137.83
+      },
+      {
+        "ticker": "COIN",
+        "price": 197.96
+      },
+      {
+        "ticker": "DDOG",
+        "price": 131.24
+      },
+      {
+        "ticker": "ADSK",
+        "price": 252.52
+      },
+      {
+        "ticker": "TYL",
+        "price": 352.52
+      },
+      {
+        "ticker": "CDW",
+        "price": 120.57
+      },
+      {
+        "ticker": "BKNG",
+        "price": 4394.27
+      },
+      {
+        "ticker": "UBER",
+        "price": 77.07
+      }
+    ]
   }
 ]
