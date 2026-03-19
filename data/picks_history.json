@@ -23,6 +23,10 @@
         "price": 508.41
       },
       {
+        "ticker": "DPZ",
+        "price": 376.92
+      },
+      {
         "ticker": "APP",
         "price": 442.57
       },
@@ -37,10 +41,6 @@
       {
         "ticker": "UBER",
         "price": 76.66
-      },
-      {
-        "ticker": "NWSA",
-        "price": 24.1
       }
     ]
   }
