@@ -48,44 +48,44 @@
     "date": "2026-03-19",
     "picks": [
       {
-        "ticker": "VST",
-        "price": 165.98
-      },
-      {
         "ticker": "INTU",
-        "price": 462.5
+        "price": 455.24
       },
       {
-        "ticker": "EPAM",
-        "price": 137.83
+        "ticker": "AMD",
+        "price": 205.27
       },
       {
-        "ticker": "COIN",
-        "price": 197.96
+        "ticker": "VST",
+        "price": 167.37
       },
       {
         "ticker": "DDOG",
-        "price": 131.24
+        "price": 129.94
       },
       {
-        "ticker": "ADSK",
-        "price": 252.52
+        "ticker": "ACN",
+        "price": 203.55
       },
       {
-        "ticker": "TYL",
-        "price": 352.52
+        "ticker": "COIN",
+        "price": 202.91
       },
       {
         "ticker": "CDW",
-        "price": 120.57
+        "price": 119.65
       },
       {
-        "ticker": "BKNG",
-        "price": 4394.27
+        "ticker": "NEM",
+        "price": 99.2
       },
       {
-        "ticker": "UBER",
-        "price": 77.07
+        "ticker": "AXON",
+        "price": 502.18
+      },
+      {
+        "ticker": "ROP",
+        "price": 353.26
       }
     ]
   }
