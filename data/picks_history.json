@@ -88,5 +88,50 @@
         "price": 353.26
       }
     ]
+  },
+  {
+    "date": "2026-03-20",
+    "picks": [
+      {
+        "ticker": "INTU",
+        "price": 455.56
+      },
+      {
+        "ticker": "DDOG",
+        "price": 125.08
+      },
+      {
+        "ticker": "ADP",
+        "price": 208.69
+      },
+      {
+        "ticker": "GEN",
+        "price": 20.97
+      },
+      {
+        "ticker": "A",
+        "price": 111.3
+      },
+      {
+        "ticker": "COIN",
+        "price": 197.5
+      },
+      {
+        "ticker": "BR",
+        "price": 174.36
+      },
+      {
+        "ticker": "ADSK",
+        "price": 247.99
+      },
+      {
+        "ticker": "ROP",
+        "price": 353.68
+      },
+      {
+        "ticker": "AXON",
+        "price": 496.27
+      }
+    ]
   }
 ]
