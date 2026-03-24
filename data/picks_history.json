@@ -133,5 +133,50 @@
         "price": 496.27
       }
     ]
+  },
+  {
+    "date": "2026-03-23",
+    "picks": [
+      {
+        "ticker": "APP",
+        "price": 458.95
+      },
+      {
+        "ticker": "DDOG",
+        "price": 129.23
+      },
+      {
+        "ticker": "XYZ",
+        "price": 61.17
+      },
+      {
+        "ticker": "INTU",
+        "price": 457.02
+      },
+      {
+        "ticker": "AXON",
+        "price": 507.28
+      },
+      {
+        "ticker": "ANET",
+        "price": 135.88
+      },
+      {
+        "ticker": "COIN",
+        "price": 200.62
+      },
+      {
+        "ticker": "TECH",
+        "price": 52.0
+      },
+      {
+        "ticker": "PLTR",
+        "price": 160.84
+      },
+      {
+        "ticker": "GEN",
+        "price": 21.02
+      }
+    ]
   }
 ]
