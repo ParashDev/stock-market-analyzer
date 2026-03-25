@@ -178,5 +178,50 @@
         "price": 21.02
       }
     ]
+  },
+  {
+    "date": "2026-03-24",
+    "picks": [
+      {
+        "ticker": "INTU",
+        "price": 432.45
+      },
+      {
+        "ticker": "PTC",
+        "price": 142.96
+      },
+      {
+        "ticker": "XYZ",
+        "price": 59.89
+      },
+      {
+        "ticker": "DDOG",
+        "price": 122.57
+      },
+      {
+        "ticker": "HBAN",
+        "price": 15.48
+      },
+      {
+        "ticker": "ANET",
+        "price": 130.8
+      },
+      {
+        "ticker": "PANW",
+        "price": 157.21
+      },
+      {
+        "ticker": "MSFT",
+        "price": 372.74
+      },
+      {
+        "ticker": "EL",
+        "price": 71.48
+      },
+      {
+        "ticker": "SPGI",
+        "price": 411.2
+      }
+    ]
   }
 ]
