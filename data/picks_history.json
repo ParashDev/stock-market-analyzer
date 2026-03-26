@@ -223,5 +223,50 @@
         "price": 411.2
       }
     ]
+  },
+  {
+    "date": "2026-03-25",
+    "picks": [
+      {
+        "ticker": "AMD",
+        "price": 220.27
+      },
+      {
+        "ticker": "XYZ",
+        "price": 60.01
+      },
+      {
+        "ticker": "GPC",
+        "price": 105.12
+      },
+      {
+        "ticker": "FIS",
+        "price": 47.6
+      },
+      {
+        "ticker": "ANET",
+        "price": 135.01
+      },
+      {
+        "ticker": "MA",
+        "price": 502.76
+      },
+      {
+        "ticker": "DDOG",
+        "price": 123.29
+      },
+      {
+        "ticker": "WST",
+        "price": 247.02
+      },
+      {
+        "ticker": "NCLH",
+        "price": 20.22
+      },
+      {
+        "ticker": "BRO",
+        "price": 64.29
+      }
+    ]
   }
 ]
