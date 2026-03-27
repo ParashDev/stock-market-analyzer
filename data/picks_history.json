@@ -268,5 +268,50 @@
         "price": 64.29
       }
     ]
+  },
+  {
+    "date": "2026-03-26",
+    "picks": [
+      {
+        "ticker": "NVDA",
+        "price": 171.24
+      },
+      {
+        "ticker": "V",
+        "price": 305.53
+      },
+      {
+        "ticker": "FIS",
+        "price": 47.41
+      },
+      {
+        "ticker": "WST",
+        "price": 248.12
+      },
+      {
+        "ticker": "XYZ",
+        "price": 59.37
+      },
+      {
+        "ticker": "GEHC",
+        "price": 71.54
+      },
+      {
+        "ticker": "GPC",
+        "price": 105.28
+      },
+      {
+        "ticker": "DDOG",
+        "price": 124.3
+      },
+      {
+        "ticker": "URI",
+        "price": 742.22
+      },
+      {
+        "ticker": "AMD",
+        "price": 203.77
+      }
+    ]
   }
 ]
