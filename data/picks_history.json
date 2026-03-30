@@ -313,5 +313,50 @@
         "price": 203.77
       }
     ]
+  },
+  {
+    "date": "2026-03-27",
+    "picks": [
+      {
+        "ticker": "APTV",
+        "price": 67.04
+      },
+      {
+        "ticker": "PTC",
+        "price": 137.61
+      },
+      {
+        "ticker": "GPC",
+        "price": 105.02
+      },
+      {
+        "ticker": "AMZN",
+        "price": 199.34
+      },
+      {
+        "ticker": "PODD",
+        "price": 208.22
+      },
+      {
+        "ticker": "SNPS",
+        "price": 380.47
+      },
+      {
+        "ticker": "SW",
+        "price": 39.41
+      },
+      {
+        "ticker": "WY",
+        "price": 23.86
+      },
+      {
+        "ticker": "CEG",
+        "price": 301.49
+      },
+      {
+        "ticker": "META",
+        "price": 525.72
+      }
+    ]
   }
 ]
