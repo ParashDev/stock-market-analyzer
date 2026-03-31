@@ -358,5 +358,50 @@
         "price": 525.72
       }
     ]
+  },
+  {
+    "date": "2026-03-30",
+    "picks": [
+      {
+        "ticker": "NWSA",
+        "price": 24.78
+      },
+      {
+        "ticker": "SYY",
+        "price": 69.3
+      },
+      {
+        "ticker": "BSX",
+        "price": 62.93
+      },
+      {
+        "ticker": "WY",
+        "price": 24.28
+      },
+      {
+        "ticker": "CHTR",
+        "price": 220.94
+      },
+      {
+        "ticker": "ISRG",
+        "price": 452.78
+      },
+      {
+        "ticker": "FDS",
+        "price": 204.55
+      },
+      {
+        "ticker": "WST",
+        "price": 245.14
+      },
+      {
+        "ticker": "EPAM",
+        "price": 136.18
+      },
+      {
+        "ticker": "TDG",
+        "price": 1132.88
+      }
+    ]
   }
 ]
