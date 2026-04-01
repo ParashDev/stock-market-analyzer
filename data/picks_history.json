@@ -403,5 +403,50 @@
         "price": 1132.88
       }
     ]
+  },
+  {
+    "date": "2026-03-31",
+    "picks": [
+      {
+        "ticker": "NWSA",
+        "price": 24.93
+      },
+      {
+        "ticker": "FDS",
+        "price": 216.99
+      },
+      {
+        "ticker": "SOLV",
+        "price": 65.3
+      },
+      {
+        "ticker": "CVNA",
+        "price": 314.38
+      },
+      {
+        "ticker": "NEM",
+        "price": 108.25
+      },
+      {
+        "ticker": "BX",
+        "price": 114.99
+      },
+      {
+        "ticker": "NKE",
+        "price": 52.82
+      },
+      {
+        "ticker": "XYZ",
+        "price": 60.18
+      },
+      {
+        "ticker": "AMD",
+        "price": 203.43
+      },
+      {
+        "ticker": "ELV",
+        "price": 292.75
+      }
+    ]
   }
 ]
