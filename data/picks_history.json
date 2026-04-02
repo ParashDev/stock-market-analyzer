@@ -448,5 +448,50 @@
         "price": 292.75
       }
     ]
+  },
+  {
+    "date": "2026-04-01",
+    "picks": [
+      {
+        "ticker": "BA",
+        "price": 207.32
+      },
+      {
+        "ticker": "NWSA",
+        "price": 24.71
+      },
+      {
+        "ticker": "NKE",
+        "price": 44.63
+      },
+      {
+        "ticker": "EFX",
+        "price": 179.66
+      },
+      {
+        "ticker": "LLY",
+        "price": 954.52
+      },
+      {
+        "ticker": "ROP",
+        "price": 355.87
+      },
+      {
+        "ticker": "AMD",
+        "price": 210.21
+      },
+      {
+        "ticker": "AMZN",
+        "price": 210.57
+      },
+      {
+        "ticker": "BX",
+        "price": 114.33
+      },
+      {
+        "ticker": "PANW",
+        "price": 160.67
+      }
+    ]
   }
 ]
