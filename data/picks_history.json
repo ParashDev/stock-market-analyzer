@@ -502,40 +502,40 @@
         "price": 217.5
       },
       {
-        "ticker": "PANW",
-        "price": 163.21
+        "ticker": "DASH",
+        "price": 156.45
+      },
+      {
+        "ticker": "SBAC",
+        "price": 204.04
+      },
+      {
+        "ticker": "SWK",
+        "price": 68.64
       },
       {
         "ticker": "NVDA",
         "price": 177.39
       },
       {
-        "ticker": "ISRG",
-        "price": 452.07
+        "ticker": "PANW",
+        "price": 163.21
       },
       {
         "ticker": "NWSA",
         "price": 24.4
       },
       {
-        "ticker": "GOOGL",
-        "price": 295.77
-      },
-      {
         "ticker": "UNH",
         "price": 277.26
       },
       {
-        "ticker": "APH",
-        "price": 128.0
+        "ticker": "GOOGL",
+        "price": 295.77
       },
       {
         "ticker": "CVS",
         "price": 73.49
-      },
-      {
-        "ticker": "TDG",
-        "price": 1167.0
       }
     ]
   }
