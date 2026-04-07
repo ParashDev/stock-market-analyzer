@@ -538,5 +538,50 @@
         "price": 73.49
       }
     ]
+  },
+  {
+    "date": "2026-04-06",
+    "picks": [
+      {
+        "ticker": "BKNG",
+        "price": 176.19
+      },
+      {
+        "ticker": "AMD",
+        "price": 220.18
+      },
+      {
+        "ticker": "MU",
+        "price": 377.76
+      },
+      {
+        "ticker": "MCHP",
+        "price": 67.22
+      },
+      {
+        "ticker": "DECK",
+        "price": 101.64
+      },
+      {
+        "ticker": "BLDR",
+        "price": 82.06
+      },
+      {
+        "ticker": "DPZ",
+        "price": 380.77
+      },
+      {
+        "ticker": "IVZ",
+        "price": 22.88
+      },
+      {
+        "ticker": "MSFT",
+        "price": 372.88
+      },
+      {
+        "ticker": "TSCO",
+        "price": 45.39
+      }
+    ]
   }
 ]
