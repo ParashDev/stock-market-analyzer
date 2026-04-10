@@ -673,5 +673,50 @@
         "price": 113.82
       }
     ]
+  },
+  {
+    "date": "2026-04-09",
+    "picks": [
+      {
+        "ticker": "AVGO",
+        "price": 354.91
+      },
+      {
+        "ticker": "MU",
+        "price": 421.51
+      },
+      {
+        "ticker": "AMZN",
+        "price": 233.65
+      },
+      {
+        "ticker": "CDW",
+        "price": 126.75
+      },
+      {
+        "ticker": "BKNG",
+        "price": 176.6
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 223.07
+      },
+      {
+        "ticker": "CVNA",
+        "price": 326.93
+      },
+      {
+        "ticker": "COF",
+        "price": 194.73
+      },
+      {
+        "ticker": "NRG",
+        "price": 161.78
+      },
+      {
+        "ticker": "CRH",
+        "price": 115.5
+      }
+    ]
   }
 ]
