@@ -763,5 +763,50 @@
         "price": 193.0
       }
     ]
+  },
+  {
+    "date": "2026-04-13",
+    "picks": [
+      {
+        "ticker": "ORCL",
+        "price": 155.62
+      },
+      {
+        "ticker": "KKR",
+        "price": 98.14
+      },
+      {
+        "ticker": "COF",
+        "price": 197.55
+      },
+      {
+        "ticker": "TECH",
+        "price": 57.53
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 226.09
+      },
+      {
+        "ticker": "APP",
+        "price": 417.45
+      },
+      {
+        "ticker": "CDW",
+        "price": 131.89
+      },
+      {
+        "ticker": "META",
+        "price": 634.53
+      },
+      {
+        "ticker": "ACN",
+        "price": 191.95
+      },
+      {
+        "ticker": "XYZ",
+        "price": 64.22
+      }
+    ]
   }
 ]
