@@ -808,5 +808,50 @@
         "price": 64.22
       }
     ]
+  },
+  {
+    "date": "2026-04-14",
+    "picks": [
+      {
+        "ticker": "ORCL",
+        "price": 163.0
+      },
+      {
+        "ticker": "NVDA",
+        "price": 196.51
+      },
+      {
+        "ticker": "HOOD",
+        "price": 79.09
+      },
+      {
+        "ticker": "XYZ",
+        "price": 66.15
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 226.7
+      },
+      {
+        "ticker": "COF",
+        "price": 199.84
+      },
+      {
+        "ticker": "META",
+        "price": 662.49
+      },
+      {
+        "ticker": "A",
+        "price": 120.39
+      },
+      {
+        "ticker": "COIN",
+        "price": 184.41
+      },
+      {
+        "ticker": "UAL",
+        "price": 97.2
+      }
+    ]
   }
 ]
