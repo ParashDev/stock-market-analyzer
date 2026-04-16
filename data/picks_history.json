@@ -853,5 +853,50 @@
         "price": 97.2
       }
     ]
+  },
+  {
+    "date": "2026-04-15",
+    "picks": [
+      {
+        "ticker": "ORCL",
+        "price": 169.81
+      },
+      {
+        "ticker": "APP",
+        "price": 464.63
+      },
+      {
+        "ticker": "DASH",
+        "price": 179.93
+      },
+      {
+        "ticker": "TTWO",
+        "price": 214.15
+      },
+      {
+        "ticker": "NVDA",
+        "price": 198.87
+      },
+      {
+        "ticker": "UBER",
+        "price": 77.28
+      },
+      {
+        "ticker": "MSFT",
+        "price": 411.22
+      },
+      {
+        "ticker": "ARES",
+        "price": 119.28
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 229.64
+      },
+      {
+        "ticker": "META",
+        "price": 671.58
+      }
+    ]
   }
 ]
