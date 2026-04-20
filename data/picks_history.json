@@ -943,5 +943,50 @@
         "price": 171.95
       }
     ]
+  },
+  {
+    "date": "2026-04-17",
+    "picks": [
+      {
+        "ticker": "ORCL",
+        "price": 175.06
+      },
+      {
+        "ticker": "A",
+        "price": 121.87
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 234.43
+      },
+      {
+        "ticker": "DASH",
+        "price": 183.89
+      },
+      {
+        "ticker": "GPN",
+        "price": 72.37
+      },
+      {
+        "ticker": "APP",
+        "price": 477.2
+      },
+      {
+        "ticker": "DDOG",
+        "price": 126.61
+      },
+      {
+        "ticker": "MSFT",
+        "price": 422.79
+      },
+      {
+        "ticker": "PLTR",
+        "price": 146.39
+      },
+      {
+        "ticker": "UBER",
+        "price": 77.12
+      }
+    ]
   }
 ]
