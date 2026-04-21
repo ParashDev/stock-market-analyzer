@@ -988,5 +988,50 @@
         "price": 77.12
       }
     ]
+  },
+  {
+    "date": "2026-04-20",
+    "picks": [
+      {
+        "ticker": "APP",
+        "price": 490.96
+      },
+      {
+        "ticker": "DDOG",
+        "price": 129.74
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 237.3
+      },
+      {
+        "ticker": "DASH",
+        "price": 189.8
+      },
+      {
+        "ticker": "ORCL",
+        "price": 177.58
+      },
+      {
+        "ticker": "MSFT",
+        "price": 418.07
+      },
+      {
+        "ticker": "WDAY",
+        "price": 127.94
+      },
+      {
+        "ticker": "NOW",
+        "price": 99.72
+      },
+      {
+        "ticker": "TTD",
+        "price": 24.05
+      },
+      {
+        "ticker": "BLDR",
+        "price": 91.32
+      }
+    ]
   }
 ]
