@@ -1123,5 +1123,50 @@
         "price": 231.1
       }
     ]
+  },
+  {
+    "date": "2026-04-23",
+    "picks": [
+      {
+        "ticker": "ORCL",
+        "price": 176.28
+      },
+      {
+        "ticker": "DASH",
+        "price": 177.0
+      },
+      {
+        "ticker": "DDOG",
+        "price": 127.86
+      },
+      {
+        "ticker": "MSFT",
+        "price": 415.75
+      },
+      {
+        "ticker": "BLDR",
+        "price": 90.14
+      },
+      {
+        "ticker": "NVDA",
+        "price": 199.64
+      },
+      {
+        "ticker": "APP",
+        "price": 454.17
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 226.87
+      },
+      {
+        "ticker": "NWSA",
+        "price": 26.31
+      },
+      {
+        "ticker": "TTWO",
+        "price": 209.9
+      }
+    ]
   }
 ]
