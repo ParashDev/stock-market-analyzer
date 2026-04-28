@@ -1213,5 +1213,50 @@
         "price": 23.5
       }
     ]
+  },
+  {
+    "date": "2026-04-28",
+    "picks": [
+      {
+        "ticker": "DDOG",
+        "price": 133.56
+      },
+      {
+        "ticker": "MSFT",
+        "price": 426.19
+      },
+      {
+        "ticker": "NVDA",
+        "price": 211.39
+      },
+      {
+        "ticker": "APP",
+        "price": 456.42
+      },
+      {
+        "ticker": "META",
+        "price": 675.17
+      },
+      {
+        "ticker": "VST",
+        "price": 160.04
+      },
+      {
+        "ticker": "XYL",
+        "price": 118.47
+      },
+      {
+        "ticker": "DASH",
+        "price": 175.56
+      },
+      {
+        "ticker": "NEM",
+        "price": 111.76
+      },
+      {
+        "ticker": "PNR",
+        "price": 84.45
+      }
+    ]
   }
 ]
