@@ -1258,5 +1258,50 @@
         "price": 84.45
       }
     ]
+  },
+  {
+    "date": "2026-04-29",
+    "picks": [
+      {
+        "ticker": "NVDA",
+        "price": 210.8
+      },
+      {
+        "ticker": "FICO",
+        "price": 1056.28
+      },
+      {
+        "ticker": "MA",
+        "price": 525.64
+      },
+      {
+        "ticker": "TTD",
+        "price": 24.17
+      },
+      {
+        "ticker": "MSFT",
+        "price": 424.48
+      },
+      {
+        "ticker": "TMUS",
+        "price": 195.63
+      },
+      {
+        "ticker": "META",
+        "price": 666.92
+      },
+      {
+        "ticker": "EXE",
+        "price": 101.28
+      },
+      {
+        "ticker": "DDOG",
+        "price": 130.18
+      },
+      {
+        "ticker": "VST",
+        "price": 159.03
+      }
+    ]
   }
 ]
