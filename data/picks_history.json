@@ -1303,5 +1303,50 @@
         "price": 159.03
       }
     ]
+  },
+  {
+    "date": "2026-04-30",
+    "picks": [
+      {
+        "ticker": "NVDA",
+        "price": 205.37
+      },
+      {
+        "ticker": "DDOG",
+        "price": 133.26
+      },
+      {
+        "ticker": "MA",
+        "price": 509.15
+      },
+      {
+        "ticker": "MSFT",
+        "price": 409.67
+      },
+      {
+        "ticker": "GPN",
+        "price": 70.84
+      },
+      {
+        "ticker": "TTWO",
+        "price": 213.72
+      },
+      {
+        "ticker": "APP",
+        "price": 438.86
+      },
+      {
+        "ticker": "GDDY",
+        "price": 85.69
+      },
+      {
+        "ticker": "DASH",
+        "price": 169.68
+      },
+      {
+        "ticker": "TTD",
+        "price": 23.76
+      }
+    ]
   }
 ]
