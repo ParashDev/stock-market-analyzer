@@ -1308,44 +1308,44 @@
     "date": "2026-04-30",
     "picks": [
       {
-        "ticker": "NVDA",
-        "price": 205.37
-      },
-      {
-        "ticker": "DDOG",
-        "price": 133.26
-      },
-      {
-        "ticker": "MA",
-        "price": 509.15
-      },
-      {
-        "ticker": "MSFT",
-        "price": 409.67
+        "ticker": "TECH",
+        "price": 55.32
       },
       {
         "ticker": "GPN",
-        "price": 70.84
+        "price": 71.96
       },
       {
-        "ticker": "TTWO",
-        "price": 213.72
-      },
-      {
-        "ticker": "APP",
-        "price": 438.86
+        "ticker": "DDOG",
+        "price": 132.19
       },
       {
         "ticker": "GDDY",
-        "price": 85.69
+        "price": 86.79
       },
       {
-        "ticker": "DASH",
-        "price": 169.68
+        "ticker": "MSFT",
+        "price": 407.78
       },
       {
-        "ticker": "TTD",
-        "price": 23.76
+        "ticker": "ZBRA",
+        "price": 226.26
+      },
+      {
+        "ticker": "LLY",
+        "price": 934.6
+      },
+      {
+        "ticker": "WYNN",
+        "price": 107.11
+      },
+      {
+        "ticker": "NVDA",
+        "price": 199.57
+      },
+      {
+        "ticker": "RVTY",
+        "price": 86.62
       }
     ]
   }
