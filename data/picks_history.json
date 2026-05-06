@@ -1393,5 +1393,50 @@
         "price": 419.89
       }
     ]
+  },
+  {
+    "date": "2026-05-06",
+    "picks": [
+      {
+        "ticker": "UBER",
+        "price": 77.49
+      },
+      {
+        "ticker": "UAL",
+        "price": 97.57
+      },
+      {
+        "ticker": "ORCL",
+        "price": 184.78
+      },
+      {
+        "ticker": "GPN",
+        "price": 72.74
+      },
+      {
+        "ticker": "APP",
+        "price": 459.79
+      },
+      {
+        "ticker": "IQV",
+        "price": 177.7
+      },
+      {
+        "ticker": "DIS",
+        "price": 108.66
+      },
+      {
+        "ticker": "A",
+        "price": 118.32
+      },
+      {
+        "ticker": "RCL",
+        "price": 277.53
+      },
+      {
+        "ticker": "WYNN",
+        "price": 108.06
+      }
+    ]
   }
 ]
