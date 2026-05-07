@@ -1438,5 +1438,50 @@
         "price": 108.06
       }
     ]
+  },
+  {
+    "date": "2026-05-07",
+    "picks": [
+      {
+        "ticker": "DASH",
+        "price": 173.74
+      },
+      {
+        "ticker": "CRM",
+        "price": 187.07
+      },
+      {
+        "ticker": "AXON",
+        "price": 423.68
+      },
+      {
+        "ticker": "APP",
+        "price": 468.16
+      },
+      {
+        "ticker": "WDAY",
+        "price": 128.1
+      },
+      {
+        "ticker": "VST",
+        "price": 160.7
+      },
+      {
+        "ticker": "MSFT",
+        "price": 424.03
+      },
+      {
+        "ticker": "ADSK",
+        "price": 251.16
+      },
+      {
+        "ticker": "UAL",
+        "price": 101.72
+      },
+      {
+        "ticker": "NVDA",
+        "price": 209.01
+      }
+    ]
   }
 ]
