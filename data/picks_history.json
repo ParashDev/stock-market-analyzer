@@ -1483,5 +1483,50 @@
         "price": 99.7
       }
     ]
+  },
+  {
+    "date": "2026-05-11",
+    "picks": [
+      {
+        "ticker": "GEN",
+        "price": 22.12
+      },
+      {
+        "ticker": "WYNN",
+        "price": 99.41
+      },
+      {
+        "ticker": "IQV",
+        "price": 175.47
+      },
+      {
+        "ticker": "UAL",
+        "price": 97.01
+      },
+      {
+        "ticker": "ORCL",
+        "price": 193.62
+      },
+      {
+        "ticker": "FICO",
+        "price": 1114.53
+      },
+      {
+        "ticker": "UBER",
+        "price": 76.38
+      },
+      {
+        "ticker": "SW",
+        "price": 41.49
+      },
+      {
+        "ticker": "APP",
+        "price": 452.42
+      },
+      {
+        "ticker": "NWSA",
+        "price": 26.97
+      }
+    ]
   }
 ]
