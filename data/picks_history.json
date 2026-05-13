@@ -1573,5 +1573,50 @@
         "price": 399.81
       }
     ]
+  },
+  {
+    "date": "2026-05-13",
+    "picks": [
+      {
+        "ticker": "ZBRA",
+        "price": 246.19
+      },
+      {
+        "ticker": "GEN",
+        "price": 22.86
+      },
+      {
+        "ticker": "APP",
+        "price": 454.74
+      },
+      {
+        "ticker": "NWSA",
+        "price": 26.7
+      },
+      {
+        "ticker": "ANET",
+        "price": 146.91
+      },
+      {
+        "ticker": "GDDY",
+        "price": 83.28
+      },
+      {
+        "ticker": "ORCL",
+        "price": 189.91
+      },
+      {
+        "ticker": "APTV",
+        "price": 56.12
+      },
+      {
+        "ticker": "PTC",
+        "price": 141.4
+      },
+      {
+        "ticker": "AXON",
+        "price": 371.73
+      }
+    ]
   }
 ]
