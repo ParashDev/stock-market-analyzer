@@ -1618,5 +1618,50 @@
         "price": 371.73
       }
     ]
+  },
+  {
+    "date": "2026-05-14",
+    "picks": [
+      {
+        "ticker": "GEN",
+        "price": 23.0
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 249.0
+      },
+      {
+        "ticker": "APTV",
+        "price": 55.8
+      },
+      {
+        "ticker": "NWSA",
+        "price": 26.37
+      },
+      {
+        "ticker": "ORCL",
+        "price": 186.88
+      },
+      {
+        "ticker": "XYZ",
+        "price": 70.37
+      },
+      {
+        "ticker": "RCL",
+        "price": 269.04
+      },
+      {
+        "ticker": "UAL",
+        "price": 96.22
+      },
+      {
+        "ticker": "A",
+        "price": 114.8
+      },
+      {
+        "ticker": "NEM",
+        "price": 116.42
+      }
+    ]
   }
 ]
