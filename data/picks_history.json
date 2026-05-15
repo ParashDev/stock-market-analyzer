@@ -1663,5 +1663,50 @@
         "price": 116.42
       }
     ]
+  },
+  {
+    "date": "2026-05-15",
+    "picks": [
+      {
+        "ticker": "ZBRA",
+        "price": 254.46
+      },
+      {
+        "ticker": "APP",
+        "price": 495.54
+      },
+      {
+        "ticker": "GEN",
+        "price": 23.23
+      },
+      {
+        "ticker": "DXCM",
+        "price": 61.28
+      },
+      {
+        "ticker": "MDT",
+        "price": 76.98
+      },
+      {
+        "ticker": "ABT",
+        "price": 85.2
+      },
+      {
+        "ticker": "MSFT",
+        "price": 416.08
+      },
+      {
+        "ticker": "DVN",
+        "price": 48.65
+      },
+      {
+        "ticker": "EXE",
+        "price": 97.68
+      },
+      {
+        "ticker": "NWSA",
+        "price": 26.38
+      }
+    ]
   }
 ]
