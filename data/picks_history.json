@@ -1708,5 +1708,50 @@
         "price": 26.38
       }
     ]
+  },
+  {
+    "date": "2026-05-18",
+    "picks": [
+      {
+        "ticker": "DXCM",
+        "price": 63.75
+      },
+      {
+        "ticker": "NOW",
+        "price": 100.81
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 258.51
+      },
+      {
+        "ticker": "FICO",
+        "price": 1162.83
+      },
+      {
+        "ticker": "VRSK",
+        "price": 170.05
+      },
+      {
+        "ticker": "GDDY",
+        "price": 90.07
+      },
+      {
+        "ticker": "WDAY",
+        "price": 127.08
+      },
+      {
+        "ticker": "DVN",
+        "price": 49.84
+      },
+      {
+        "ticker": "ADBE",
+        "price": 251.68
+      },
+      {
+        "ticker": "ACN",
+        "price": 175.35
+      }
+    ]
   }
 ]
