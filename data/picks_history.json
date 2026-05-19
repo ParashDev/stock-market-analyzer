@@ -1753,5 +1753,50 @@
         "price": 175.35
       }
     ]
+  },
+  {
+    "date": "2026-05-19",
+    "picks": [
+      {
+        "ticker": "NOW",
+        "price": 105.5
+      },
+      {
+        "ticker": "WDAY",
+        "price": 133.49
+      },
+      {
+        "ticker": "CRM",
+        "price": 184.43
+      },
+      {
+        "ticker": "FICO",
+        "price": 1218.62
+      },
+      {
+        "ticker": "ADSK",
+        "price": 248.01
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 251.46
+      },
+      {
+        "ticker": "INTU",
+        "price": 411.13
+      },
+      {
+        "ticker": "EPAM",
+        "price": 104.53
+      },
+      {
+        "ticker": "ADBE",
+        "price": 261.22
+      },
+      {
+        "ticker": "EXE",
+        "price": 100.14
+      }
+    ]
   }
 ]
