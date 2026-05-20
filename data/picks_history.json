@@ -1798,5 +1798,50 @@
         "price": 100.14
       }
     ]
+  },
+  {
+    "date": "2026-05-20",
+    "picks": [
+      {
+        "ticker": "NOW",
+        "price": 100.99
+      },
+      {
+        "ticker": "GPN",
+        "price": 69.96
+      },
+      {
+        "ticker": "FICO",
+        "price": 1208.77
+      },
+      {
+        "ticker": "WDAY",
+        "price": 126.32
+      },
+      {
+        "ticker": "HAS",
+        "price": 88.92
+      },
+      {
+        "ticker": "ADBE",
+        "price": 250.05
+      },
+      {
+        "ticker": "CRM",
+        "price": 176.85
+      },
+      {
+        "ticker": "VRSK",
+        "price": 169.46
+      },
+      {
+        "ticker": "TDG",
+        "price": 1198.86
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 244.77
+      }
+    ]
   }
 ]
