@@ -1843,5 +1843,50 @@
         "price": 244.77
       }
     ]
+  },
+  {
+    "date": "2026-05-21",
+    "picks": [
+      {
+        "ticker": "APP",
+        "price": 495.18
+      },
+      {
+        "ticker": "NOW",
+        "price": 101.42
+      },
+      {
+        "ticker": "GPN",
+        "price": 70.92
+      },
+      {
+        "ticker": "UAL",
+        "price": 96.52
+      },
+      {
+        "ticker": "FICO",
+        "price": 1238.54
+      },
+      {
+        "ticker": "VEEV",
+        "price": 160.9
+      },
+      {
+        "ticker": "WDAY",
+        "price": 122.52
+      },
+      {
+        "ticker": "ADSK",
+        "price": 241.28
+      },
+      {
+        "ticker": "GDDY",
+        "price": 91.49
+      },
+      {
+        "ticker": "CTSH",
+        "price": 51.31
+      }
+    ]
   }
 ]
