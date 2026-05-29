@@ -1933,5 +1933,50 @@
         "price": 114.5
       }
     ]
+  },
+  {
+    "date": "2026-05-29",
+    "picks": [
+      {
+        "ticker": "CRM",
+        "price": 190.24
+      },
+      {
+        "ticker": "AXON",
+        "price": 435.55
+      },
+      {
+        "ticker": "VEEV",
+        "price": 170.31
+      },
+      {
+        "ticker": "SW",
+        "price": 40.99
+      },
+      {
+        "ticker": "CRH",
+        "price": 110.85
+      },
+      {
+        "ticker": "MSFT",
+        "price": 444.16
+      },
+      {
+        "ticker": "IQV",
+        "price": 180.35
+      },
+      {
+        "ticker": "NKE",
+        "price": 46.53
+      },
+      {
+        "ticker": "WDAY",
+        "price": 139.42
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 246.13
+      }
+    ]
   }
 ]
