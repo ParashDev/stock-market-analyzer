@@ -1978,5 +1978,50 @@
         "price": 246.13
       }
     ]
+  },
+  {
+    "date": "2026-06-01",
+    "picks": [
+      {
+        "ticker": "ADSK",
+        "price": 246.95
+      },
+      {
+        "ticker": "VEEV",
+        "price": 187.9
+      },
+      {
+        "ticker": "ACN",
+        "price": 196.35
+      },
+      {
+        "ticker": "ROP",
+        "price": 344.02
+      },
+      {
+        "ticker": "NVDA",
+        "price": 221.94
+      },
+      {
+        "ticker": "SW",
+        "price": 41.4
+      },
+      {
+        "ticker": "WYNN",
+        "price": 106.34
+      },
+      {
+        "ticker": "AXON",
+        "price": 479.33
+      },
+      {
+        "ticker": "CTSH",
+        "price": 57.33
+      },
+      {
+        "ticker": "INTU",
+        "price": 357.08
+      }
+    ]
   }
 ]
