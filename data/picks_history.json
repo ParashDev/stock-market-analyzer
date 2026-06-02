@@ -2023,5 +2023,50 @@
         "price": 357.08
       }
     ]
+  },
+  {
+    "date": "2026-06-02",
+    "picks": [
+      {
+        "ticker": "CRM",
+        "price": 198.45
+      },
+      {
+        "ticker": "VEEV",
+        "price": 180.64
+      },
+      {
+        "ticker": "NVDA",
+        "price": 225.12
+      },
+      {
+        "ticker": "ACN",
+        "price": 184.98
+      },
+      {
+        "ticker": "ADBE",
+        "price": 261.89
+      },
+      {
+        "ticker": "SW",
+        "price": 41.88
+      },
+      {
+        "ticker": "AXON",
+        "price": 478.0
+      },
+      {
+        "ticker": "IQV",
+        "price": 182.37
+      },
+      {
+        "ticker": "WY",
+        "price": 24.34
+      },
+      {
+        "ticker": "CTSH",
+        "price": 54.33
+      }
+    ]
   }
 ]
