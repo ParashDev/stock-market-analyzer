@@ -2158,5 +2158,50 @@
         "price": 251.51
       }
     ]
+  },
+  {
+    "date": "2026-06-05",
+    "picks": [
+      {
+        "ticker": "AXON",
+        "price": 493.92
+      },
+      {
+        "ticker": "COO",
+        "price": 66.39
+      },
+      {
+        "ticker": "NVDA",
+        "price": 211.31
+      },
+      {
+        "ticker": "NWSA",
+        "price": 27.03
+      },
+      {
+        "ticker": "PCG",
+        "price": 17.17
+      },
+      {
+        "ticker": "MDT",
+        "price": 82.53
+      },
+      {
+        "ticker": "PODD",
+        "price": 153.09
+      },
+      {
+        "ticker": "LULU",
+        "price": 115.75
+      },
+      {
+        "ticker": "DHR",
+        "price": 185.38
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 236.27
+      }
+    ]
   }
 ]
