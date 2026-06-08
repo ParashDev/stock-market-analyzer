@@ -2203,5 +2203,50 @@
         "price": 236.27
       }
     ]
+  },
+  {
+    "date": "2026-06-08",
+    "picks": [
+      {
+        "ticker": "AXON",
+        "price": 483.56
+      },
+      {
+        "ticker": "APH",
+        "price": 143.76
+      },
+      {
+        "ticker": "DHR",
+        "price": 185.31
+      },
+      {
+        "ticker": "ABT",
+        "price": 90.49
+      },
+      {
+        "ticker": "WY",
+        "price": 24.17
+      },
+      {
+        "ticker": "COR",
+        "price": 274.33
+      },
+      {
+        "ticker": "HPE",
+        "price": 50.63
+      },
+      {
+        "ticker": "FICO",
+        "price": 1191.55
+      },
+      {
+        "ticker": "PCG",
+        "price": 16.59
+      },
+      {
+        "ticker": "NWSA",
+        "price": 26.95
+      }
+    ]
   }
 ]
