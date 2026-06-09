@@ -2248,5 +2248,50 @@
         "price": 26.95
       }
     ]
+  },
+  {
+    "date": "2026-06-09",
+    "picks": [
+      {
+        "ticker": "PODD",
+        "price": 157.72
+      },
+      {
+        "ticker": "DHR",
+        "price": 188.25
+      },
+      {
+        "ticker": "NKE",
+        "price": 45.15
+      },
+      {
+        "ticker": "POOL",
+        "price": 191.98
+      },
+      {
+        "ticker": "CVNA",
+        "price": 72.0
+      },
+      {
+        "ticker": "ZTS",
+        "price": 81.21
+      },
+      {
+        "ticker": "HPE",
+        "price": 48.44
+      },
+      {
+        "ticker": "RMD",
+        "price": 196.32
+      },
+      {
+        "ticker": "DASH",
+        "price": 159.21
+      },
+      {
+        "ticker": "APH",
+        "price": 152.49
+      }
+    ]
   }
 ]
