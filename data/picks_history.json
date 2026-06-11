@@ -2338,5 +2338,50 @@
         "price": 27.37
       }
     ]
+  },
+  {
+    "date": "2026-06-11",
+    "picks": [
+      {
+        "ticker": "FICO",
+        "price": 1180.44
+      },
+      {
+        "ticker": "DELL",
+        "price": 379.12
+      },
+      {
+        "ticker": "HPE",
+        "price": 45.11
+      },
+      {
+        "ticker": "TMUS",
+        "price": 186.81
+      },
+      {
+        "ticker": "J",
+        "price": 125.15
+      },
+      {
+        "ticker": "WYNN",
+        "price": 105.54
+      },
+      {
+        "ticker": "ZTS",
+        "price": 79.97
+      },
+      {
+        "ticker": "NKE",
+        "price": 44.48
+      },
+      {
+        "ticker": "WDAY",
+        "price": 132.86
+      },
+      {
+        "ticker": "TRMB",
+        "price": 49.13
+      }
+    ]
   }
 ]
