@@ -2383,5 +2383,50 @@
         "price": 49.13
       }
     ]
+  },
+  {
+    "date": "2026-06-12",
+    "picks": [
+      {
+        "ticker": "HPE",
+        "price": 48.26
+      },
+      {
+        "ticker": "NKE",
+        "price": 45.21
+      },
+      {
+        "ticker": "CMG",
+        "price": 31.98
+      },
+      {
+        "ticker": "FICO",
+        "price": 1172.53
+      },
+      {
+        "ticker": "POOL",
+        "price": 195.18
+      },
+      {
+        "ticker": "OMC",
+        "price": 76.38
+      },
+      {
+        "ticker": "GPC",
+        "price": 102.34
+      },
+      {
+        "ticker": "WYNN",
+        "price": 108.08
+      },
+      {
+        "ticker": "AXON",
+        "price": 435.84
+      },
+      {
+        "ticker": "ZTS",
+        "price": 79.99
+      }
+    ]
   }
 ]
