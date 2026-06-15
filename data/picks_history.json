@@ -2428,5 +2428,50 @@
         "price": 79.99
       }
     ]
+  },
+  {
+    "date": "2026-06-15",
+    "picks": [
+      {
+        "ticker": "COF",
+        "price": 196.52
+      },
+      {
+        "ticker": "DASH",
+        "price": 166.34
+      },
+      {
+        "ticker": "VST",
+        "price": 154.71
+      },
+      {
+        "ticker": "HPE",
+        "price": 48.51
+      },
+      {
+        "ticker": "BKNG",
+        "price": 174.05
+      },
+      {
+        "ticker": "CRH",
+        "price": 111.07
+      },
+      {
+        "ticker": "POOL",
+        "price": 194.19
+      },
+      {
+        "ticker": "NKE",
+        "price": 45.36
+      },
+      {
+        "ticker": "GPC",
+        "price": 105.19
+      },
+      {
+        "ticker": "OMC",
+        "price": 76.35
+      }
+    ]
   }
 ]
