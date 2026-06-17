@@ -2518,5 +2518,50 @@
         "price": 134.14
       }
     ]
+  },
+  {
+    "date": "2026-06-17",
+    "picks": [
+      {
+        "ticker": "VST",
+        "price": 160.9
+      },
+      {
+        "ticker": "BKNG",
+        "price": 173.77
+      },
+      {
+        "ticker": "HPE",
+        "price": 50.1
+      },
+      {
+        "ticker": "DASH",
+        "price": 171.5
+      },
+      {
+        "ticker": "CEG",
+        "price": 272.18
+      },
+      {
+        "ticker": "NEM",
+        "price": 111.48
+      },
+      {
+        "ticker": "NRG",
+        "price": 134.3
+      },
+      {
+        "ticker": "POOL",
+        "price": 200.67
+      },
+      {
+        "ticker": "AVGO",
+        "price": 399.1
+      },
+      {
+        "ticker": "OMC",
+        "price": 76.98
+      }
+    ]
   }
 ]
