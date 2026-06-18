@@ -2563,5 +2563,50 @@
         "price": 76.98
       }
     ]
+  },
+  {
+    "date": "2026-06-18",
+    "picks": [
+      {
+        "ticker": "VST",
+        "price": 167.67
+      },
+      {
+        "ticker": "HPE",
+        "price": 48.14
+      },
+      {
+        "ticker": "DASH",
+        "price": 171.35
+      },
+      {
+        "ticker": "CEG",
+        "price": 279.29
+      },
+      {
+        "ticker": "NRG",
+        "price": 138.65
+      },
+      {
+        "ticker": "BKNG",
+        "price": 172.89
+      },
+      {
+        "ticker": "CRH",
+        "price": 113.68
+      },
+      {
+        "ticker": "COF",
+        "price": 203.7
+      },
+      {
+        "ticker": "POOL",
+        "price": 202.47
+      },
+      {
+        "ticker": "ACN",
+        "price": 131.71
+      }
+    ]
   }
 ]
