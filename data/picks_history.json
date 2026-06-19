@@ -2569,43 +2569,43 @@
     "picks": [
       {
         "ticker": "VST",
-        "price": 167.67
+        "price": 158.83
+      },
+      {
+        "ticker": "GPC",
+        "price": 106.12
       },
       {
         "ticker": "HPE",
-        "price": 48.14
+        "price": 48.2
       },
       {
         "ticker": "DASH",
-        "price": 171.35
-      },
-      {
-        "ticker": "CEG",
-        "price": 279.29
-      },
-      {
-        "ticker": "NRG",
-        "price": 138.65
-      },
-      {
-        "ticker": "BKNG",
-        "price": 172.89
+        "price": 165.66
       },
       {
         "ticker": "CRH",
-        "price": 113.68
+        "price": 109.41
+      },
+      {
+        "ticker": "BKNG",
+        "price": 171.63
       },
       {
         "ticker": "COF",
-        "price": 203.7
+        "price": 200.87
       },
       {
-        "ticker": "POOL",
-        "price": 202.47
+        "ticker": "NEM",
+        "price": 105.67
       },
       {
-        "ticker": "ACN",
-        "price": 131.71
+        "ticker": "SW",
+        "price": 43.42
+      },
+      {
+        "ticker": "OMC",
+        "price": 76.31
       }
     ]
   }
