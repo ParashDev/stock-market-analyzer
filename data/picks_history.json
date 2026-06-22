@@ -2608,5 +2608,50 @@
         "price": 76.31
       }
     ]
+  },
+  {
+    "date": "2026-06-22",
+    "picks": [
+      {
+        "ticker": "DASH",
+        "price": 173.93
+      },
+      {
+        "ticker": "VST",
+        "price": 167.24
+      },
+      {
+        "ticker": "HPE",
+        "price": 48.22
+      },
+      {
+        "ticker": "CRH",
+        "price": 111.85
+      },
+      {
+        "ticker": "CVNA",
+        "price": 67.01
+      },
+      {
+        "ticker": "COF",
+        "price": 201.79
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 244.98
+      },
+      {
+        "ticker": "NRG",
+        "price": 136.75
+      },
+      {
+        "ticker": "GPC",
+        "price": 106.17
+      },
+      {
+        "ticker": "BKNG",
+        "price": 168.41
+      }
+    ]
   }
 ]
