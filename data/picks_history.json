@@ -2653,5 +2653,50 @@
         "price": 168.41
       }
     ]
+  },
+  {
+    "date": "2026-06-23",
+    "picks": [
+      {
+        "ticker": "HPE",
+        "price": 47.22
+      },
+      {
+        "ticker": "VST",
+        "price": 164.24
+      },
+      {
+        "ticker": "AXON",
+        "price": 435.4
+      },
+      {
+        "ticker": "DASH",
+        "price": 173.99
+      },
+      {
+        "ticker": "CRH",
+        "price": 110.22
+      },
+      {
+        "ticker": "WYNN",
+        "price": 104.78
+      },
+      {
+        "ticker": "CCL",
+        "price": 28.25
+      },
+      {
+        "ticker": "COF",
+        "price": 200.62
+      },
+      {
+        "ticker": "ABT",
+        "price": 90.25
+      },
+      {
+        "ticker": "PCG",
+        "price": 16.75
+      }
+    ]
   }
 ]
