@@ -2698,5 +2698,50 @@
         "price": 16.75
       }
     ]
+  },
+  {
+    "date": "2026-06-24",
+    "picks": [
+      {
+        "ticker": "AXON",
+        "price": 455.52
+      },
+      {
+        "ticker": "HPE",
+        "price": 48.92
+      },
+      {
+        "ticker": "DASH",
+        "price": 174.87
+      },
+      {
+        "ticker": "IQV",
+        "price": 183.05
+      },
+      {
+        "ticker": "DHR",
+        "price": 187.34
+      },
+      {
+        "ticker": "TMO",
+        "price": 489.88
+      },
+      {
+        "ticker": "BKNG",
+        "price": 183.31
+      },
+      {
+        "ticker": "WYNN",
+        "price": 105.86
+      },
+      {
+        "ticker": "PCG",
+        "price": 17.04
+      },
+      {
+        "ticker": "MKC",
+        "price": 48.28
+      }
+    ]
   }
 ]
