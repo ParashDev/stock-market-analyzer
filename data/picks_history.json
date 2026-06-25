@@ -2743,5 +2743,50 @@
         "price": 48.28
       }
     ]
+  },
+  {
+    "date": "2026-06-25",
+    "picks": [
+      {
+        "ticker": "HPE",
+        "price": 47.33
+      },
+      {
+        "ticker": "AXON",
+        "price": 464.12
+      },
+      {
+        "ticker": "DASH",
+        "price": 177.05
+      },
+      {
+        "ticker": "VST",
+        "price": 169.38
+      },
+      {
+        "ticker": "NRG",
+        "price": 145.66
+      },
+      {
+        "ticker": "XYL",
+        "price": 118.99
+      },
+      {
+        "ticker": "PNR",
+        "price": 77.33
+      },
+      {
+        "ticker": "DHR",
+        "price": 196.76
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 250.35
+      },
+      {
+        "ticker": "J",
+        "price": 125.45
+      }
+    ]
   }
 ]
