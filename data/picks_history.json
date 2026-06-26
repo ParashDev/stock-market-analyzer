@@ -2788,5 +2788,50 @@
         "price": 125.45
       }
     ]
+  },
+  {
+    "date": "2026-06-26",
+    "picks": [
+      {
+        "ticker": "NRG",
+        "price": 147.45
+      },
+      {
+        "ticker": "PODD",
+        "price": 159.67
+      },
+      {
+        "ticker": "EQT",
+        "price": 53.38
+      },
+      {
+        "ticker": "DASH",
+        "price": 177.98
+      },
+      {
+        "ticker": "HPE",
+        "price": 44.24
+      },
+      {
+        "ticker": "VEEV",
+        "price": 165.86
+      },
+      {
+        "ticker": "AXON",
+        "price": 456.72
+      },
+      {
+        "ticker": "XYL",
+        "price": 116.47
+      },
+      {
+        "ticker": "PCG",
+        "price": 17.18
+      },
+      {
+        "ticker": "DHR",
+        "price": 195.15
+      }
+    ]
   }
 ]
