@@ -2833,5 +2833,50 @@
         "price": 195.15
       }
     ]
+  },
+  {
+    "date": "2026-06-29",
+    "picks": [
+      {
+        "ticker": "AXON",
+        "price": 513.48
+      },
+      {
+        "ticker": "CHTR",
+        "price": 148.93
+      },
+      {
+        "ticker": "CMCSA",
+        "price": 24.65
+      },
+      {
+        "ticker": "DASH",
+        "price": 184.14
+      },
+      {
+        "ticker": "VEEV",
+        "price": 174.52
+      },
+      {
+        "ticker": "NRG",
+        "price": 148.15
+      },
+      {
+        "ticker": "GDDY",
+        "price": 85.08
+      },
+      {
+        "ticker": "PODD",
+        "price": 157.7
+      },
+      {
+        "ticker": "UBER",
+        "price": 75.67
+      },
+      {
+        "ticker": "CMG",
+        "price": 32.94
+      }
+    ]
   }
 ]
