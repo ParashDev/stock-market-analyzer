@@ -2878,5 +2878,50 @@
         "price": 32.94
       }
     ]
+  },
+  {
+    "date": "2026-06-30",
+    "picks": [
+      {
+        "ticker": "DASH",
+        "price": 186.21
+      },
+      {
+        "ticker": "NRG",
+        "price": 148.91
+      },
+      {
+        "ticker": "MU",
+        "price": 1141.69
+      },
+      {
+        "ticker": "CMG",
+        "price": 33.33
+      },
+      {
+        "ticker": "XYL",
+        "price": 117.2
+      },
+      {
+        "ticker": "PODD",
+        "price": 155.85
+      },
+      {
+        "ticker": "UBER",
+        "price": 74.06
+      },
+      {
+        "ticker": "ZBRA",
+        "price": 255.89
+      },
+      {
+        "ticker": "GDDY",
+        "price": 85.1
+      },
+      {
+        "ticker": "DHR",
+        "price": 190.62
+      }
+    ]
   }
 ]
