@@ -2923,5 +2923,50 @@
         "price": 190.62
       }
     ]
+  },
+  {
+    "date": "2026-07-01",
+    "picks": [
+      {
+        "ticker": "META",
+        "price": 612.98
+      },
+      {
+        "ticker": "VEEV",
+        "price": 186.08
+      },
+      {
+        "ticker": "JKHY",
+        "price": 143.98
+      },
+      {
+        "ticker": "DASH",
+        "price": 189.04
+      },
+      {
+        "ticker": "PODD",
+        "price": 157.91
+      },
+      {
+        "ticker": "TSCO",
+        "price": 32.17
+      },
+      {
+        "ticker": "FIS",
+        "price": 40.6
+      },
+      {
+        "ticker": "MU",
+        "price": 1080.54
+      },
+      {
+        "ticker": "PNR",
+        "price": 77.17
+      },
+      {
+        "ticker": "WDAY",
+        "price": 128.48
+      }
+    ]
   }
 ]
