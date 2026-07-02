@@ -2968,5 +2968,50 @@
         "price": 128.48
       }
     ]
+  },
+  {
+    "date": "2026-07-02",
+    "picks": [
+      {
+        "ticker": "PLTR",
+        "price": 131.22
+      },
+      {
+        "ticker": "NOW",
+        "price": 105.7
+      },
+      {
+        "ticker": "VEEV",
+        "price": 188.36
+      },
+      {
+        "ticker": "NOC",
+        "price": 537.48
+      },
+      {
+        "ticker": "EFX",
+        "price": 166.7
+      },
+      {
+        "ticker": "WDAY",
+        "price": 131.79
+      },
+      {
+        "ticker": "DASH",
+        "price": 191.5
+      },
+      {
+        "ticker": "COIN",
+        "price": 170.18
+      },
+      {
+        "ticker": "JKHY",
+        "price": 144.95
+      },
+      {
+        "ticker": "PODD",
+        "price": 160.07
+      }
+    ]
   }
 ]
