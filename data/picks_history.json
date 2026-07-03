@@ -2973,44 +2973,44 @@
     "date": "2026-07-02",
     "picks": [
       {
+        "ticker": "EFX",
+        "price": 172.07
+      },
+      {
         "ticker": "PLTR",
-        "price": 131.22
-      },
-      {
-        "ticker": "NOW",
-        "price": 105.7
-      },
-      {
-        "ticker": "VEEV",
-        "price": 188.36
+        "price": 129.3
       },
       {
         "ticker": "NOC",
-        "price": 537.48
+        "price": 549.01
       },
       {
-        "ticker": "EFX",
-        "price": 166.7
+        "ticker": "NOW",
+        "price": 106.32
       },
       {
-        "ticker": "WDAY",
-        "price": 131.79
-      },
-      {
-        "ticker": "DASH",
-        "price": 191.5
-      },
-      {
-        "ticker": "COIN",
-        "price": 170.18
-      },
-      {
-        "ticker": "JKHY",
-        "price": 144.95
+        "ticker": "UHS",
+        "price": 158.33
       },
       {
         "ticker": "PODD",
-        "price": 160.07
+        "price": 164.48
+      },
+      {
+        "ticker": "TYL",
+        "price": 318.1
+      },
+      {
+        "ticker": "NFLX",
+        "price": 77.65
+      },
+      {
+        "ticker": "NWSA",
+        "price": 26.64
+      },
+      {
+        "ticker": "REGN",
+        "price": 654.27
       }
     ]
   }
