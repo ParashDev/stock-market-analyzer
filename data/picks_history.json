@@ -3013,5 +3013,50 @@
         "price": 654.27
       }
     ]
+  },
+  {
+    "date": "2026-07-06",
+    "picks": [
+      {
+        "ticker": "CMG",
+        "price": 33.99
+      },
+      {
+        "ticker": "UHS",
+        "price": 157.83
+      },
+      {
+        "ticker": "VEEV",
+        "price": 191.13
+      },
+      {
+        "ticker": "OMC",
+        "price": 79.26
+      },
+      {
+        "ticker": "PODD",
+        "price": 157.64
+      },
+      {
+        "ticker": "JKHY",
+        "price": 146.0
+      },
+      {
+        "ticker": "CVNA",
+        "price": 69.51
+      },
+      {
+        "ticker": "PLTR",
+        "price": 132.5
+      },
+      {
+        "ticker": "COIN",
+        "price": 166.58
+      },
+      {
+        "ticker": "KKR",
+        "price": 96.18
+      }
+    ]
   }
 ]
