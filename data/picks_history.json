@@ -3103,5 +3103,50 @@
         "price": 149.12
       }
     ]
+  },
+  {
+    "date": "2026-07-08",
+    "picks": [
+      {
+        "ticker": "DASH",
+        "price": 188.63
+      },
+      {
+        "ticker": "VEEV",
+        "price": 190.66
+      },
+      {
+        "ticker": "AVGO",
+        "price": 383.55
+      },
+      {
+        "ticker": "JKHY",
+        "price": 144.7
+      },
+      {
+        "ticker": "OMC",
+        "price": 78.57
+      },
+      {
+        "ticker": "FIS",
+        "price": 41.65
+      },
+      {
+        "ticker": "CMG",
+        "price": 33.24
+      },
+      {
+        "ticker": "COIN",
+        "price": 158.65
+      },
+      {
+        "ticker": "TYL",
+        "price": 315.62
+      },
+      {
+        "ticker": "META",
+        "price": 603.1
+      }
+    ]
   }
 ]
