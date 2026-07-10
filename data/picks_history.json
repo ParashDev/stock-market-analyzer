@@ -3193,5 +3193,50 @@
         "price": 1392.16
       }
     ]
+  },
+  {
+    "date": "2026-07-10",
+    "picks": [
+      {
+        "ticker": "META",
+        "price": 668.45
+      },
+      {
+        "ticker": "NRG",
+        "price": 142.79
+      },
+      {
+        "ticker": "HPE",
+        "price": 50.73
+      },
+      {
+        "ticker": "VST",
+        "price": 158.88
+      },
+      {
+        "ticker": "AVGO",
+        "price": 399.79
+      },
+      {
+        "ticker": "PNR",
+        "price": 76.39
+      },
+      {
+        "ticker": "NVDA",
+        "price": 207.45
+      },
+      {
+        "ticker": "DASH",
+        "price": 194.72
+      },
+      {
+        "ticker": "COIN",
+        "price": 162.47
+      },
+      {
+        "ticker": "UBER",
+        "price": 76.1
+      }
+    ]
   }
 ]
