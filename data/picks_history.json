@@ -3238,5 +3238,50 @@
         "price": 76.1
       }
     ]
+  },
+  {
+    "date": "2026-07-13",
+    "picks": [
+      {
+        "ticker": "INTU",
+        "price": 284.27
+      },
+      {
+        "ticker": "DASH",
+        "price": 193.39
+      },
+      {
+        "ticker": "HPE",
+        "price": 47.64
+      },
+      {
+        "ticker": "META",
+        "price": 655.11
+      },
+      {
+        "ticker": "FIS",
+        "price": 42.26
+      },
+      {
+        "ticker": "PODD",
+        "price": 162.84
+      },
+      {
+        "ticker": "UBER",
+        "price": 74.68
+      },
+      {
+        "ticker": "CEG",
+        "price": 254.93
+      },
+      {
+        "ticker": "GDDY",
+        "price": 89.67
+      },
+      {
+        "ticker": "VEEV",
+        "price": 194.12
+      }
+    ]
   }
 ]
