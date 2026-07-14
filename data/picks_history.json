@@ -3243,44 +3243,44 @@
     "date": "2026-07-13",
     "picks": [
       {
-        "ticker": "INTU",
-        "price": 284.27
-      },
-      {
         "ticker": "DASH",
-        "price": 193.39
+        "price": 189.57
       },
       {
-        "ticker": "HPE",
-        "price": 47.64
+        "ticker": "CRM",
+        "price": 171.22
       },
       {
         "ticker": "META",
-        "price": 655.11
+        "price": 656.73
       },
       {
-        "ticker": "FIS",
-        "price": 42.26
+        "ticker": "HPE",
+        "price": 47.24
       },
       {
-        "ticker": "PODD",
-        "price": 162.84
-      },
-      {
-        "ticker": "UBER",
-        "price": 74.68
+        "ticker": "PNR",
+        "price": 76.53
       },
       {
         "ticker": "CEG",
-        "price": 254.93
+        "price": 257.57
       },
       {
-        "ticker": "GDDY",
-        "price": 89.67
+        "ticker": "PODD",
+        "price": 162.06
       },
       {
-        "ticker": "VEEV",
-        "price": 194.12
+        "ticker": "INTU",
+        "price": 289.76
+      },
+      {
+        "ticker": "FIS",
+        "price": 41.93
+      },
+      {
+        "ticker": "VST",
+        "price": 158.12
       }
     ]
   }
