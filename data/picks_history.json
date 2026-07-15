@@ -3283,5 +3283,50 @@
         "price": 158.12
       }
     ]
+  },
+  {
+    "date": "2026-07-14",
+    "picks": [
+      {
+        "ticker": "HPE",
+        "price": 49.56
+      },
+      {
+        "ticker": "CVNA",
+        "price": 70.38
+      },
+      {
+        "ticker": "VEEV",
+        "price": 193.09
+      },
+      {
+        "ticker": "DASH",
+        "price": 187.79
+      },
+      {
+        "ticker": "META",
+        "price": 661.04
+      },
+      {
+        "ticker": "LITE",
+        "price": 814.8
+      },
+      {
+        "ticker": "PNR",
+        "price": 76.53
+      },
+      {
+        "ticker": "VST",
+        "price": 158.43
+      },
+      {
+        "ticker": "PODD",
+        "price": 162.06
+      },
+      {
+        "ticker": "INTU",
+        "price": 289.76
+      }
+    ]
   }
 ]
