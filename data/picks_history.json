@@ -3328,5 +3328,50 @@
         "price": 289.76
       }
     ]
+  },
+  {
+    "date": "2026-07-16",
+    "picks": [
+      {
+        "ticker": "PODD",
+        "price": 166.49
+      },
+      {
+        "ticker": "WY",
+        "price": 24.24
+      },
+      {
+        "ticker": "UBER",
+        "price": 74.82
+      },
+      {
+        "ticker": "VEEV",
+        "price": 196.05
+      },
+      {
+        "ticker": "TMUS",
+        "price": 190.79
+      },
+      {
+        "ticker": "PCG",
+        "price": 17.59
+      },
+      {
+        "ticker": "BR",
+        "price": 150.82
+      },
+      {
+        "ticker": "DASH",
+        "price": 192.24
+      },
+      {
+        "ticker": "ABT",
+        "price": 100.2
+      },
+      {
+        "ticker": "TSCO",
+        "price": 30.93
+      }
+    ]
   }
 ]
