@@ -3333,44 +3333,44 @@
     "date": "2026-07-16",
     "picks": [
       {
+        "ticker": "ABT",
+        "price": 98.83
+      },
+      {
         "ticker": "PODD",
-        "price": 166.49
+        "price": 164.43
+      },
+      {
+        "ticker": "CRM",
+        "price": 172.68
+      },
+      {
+        "ticker": "INTU",
+        "price": 294.79
       },
       {
         "ticker": "WY",
-        "price": 24.24
-      },
-      {
-        "ticker": "UBER",
-        "price": 74.82
-      },
-      {
-        "ticker": "VEEV",
-        "price": 196.05
+        "price": 24.45
       },
       {
         "ticker": "TMUS",
-        "price": 190.79
+        "price": 192.85
       },
       {
-        "ticker": "PCG",
-        "price": 17.59
+        "ticker": "FIS",
+        "price": 42.62
       },
       {
         "ticker": "BR",
-        "price": 150.82
+        "price": 153.06
       },
       {
-        "ticker": "DASH",
-        "price": 192.24
-      },
-      {
-        "ticker": "ABT",
-        "price": 100.2
+        "ticker": "TYL",
+        "price": 316.23
       },
       {
         "ticker": "TSCO",
-        "price": 30.93
+        "price": 31.01
       }
     ]
   }
