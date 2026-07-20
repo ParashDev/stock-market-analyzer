@@ -3373,5 +3373,50 @@
         "price": 31.01
       }
     ]
+  },
+  {
+    "date": "2026-07-20",
+    "picks": [
+      {
+        "ticker": "ADSK",
+        "price": 212.82
+      },
+      {
+        "ticker": "INTU",
+        "price": 282.25
+      },
+      {
+        "ticker": "VEEV",
+        "price": 195.01
+      },
+      {
+        "ticker": "PODD",
+        "price": 163.29
+      },
+      {
+        "ticker": "LITE",
+        "price": 788.8
+      },
+      {
+        "ticker": "TYL",
+        "price": 311.01
+      },
+      {
+        "ticker": "AXON",
+        "price": 509.98
+      },
+      {
+        "ticker": "CTSH",
+        "price": 43.38
+      },
+      {
+        "ticker": "PLTR",
+        "price": 133.37
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1358.2
+      }
+    ]
   }
 ]
