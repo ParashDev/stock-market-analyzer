@@ -3378,44 +3378,44 @@
     "date": "2026-07-20",
     "picks": [
       {
-        "ticker": "ADSK",
-        "price": 212.82
-      },
-      {
-        "ticker": "INTU",
-        "price": 282.25
-      },
-      {
-        "ticker": "VEEV",
-        "price": 195.01
-      },
-      {
         "ticker": "PODD",
-        "price": 163.29
+        "price": 167.37
       },
       {
-        "ticker": "LITE",
-        "price": 788.8
+        "ticker": "CRM",
+        "price": 173.79
       },
       {
         "ticker": "TYL",
-        "price": 311.01
+        "price": 317.96
       },
       {
-        "ticker": "AXON",
-        "price": 509.98
+        "ticker": "DASH",
+        "price": 189.02
       },
       {
-        "ticker": "CTSH",
-        "price": 43.38
+        "ticker": "EFX",
+        "price": 180.08
+      },
+      {
+        "ticker": "FIS",
+        "price": 42.27
+      },
+      {
+        "ticker": "TMUS",
+        "price": 195.64
       },
       {
         "ticker": "PLTR",
-        "price": 133.37
+        "price": 134.85
       },
       {
-        "ticker": "MPWR",
-        "price": 1358.2
+        "ticker": "ADSK",
+        "price": 217.8
+      },
+      {
+        "ticker": "MSFT",
+        "price": 402.29
       }
     ]
   }
