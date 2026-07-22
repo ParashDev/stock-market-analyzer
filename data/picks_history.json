@@ -3418,5 +3418,50 @@
         "price": 402.29
       }
     ]
+  },
+  {
+    "date": "2026-07-22",
+    "picks": [
+      {
+        "ticker": "EXE",
+        "price": 91.44
+      },
+      {
+        "ticker": "PODD",
+        "price": 165.5
+      },
+      {
+        "ticker": "DVN",
+        "price": 44.96
+      },
+      {
+        "ticker": "T",
+        "price": 23.35
+      },
+      {
+        "ticker": "HII",
+        "price": 274.6
+      },
+      {
+        "ticker": "HPE",
+        "price": 48.34
+      },
+      {
+        "ticker": "VEEV",
+        "price": 188.22
+      },
+      {
+        "ticker": "FIS",
+        "price": 41.88
+      },
+      {
+        "ticker": "INTU",
+        "price": 289.8
+      },
+      {
+        "ticker": "LITE",
+        "price": 834.92
+      }
+    ]
   }
 ]
