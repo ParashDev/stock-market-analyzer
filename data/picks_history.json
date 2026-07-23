@@ -3463,5 +3463,50 @@
         "price": 834.92
       }
     ]
+  },
+  {
+    "date": "2026-07-23",
+    "picks": [
+      {
+        "ticker": "MU",
+        "price": 997.3
+      },
+      {
+        "ticker": "LITE",
+        "price": 886.3
+      },
+      {
+        "ticker": "VST",
+        "price": 167.6
+      },
+      {
+        "ticker": "CEG",
+        "price": 274.86
+      },
+      {
+        "ticker": "HII",
+        "price": 290.95
+      },
+      {
+        "ticker": "DVN",
+        "price": 45.98
+      },
+      {
+        "ticker": "NOC",
+        "price": 543.29
+      },
+      {
+        "ticker": "EXE",
+        "price": 92.85
+      },
+      {
+        "ticker": "HPE",
+        "price": 48.76
+      },
+      {
+        "ticker": "LHX",
+        "price": 298.98
+      }
+    ]
   }
 ]
