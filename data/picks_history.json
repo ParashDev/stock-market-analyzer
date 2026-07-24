@@ -3468,44 +3468,44 @@
     "date": "2026-07-23",
     "picks": [
       {
-        "ticker": "MU",
-        "price": 997.3
+        "ticker": "NRG",
+        "price": 142.99
       },
       {
         "ticker": "LITE",
-        "price": 886.3
+        "price": 833.64
+      },
+      {
+        "ticker": "MU",
+        "price": 990.21
       },
       {
         "ticker": "VST",
-        "price": 167.6
+        "price": 168.98
       },
       {
         "ticker": "CEG",
-        "price": 274.86
-      },
-      {
-        "ticker": "HII",
-        "price": 290.95
-      },
-      {
-        "ticker": "DVN",
-        "price": 45.98
-      },
-      {
-        "ticker": "NOC",
-        "price": 543.29
-      },
-      {
-        "ticker": "EXE",
-        "price": 92.85
-      },
-      {
-        "ticker": "HPE",
-        "price": 48.76
+        "price": 275.6
       },
       {
         "ticker": "LHX",
-        "price": 298.98
+        "price": 299.67
+      },
+      {
+        "ticker": "DVN",
+        "price": 45.29
+      },
+      {
+        "ticker": "PCG",
+        "price": 17.54
+      },
+      {
+        "ticker": "EXE",
+        "price": 91.73
+      },
+      {
+        "ticker": "TSLA",
+        "price": 319.69
       }
     ]
   }
