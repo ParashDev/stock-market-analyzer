@@ -3508,5 +3508,50 @@
         "price": 319.69
       }
     ]
+  },
+  {
+    "date": "2026-07-27",
+    "picks": [
+      {
+        "ticker": "FIS",
+        "price": 42.79
+      },
+      {
+        "ticker": "UHS",
+        "price": 160.05
+      },
+      {
+        "ticker": "TRMB",
+        "price": 54.77
+      },
+      {
+        "ticker": "INTU",
+        "price": 304.86
+      },
+      {
+        "ticker": "BR",
+        "price": 152.57
+      },
+      {
+        "ticker": "PODD",
+        "price": 168.28
+      },
+      {
+        "ticker": "ADSK",
+        "price": 220.54
+      },
+      {
+        "ticker": "CTSH",
+        "price": 46.87
+      },
+      {
+        "ticker": "COIN",
+        "price": 164.4
+      },
+      {
+        "ticker": "CRM",
+        "price": 171.6
+      }
+    ]
   }
 ]
