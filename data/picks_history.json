@@ -3598,5 +3598,50 @@
         "price": 44.15
       }
     ]
+  },
+  {
+    "date": "2026-07-29",
+    "picks": [
+      {
+        "ticker": "TYL",
+        "price": 340.75
+      },
+      {
+        "ticker": "CRM",
+        "price": 185.32
+      },
+      {
+        "ticker": "INTU",
+        "price": 325.84
+      },
+      {
+        "ticker": "CPRT",
+        "price": 30.95
+      },
+      {
+        "ticker": "TRMB",
+        "price": 58.92
+      },
+      {
+        "ticker": "LDOS",
+        "price": 116.41
+      },
+      {
+        "ticker": "ADSK",
+        "price": 242.62
+      },
+      {
+        "ticker": "BR",
+        "price": 159.62
+      },
+      {
+        "ticker": "NOW",
+        "price": 113.38
+      },
+      {
+        "ticker": "CHTR",
+        "price": 140.27
+      }
+    ]
   }
 ]
