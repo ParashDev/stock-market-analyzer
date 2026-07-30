@@ -3643,5 +3643,50 @@
         "price": 140.27
       }
     ]
+  },
+  {
+    "date": "2026-07-30",
+    "picks": [
+      {
+        "ticker": "NOW",
+        "price": 108.74
+      },
+      {
+        "ticker": "TYL",
+        "price": 324.28
+      },
+      {
+        "ticker": "CRM",
+        "price": 178.54
+      },
+      {
+        "ticker": "INTU",
+        "price": 312.4
+      },
+      {
+        "ticker": "ADSK",
+        "price": 235.0
+      },
+      {
+        "ticker": "TRMB",
+        "price": 56.56
+      },
+      {
+        "ticker": "PTC",
+        "price": 136.9
+      },
+      {
+        "ticker": "BR",
+        "price": 153.28
+      },
+      {
+        "ticker": "CHTR",
+        "price": 139.98
+      },
+      {
+        "ticker": "DASH",
+        "price": 190.77
+      }
+    ]
   }
 ]
