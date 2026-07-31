@@ -3688,5 +3688,50 @@
         "price": 190.77
       }
     ]
+  },
+  {
+    "date": "2026-07-31",
+    "picks": [
+      {
+        "ticker": "ADSK",
+        "price": 233.2
+      },
+      {
+        "ticker": "CRM",
+        "price": 181.4
+      },
+      {
+        "ticker": "CHTR",
+        "price": 141.25
+      },
+      {
+        "ticker": "INTU",
+        "price": 315.29
+      },
+      {
+        "ticker": "HPE",
+        "price": 48.15
+      },
+      {
+        "ticker": "TRMB",
+        "price": 56.8
+      },
+      {
+        "ticker": "PTC",
+        "price": 136.71
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1465.3
+      },
+      {
+        "ticker": "AMZN",
+        "price": 268.0
+      },
+      {
+        "ticker": "NOW",
+        "price": 111.48
+      }
+    ]
   }
 ]
