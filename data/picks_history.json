@@ -3733,5 +3733,50 @@
         "price": 111.48
       }
     ]
+  },
+  {
+    "date": "2026-08-03",
+    "picks": [
+      {
+        "ticker": "INTU",
+        "price": 320.93
+      },
+      {
+        "ticker": "ADSK",
+        "price": 237.51
+      },
+      {
+        "ticker": "CRM",
+        "price": 188.64
+      },
+      {
+        "ticker": "LITE",
+        "price": 740.0
+      },
+      {
+        "ticker": "UAL",
+        "price": 129.97
+      },
+      {
+        "ticker": "BSX",
+        "price": 48.05
+      },
+      {
+        "ticker": "CHTR",
+        "price": 145.93
+      },
+      {
+        "ticker": "PTC",
+        "price": 141.77
+      },
+      {
+        "ticker": "DVN",
+        "price": 44.37
+      },
+      {
+        "ticker": "TRMB",
+        "price": 57.59
+      }
+    ]
   }
 ]
