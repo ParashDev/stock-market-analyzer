@@ -3873,44 +3873,44 @@
     "date": "2026-08-06",
     "picks": [
       {
-        "ticker": "NVDA",
-        "price": 222.82
+        "ticker": "LITE",
+        "price": 838.06
       },
       {
-        "ticker": "LITE",
-        "price": 829.34
+        "ticker": "NVDA",
+        "price": 218.99
+      },
+      {
+        "ticker": "ZTS",
+        "price": 77.27
+      },
+      {
+        "ticker": "BR",
+        "price": 164.75
       },
       {
         "ticker": "CRM",
-        "price": 185.73
+        "price": 186.77
       },
       {
         "ticker": "INTU",
-        "price": 322.15
-      },
-      {
-        "ticker": "PSKY",
-        "price": 8.97
-      },
-      {
-        "ticker": "NWSA",
-        "price": 30.16
-      },
-      {
-        "ticker": "BSX",
-        "price": 49.4
-      },
-      {
-        "ticker": "HPE",
-        "price": 51.62
+        "price": 321.91
       },
       {
         "ticker": "ADSK",
-        "price": 237.85
+        "price": 242.47
+      },
+      {
+        "ticker": "BSX",
+        "price": 49.3
       },
       {
         "ticker": "ALB",
-        "price": 125.86
+        "price": 125.42
+      },
+      {
+        "ticker": "TRMB",
+        "price": 58.55
       }
     ]
   }
