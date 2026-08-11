@@ -3958,5 +3958,50 @@
         "price": 249.08
       }
     ]
+  },
+  {
+    "date": "2026-08-10",
+    "picks": [
+      {
+        "ticker": "UBER",
+        "price": 78.03
+      },
+      {
+        "ticker": "DVN",
+        "price": 45.36
+      },
+      {
+        "ticker": "INTU",
+        "price": 334.43
+      },
+      {
+        "ticker": "ORCL",
+        "price": 151.05
+      },
+      {
+        "ticker": "NVDA",
+        "price": 217.55
+      },
+      {
+        "ticker": "ALB",
+        "price": 131.21
+      },
+      {
+        "ticker": "EXE",
+        "price": 97.56
+      },
+      {
+        "ticker": "LITE",
+        "price": 813.51
+      },
+      {
+        "ticker": "TRMB",
+        "price": 58.44
+      },
+      {
+        "ticker": "MCHP",
+        "price": 81.39
+      }
+    ]
   }
 ]
