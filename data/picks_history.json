@@ -4003,5 +4003,50 @@
         "price": 81.39
       }
     ]
+  },
+  {
+    "date": "2026-08-11",
+    "picks": [
+      {
+        "ticker": "INTU",
+        "price": 336.44
+      },
+      {
+        "ticker": "UBER",
+        "price": 78.03
+      },
+      {
+        "ticker": "TYL",
+        "price": 322.93
+      },
+      {
+        "ticker": "EXE",
+        "price": 97.56
+      },
+      {
+        "ticker": "ADSK",
+        "price": 251.59
+      },
+      {
+        "ticker": "LITE",
+        "price": 813.51
+      },
+      {
+        "ticker": "WYNN",
+        "price": 104.79
+      },
+      {
+        "ticker": "JBL",
+        "price": 356.61
+      },
+      {
+        "ticker": "TRMB",
+        "price": 57.98
+      },
+      {
+        "ticker": "DVN",
+        "price": 45.4
+      }
+    ]
   }
 ]
