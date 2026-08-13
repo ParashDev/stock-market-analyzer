@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-03-18",
-    "picks": [
-      {
-        "ticker": "VST",
-        "price": 170.12
-      },
-      {
-        "ticker": "COIN",
-        "price": 202.29
-      },
-      {
-        "ticker": "DDOG",
-        "price": 131.26
-      },
-      {
-        "ticker": "INTU",
-        "price": 446.79
-      },
-      {
-        "ticker": "AXON",
-        "price": 508.41
-      },
-      {
-        "ticker": "DPZ",
-        "price": 376.92
-      },
-      {
-        "ticker": "APP",
-        "price": 442.57
-      },
-      {
-        "ticker": "CEG",
-        "price": 317.22
-      },
-      {
-        "ticker": "FDS",
-        "price": 207.82
-      },
-      {
-        "ticker": "UBER",
-        "price": 76.66
-      }
-    ]
-  },
-  {
     "date": "2026-03-19",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "DVN",
         "price": 45.4
+      }
+    ]
+  },
+  {
+    "date": "2026-08-12",
+    "picks": [
+      {
+        "ticker": "UBER",
+        "price": 75.36
+      },
+      {
+        "ticker": "CIEN",
+        "price": 432.05
+      },
+      {
+        "ticker": "INTU",
+        "price": 334.71
+      },
+      {
+        "ticker": "LITE",
+        "price": 932.47
+      },
+      {
+        "ticker": "ORCL",
+        "price": 153.28
+      },
+      {
+        "ticker": "EXE",
+        "price": 96.28
+      },
+      {
+        "ticker": "STX",
+        "price": 878.21
+      },
+      {
+        "ticker": "DVN",
+        "price": 44.86
+      },
+      {
+        "ticker": "ADSK",
+        "price": 249.51
+      },
+      {
+        "ticker": "TRMB",
+        "price": 56.35
       }
     ]
   }
