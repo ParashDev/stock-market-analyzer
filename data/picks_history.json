@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-03-20",
-    "picks": [
-      {
-        "ticker": "INTU",
-        "price": 455.56
-      },
-      {
-        "ticker": "DDOG",
-        "price": 125.08
-      },
-      {
-        "ticker": "ADP",
-        "price": 208.69
-      },
-      {
-        "ticker": "GEN",
-        "price": 20.97
-      },
-      {
-        "ticker": "A",
-        "price": 111.3
-      },
-      {
-        "ticker": "COIN",
-        "price": 197.5
-      },
-      {
-        "ticker": "BR",
-        "price": 174.36
-      },
-      {
-        "ticker": "ADSK",
-        "price": 247.99
-      },
-      {
-        "ticker": "ROP",
-        "price": 353.68
-      },
-      {
-        "ticker": "AXON",
-        "price": 496.27
-      }
-    ]
-  },
-  {
     "date": "2026-03-23",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "STX",
         "price": 921.37
+      }
+    ]
+  },
+  {
+    "date": "2026-08-14",
+    "picks": [
+      {
+        "ticker": "INTU",
+        "price": 345.66
+      },
+      {
+        "ticker": "CIEN",
+        "price": 428.77
+      },
+      {
+        "ticker": "ALB",
+        "price": 136.15
+      },
+      {
+        "ticker": "WDC",
+        "price": 508.8
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1641.11
+      },
+      {
+        "ticker": "CPRT",
+        "price": 31.61
+      },
+      {
+        "ticker": "MU",
+        "price": 971.66
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1402.01
+      },
+      {
+        "ticker": "DVN",
+        "price": 45.85
+      },
+      {
+        "ticker": "ORCL",
+        "price": 150.52
       }
     ]
   }
