@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-03-24",
-    "picks": [
-      {
-        "ticker": "INTU",
-        "price": 432.45
-      },
-      {
-        "ticker": "PTC",
-        "price": 142.96
-      },
-      {
-        "ticker": "XYZ",
-        "price": 59.89
-      },
-      {
-        "ticker": "DDOG",
-        "price": 122.57
-      },
-      {
-        "ticker": "HBAN",
-        "price": 15.48
-      },
-      {
-        "ticker": "ANET",
-        "price": 130.8
-      },
-      {
-        "ticker": "PANW",
-        "price": 157.21
-      },
-      {
-        "ticker": "MSFT",
-        "price": 372.74
-      },
-      {
-        "ticker": "EL",
-        "price": 71.48
-      },
-      {
-        "ticker": "SPGI",
-        "price": 411.2
-      }
-    ]
-  },
-  {
     "date": "2026-03-25",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "RDDT",
         "price": 178.09
+      }
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "picks": [
+      {
+        "ticker": "CPRT",
+        "price": 31.51
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1625.78
+      },
+      {
+        "ticker": "INTU",
+        "price": 350.41
+      },
+      {
+        "ticker": "LITE",
+        "price": 873.31
+      },
+      {
+        "ticker": "CEG",
+        "price": 266.83
+      },
+      {
+        "ticker": "EME",
+        "price": 824.53
+      },
+      {
+        "ticker": "WDC",
+        "price": 496.16
+      },
+      {
+        "ticker": "DVN",
+        "price": 47.83
+      },
+      {
+        "ticker": "PCG",
+        "price": 17.82
+      },
+      {
+        "ticker": "NVDA",
+        "price": 219.74
       }
     ]
   }
