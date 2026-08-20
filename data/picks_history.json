@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-03-25",
-    "picks": [
-      {
-        "ticker": "AMD",
-        "price": 220.27
-      },
-      {
-        "ticker": "XYZ",
-        "price": 60.01
-      },
-      {
-        "ticker": "GPC",
-        "price": 105.12
-      },
-      {
-        "ticker": "FIS",
-        "price": 47.6
-      },
-      {
-        "ticker": "ANET",
-        "price": 135.01
-      },
-      {
-        "ticker": "MA",
-        "price": 502.76
-      },
-      {
-        "ticker": "DDOG",
-        "price": 123.29
-      },
-      {
-        "ticker": "WST",
-        "price": 247.02
-      },
-      {
-        "ticker": "NCLH",
-        "price": 20.22
-      },
-      {
-        "ticker": "BRO",
-        "price": 64.29
-      }
-    ]
-  },
-  {
     "date": "2026-03-26",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "NVDA",
         "price": 219.74
+      }
+    ]
+  },
+  {
+    "date": "2026-08-19",
+    "picks": [
+      {
+        "ticker": "TRMB",
+        "price": 59.25
+      },
+      {
+        "ticker": "CBRE",
+        "price": 155.07
+      },
+      {
+        "ticker": "ZTS",
+        "price": 76.68
+      },
+      {
+        "ticker": "ALB",
+        "price": 134.28
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1568.87
+      },
+      {
+        "ticker": "UBER",
+        "price": 78.04
+      },
+      {
+        "ticker": "FICO",
+        "price": 1161.59
+      },
+      {
+        "ticker": "ADSK",
+        "price": 251.29
+      },
+      {
+        "ticker": "COIN",
+        "price": 160.2
+      },
+      {
+        "ticker": "CMG",
+        "price": 34.66
       }
     ]
   }
