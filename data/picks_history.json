@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-03-26",
-    "picks": [
-      {
-        "ticker": "NVDA",
-        "price": 171.24
-      },
-      {
-        "ticker": "V",
-        "price": 305.53
-      },
-      {
-        "ticker": "FIS",
-        "price": 47.41
-      },
-      {
-        "ticker": "WST",
-        "price": 248.12
-      },
-      {
-        "ticker": "XYZ",
-        "price": 59.37
-      },
-      {
-        "ticker": "GEHC",
-        "price": 71.54
-      },
-      {
-        "ticker": "GPC",
-        "price": 105.28
-      },
-      {
-        "ticker": "DDOG",
-        "price": 124.3
-      },
-      {
-        "ticker": "URI",
-        "price": 742.22
-      },
-      {
-        "ticker": "AMD",
-        "price": 203.77
-      }
-    ]
-  },
-  {
     "date": "2026-03-27",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "CMG",
         "price": 34.66
+      }
+    ]
+  },
+  {
+    "date": "2026-08-20",
+    "picks": [
+      {
+        "ticker": "TRMB",
+        "price": 59.68
+      },
+      {
+        "ticker": "UBER",
+        "price": 78.55
+      },
+      {
+        "ticker": "CMG",
+        "price": 35.29
+      },
+      {
+        "ticker": "ALB",
+        "price": 134.19
+      },
+      {
+        "ticker": "WMT",
+        "price": 103.84
+      },
+      {
+        "ticker": "INTU",
+        "price": 361.87
+      },
+      {
+        "ticker": "EXE",
+        "price": 96.07
+      },
+      {
+        "ticker": "PCG",
+        "price": 17.96
+      },
+      {
+        "ticker": "TYL",
+        "price": 348.14
+      },
+      {
+        "ticker": "ADSK",
+        "price": 251.02
       }
     ]
   }
