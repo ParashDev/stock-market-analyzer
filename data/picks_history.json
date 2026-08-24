@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-03-27",
-    "picks": [
-      {
-        "ticker": "APTV",
-        "price": 67.04
-      },
-      {
-        "ticker": "PTC",
-        "price": 137.61
-      },
-      {
-        "ticker": "GPC",
-        "price": 105.02
-      },
-      {
-        "ticker": "AMZN",
-        "price": 199.34
-      },
-      {
-        "ticker": "PODD",
-        "price": 208.22
-      },
-      {
-        "ticker": "SNPS",
-        "price": 380.47
-      },
-      {
-        "ticker": "SW",
-        "price": 39.41
-      },
-      {
-        "ticker": "WY",
-        "price": 23.86
-      },
-      {
-        "ticker": "CEG",
-        "price": 301.49
-      },
-      {
-        "ticker": "META",
-        "price": 525.72
-      }
-    ]
-  },
-  {
     "date": "2026-03-30",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "ADSK",
         "price": 251.02
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21",
+    "picks": [
+      {
+        "ticker": "TRMB",
+        "price": 60.25
+      },
+      {
+        "ticker": "ORCL",
+        "price": 146.47
+      },
+      {
+        "ticker": "UBER",
+        "price": 78.8
+      },
+      {
+        "ticker": "CMG",
+        "price": 36.9
+      },
+      {
+        "ticker": "EXE",
+        "price": 96.09
+      },
+      {
+        "ticker": "ANET",
+        "price": 188.65
+      },
+      {
+        "ticker": "ZTS",
+        "price": 77.73
+      },
+      {
+        "ticker": "ALB",
+        "price": 143.25
+      },
+      {
+        "ticker": "ADSK",
+        "price": 253.83
+      },
+      {
+        "ticker": "INTU",
+        "price": 367.0
       }
     ]
   }
