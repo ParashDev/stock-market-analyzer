@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-03-30",
-    "picks": [
-      {
-        "ticker": "NWSA",
-        "price": 24.78
-      },
-      {
-        "ticker": "SYY",
-        "price": 69.3
-      },
-      {
-        "ticker": "BSX",
-        "price": 62.93
-      },
-      {
-        "ticker": "WY",
-        "price": 24.28
-      },
-      {
-        "ticker": "CHTR",
-        "price": 220.94
-      },
-      {
-        "ticker": "ISRG",
-        "price": 452.78
-      },
-      {
-        "ticker": "FDS",
-        "price": 204.55
-      },
-      {
-        "ticker": "WST",
-        "price": 245.14
-      },
-      {
-        "ticker": "EPAM",
-        "price": 136.18
-      },
-      {
-        "ticker": "TDG",
-        "price": 1132.88
-      }
-    ]
-  },
-  {
     "date": "2026-03-31",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "INTU",
         "price": 367.0
+      }
+    ]
+  },
+  {
+    "date": "2026-08-24",
+    "picks": [
+      {
+        "ticker": "TRMB",
+        "price": 60.67
+      },
+      {
+        "ticker": "UBER",
+        "price": 79.29
+      },
+      {
+        "ticker": "EXE",
+        "price": 96.33
+      },
+      {
+        "ticker": "ALB",
+        "price": 141.51
+      },
+      {
+        "ticker": "ZTS",
+        "price": 77.17
+      },
+      {
+        "ticker": "CHTR",
+        "price": 150.3
+      },
+      {
+        "ticker": "ORCL",
+        "price": 142.45
+      },
+      {
+        "ticker": "TMUS",
+        "price": 182.62
+      },
+      {
+        "ticker": "ADSK",
+        "price": 254.42
+      },
+      {
+        "ticker": "STZ",
+        "price": 137.6
       }
     ]
   }
