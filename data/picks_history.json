@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-03-31",
-    "picks": [
-      {
-        "ticker": "NWSA",
-        "price": 24.93
-      },
-      {
-        "ticker": "FDS",
-        "price": 216.99
-      },
-      {
-        "ticker": "SOLV",
-        "price": 65.3
-      },
-      {
-        "ticker": "CVNA",
-        "price": 314.38
-      },
-      {
-        "ticker": "NEM",
-        "price": 108.25
-      },
-      {
-        "ticker": "BX",
-        "price": 114.99
-      },
-      {
-        "ticker": "NKE",
-        "price": 52.82
-      },
-      {
-        "ticker": "XYZ",
-        "price": 60.18
-      },
-      {
-        "ticker": "AMD",
-        "price": 203.43
-      },
-      {
-        "ticker": "ELV",
-        "price": 292.75
-      }
-    ]
-  },
-  {
     "date": "2026-04-01",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "STZ",
         "price": 137.6
+      }
+    ]
+  },
+  {
+    "date": "2026-08-25",
+    "picks": [
+      {
+        "ticker": "LITE",
+        "price": 885.57
+      },
+      {
+        "ticker": "ORCL",
+        "price": 144.76
+      },
+      {
+        "ticker": "ALB",
+        "price": 133.18
+      },
+      {
+        "ticker": "SNPS",
+        "price": 408.79
+      },
+      {
+        "ticker": "UBER",
+        "price": 80.35
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1480.77
+      },
+      {
+        "ticker": "INTU",
+        "price": 357.46
+      },
+      {
+        "ticker": "TRMB",
+        "price": 59.43
+      },
+      {
+        "ticker": "NVDA",
+        "price": 213.05
+      },
+      {
+        "ticker": "EXE",
+        "price": 94.66
       }
     ]
   }
