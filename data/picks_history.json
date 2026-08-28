@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-02",
-    "picks": [
-      {
-        "ticker": "AMD",
-        "price": 217.5
-      },
-      {
-        "ticker": "DASH",
-        "price": 156.45
-      },
-      {
-        "ticker": "SBAC",
-        "price": 204.04
-      },
-      {
-        "ticker": "SWK",
-        "price": 68.64
-      },
-      {
-        "ticker": "NVDA",
-        "price": 177.39
-      },
-      {
-        "ticker": "PANW",
-        "price": 163.21
-      },
-      {
-        "ticker": "NWSA",
-        "price": 24.4
-      },
-      {
-        "ticker": "UNH",
-        "price": 277.26
-      },
-      {
-        "ticker": "GOOGL",
-        "price": 295.77
-      },
-      {
-        "ticker": "CVS",
-        "price": 73.49
-      }
-    ]
-  },
-  {
     "date": "2026-04-06",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "ALB",
         "price": 135.77
+      }
+    ]
+  },
+  {
+    "date": "2026-08-28",
+    "picks": [
+      {
+        "ticker": "SNPS",
+        "price": 442.61
+      },
+      {
+        "ticker": "NVDA",
+        "price": 217.55
+      },
+      {
+        "ticker": "ORCL",
+        "price": 150.85
+      },
+      {
+        "ticker": "LITE",
+        "price": 895.0
+      },
+      {
+        "ticker": "HPE",
+        "price": 52.31
+      },
+      {
+        "ticker": "TRMB",
+        "price": 61.01
+      },
+      {
+        "ticker": "BG",
+        "price": 115.48
+      },
+      {
+        "ticker": "VRT",
+        "price": 257.08
+      },
+      {
+        "ticker": "PCG",
+        "price": 16.6
+      },
+      {
+        "ticker": "ADSK",
+        "price": 260.66
       }
     ]
   }
