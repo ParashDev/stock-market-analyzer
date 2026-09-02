@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-08",
-    "picks": [
-      {
-        "ticker": "MU",
-        "price": 406.73
-      },
-      {
-        "ticker": "UAL",
-        "price": 96.3
-      },
-      {
-        "ticker": "AVGO",
-        "price": 350.63
-      },
-      {
-        "ticker": "COF",
-        "price": 192.46
-      },
-      {
-        "ticker": "CDW",
-        "price": 126.73
-      },
-      {
-        "ticker": "ANET",
-        "price": 145.07
-      },
-      {
-        "ticker": "META",
-        "price": 612.42
-      },
-      {
-        "ticker": "AMD",
-        "price": 231.82
-      },
-      {
-        "ticker": "BKNG",
-        "price": 181.0
-      },
-      {
-        "ticker": "CRH",
-        "price": 113.82
-      }
-    ]
-  },
-  {
     "date": "2026-04-09",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "CEG",
         "price": 281.0
+      }
+    ]
+  },
+  {
+    "date": "2026-09-02",
+    "picks": [
+      {
+        "ticker": "NVDA",
+        "price": 227.6
+      },
+      {
+        "ticker": "TMUS",
+        "price": 187.07
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1539.7
+      },
+      {
+        "ticker": "RDDT",
+        "price": 154.87
+      },
+      {
+        "ticker": "ALB",
+        "price": 134.63
+      },
+      {
+        "ticker": "UBER",
+        "price": 76.43
+      },
+      {
+        "ticker": "SNPS",
+        "price": 415.2
+      },
+      {
+        "ticker": "EXE",
+        "price": 99.96
+      },
+      {
+        "ticker": "DVN",
+        "price": 48.97
+      },
+      {
+        "ticker": "DELL",
+        "price": 450.83
       }
     ]
   }
