@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-10",
-    "picks": [
-      {
-        "ticker": "AVGO",
-        "price": 371.55
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 222.13
-      },
-      {
-        "ticker": "IDXX",
-        "price": 563.0
-      },
-      {
-        "ticker": "MU",
-        "price": 420.59
-      },
-      {
-        "ticker": "CDW",
-        "price": 125.53
-      },
-      {
-        "ticker": "CVNA",
-        "price": 336.31
-      },
-      {
-        "ticker": "NVDA",
-        "price": 188.63
-      },
-      {
-        "ticker": "XYZ",
-        "price": 62.2
-      },
-      {
-        "ticker": "UAL",
-        "price": 96.4
-      },
-      {
-        "ticker": "COF",
-        "price": 193.0
-      }
-    ]
-  },
-  {
     "date": "2026-04-13",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "EXE",
         "price": 99.74
+      }
+    ]
+  },
+  {
+    "date": "2026-09-04",
+    "picks": [
+      {
+        "ticker": "MU",
+        "price": 999.43
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1688.09
+      },
+      {
+        "ticker": "ORCL",
+        "price": 157.45
+      },
+      {
+        "ticker": "NVDA",
+        "price": 231.8
+      },
+      {
+        "ticker": "HPE",
+        "price": 52.75
+      },
+      {
+        "ticker": "VST",
+        "price": 147.79
+      },
+      {
+        "ticker": "WDC",
+        "price": 460.19
+      },
+      {
+        "ticker": "FICO",
+        "price": 921.51
+      },
+      {
+        "ticker": "KLAC",
+        "price": 185.79
+      },
+      {
+        "ticker": "STX",
+        "price": 838.0
       }
     ]
   }
