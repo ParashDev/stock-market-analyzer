@@ -4008,44 +4008,44 @@
     "date": "2026-09-04",
     "picks": [
       {
-        "ticker": "MU",
-        "price": 999.43
+        "ticker": "VST",
+        "price": 149.3
       },
       {
-        "ticker": "SNDK",
-        "price": 1688.09
+        "ticker": "MU",
+        "price": 1016.59
       },
       {
         "ticker": "ORCL",
-        "price": 157.45
-      },
-      {
-        "ticker": "NVDA",
-        "price": 231.8
+        "price": 158.78
       },
       {
         "ticker": "HPE",
-        "price": 52.75
+        "price": 52.0
       },
       {
-        "ticker": "VST",
-        "price": 147.79
-      },
-      {
-        "ticker": "WDC",
-        "price": 460.19
-      },
-      {
-        "ticker": "FICO",
-        "price": 921.51
-      },
-      {
-        "ticker": "KLAC",
-        "price": 185.79
+        "ticker": "NVDA",
+        "price": 230.36
       },
       {
         "ticker": "STX",
-        "price": 838.0
+        "price": 849.28
+      },
+      {
+        "ticker": "LITE",
+        "price": 881.26
+      },
+      {
+        "ticker": "NRG",
+        "price": 119.02
+      },
+      {
+        "ticker": "TMUS",
+        "price": 181.52
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1740.0
       }
     ]
   }
