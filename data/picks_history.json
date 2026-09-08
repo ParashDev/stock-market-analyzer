@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-13",
-    "picks": [
-      {
-        "ticker": "ORCL",
-        "price": 155.62
-      },
-      {
-        "ticker": "KKR",
-        "price": 98.14
-      },
-      {
-        "ticker": "COF",
-        "price": 197.55
-      },
-      {
-        "ticker": "TECH",
-        "price": 57.53
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 226.09
-      },
-      {
-        "ticker": "APP",
-        "price": 417.45
-      },
-      {
-        "ticker": "CDW",
-        "price": 131.89
-      },
-      {
-        "ticker": "META",
-        "price": 634.53
-      },
-      {
-        "ticker": "ACN",
-        "price": 191.95
-      },
-      {
-        "ticker": "XYZ",
-        "price": 64.22
-      }
-    ]
-  },
-  {
     "date": "2026-04-14",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "SNDK",
         "price": 1740.0
+      }
+    ]
+  },
+  {
+    "date": "2026-09-08",
+    "picks": [
+      {
+        "ticker": "COHR",
+        "price": 308.9
+      },
+      {
+        "ticker": "STX",
+        "price": 890.2
+      },
+      {
+        "ticker": "VST",
+        "price": 154.1
+      },
+      {
+        "ticker": "ORCL",
+        "price": 164.42
+      },
+      {
+        "ticker": "MU",
+        "price": 1027.59
+      },
+      {
+        "ticker": "ECHO",
+        "price": 94.47
+      },
+      {
+        "ticker": "LITE",
+        "price": 986.73
+      },
+      {
+        "ticker": "WDC",
+        "price": 476.42
+      },
+      {
+        "ticker": "FIX",
+        "price": 1645.6
+      },
+      {
+        "ticker": "MRVL",
+        "price": 230.8
       }
     ]
   }
