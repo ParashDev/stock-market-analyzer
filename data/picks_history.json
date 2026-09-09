@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-14",
-    "picks": [
-      {
-        "ticker": "ORCL",
-        "price": 163.0
-      },
-      {
-        "ticker": "NVDA",
-        "price": 196.51
-      },
-      {
-        "ticker": "HOOD",
-        "price": 79.09
-      },
-      {
-        "ticker": "XYZ",
-        "price": 66.15
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 226.7
-      },
-      {
-        "ticker": "COF",
-        "price": 199.84
-      },
-      {
-        "ticker": "META",
-        "price": 662.49
-      },
-      {
-        "ticker": "A",
-        "price": 120.39
-      },
-      {
-        "ticker": "COIN",
-        "price": 184.41
-      },
-      {
-        "ticker": "UAL",
-        "price": 97.2
-      }
-    ]
-  },
-  {
     "date": "2026-04-15",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "MRVL",
         "price": 230.8
+      }
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "picks": [
+      {
+        "ticker": "MU",
+        "price": 1023.27
+      },
+      {
+        "ticker": "WDC",
+        "price": 491.48
+      },
+      {
+        "ticker": "ORCL",
+        "price": 161.26
+      },
+      {
+        "ticker": "VST",
+        "price": 149.84
+      },
+      {
+        "ticker": "COHR",
+        "price": 308.36
+      },
+      {
+        "ticker": "ECHO",
+        "price": 90.48
+      },
+      {
+        "ticker": "AKAM",
+        "price": 112.13
+      },
+      {
+        "ticker": "STX",
+        "price": 908.7
+      },
+      {
+        "ticker": "AMD",
+        "price": 523.18
+      },
+      {
+        "ticker": "NVDA",
+        "price": 224.29
       }
     ]
   }
