@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-16",
-    "picks": [
-      {
-        "ticker": "ORCL",
-        "price": 178.34
-      },
-      {
-        "ticker": "DDOG",
-        "price": 123.47
-      },
-      {
-        "ticker": "DASH",
-        "price": 179.33
-      },
-      {
-        "ticker": "APP",
-        "price": 466.09
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 233.04
-      },
-      {
-        "ticker": "NVDA",
-        "price": 198.35
-      },
-      {
-        "ticker": "MSFT",
-        "price": 420.26
-      },
-      {
-        "ticker": "ARES",
-        "price": 116.22
-      },
-      {
-        "ticker": "ADSK",
-        "price": 243.16
-      },
-      {
-        "ticker": "IQV",
-        "price": 171.95
-      }
-    ]
-  },
-  {
     "date": "2026-04-17",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "COO",
         "price": 54.68
+      }
+    ]
+  },
+  {
+    "date": "2026-09-11",
+    "picks": [
+      {
+        "ticker": "COHR",
+        "price": 306.3
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1642.17
+      },
+      {
+        "ticker": "EME",
+        "price": 779.66
+      },
+      {
+        "ticker": "FIX",
+        "price": 1691.4
+      },
+      {
+        "ticker": "ORCL",
+        "price": 153.73
+      },
+      {
+        "ticker": "MRVL",
+        "price": 237.85
+      },
+      {
+        "ticker": "FLEX",
+        "price": 116.65
+      },
+      {
+        "ticker": "MU",
+        "price": 980.47
+      },
+      {
+        "ticker": "ADI",
+        "price": 378.24
+      },
+      {
+        "ticker": "JBL",
+        "price": 319.15
       }
     ]
   }
