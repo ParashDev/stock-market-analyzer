@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-20",
-    "picks": [
-      {
-        "ticker": "APP",
-        "price": 490.96
-      },
-      {
-        "ticker": "DDOG",
-        "price": 129.74
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 237.3
-      },
-      {
-        "ticker": "DASH",
-        "price": 189.8
-      },
-      {
-        "ticker": "ORCL",
-        "price": 177.58
-      },
-      {
-        "ticker": "MSFT",
-        "price": 418.07
-      },
-      {
-        "ticker": "WDAY",
-        "price": 127.94
-      },
-      {
-        "ticker": "NOW",
-        "price": 99.72
-      },
-      {
-        "ticker": "TTD",
-        "price": 24.05
-      },
-      {
-        "ticker": "BLDR",
-        "price": 91.32
-      }
-    ]
-  },
-  {
     "date": "2026-04-21",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "GOOG",
         "price": 345.42
+      }
+    ]
+  },
+  {
+    "date": "2026-09-15",
+    "picks": [
+      {
+        "ticker": "APP",
+        "price": 327.42
+      },
+      {
+        "ticker": "TRMB",
+        "price": 59.25
+      },
+      {
+        "ticker": "ADSK",
+        "price": 231.33
+      },
+      {
+        "ticker": "RDDT",
+        "price": 159.72
+      },
+      {
+        "ticker": "FICO",
+        "price": 987.25
+      },
+      {
+        "ticker": "CHRW",
+        "price": 156.85
+      },
+      {
+        "ticker": "TMUS",
+        "price": 181.51
+      },
+      {
+        "ticker": "CASY",
+        "price": 595.37
+      },
+      {
+        "ticker": "ECHO",
+        "price": 92.39
+      },
+      {
+        "ticker": "ISRG",
+        "price": 377.02
       }
     ]
   }
