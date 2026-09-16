@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-21",
-    "picks": [
-      {
-        "ticker": "DASH",
-        "price": 182.45
-      },
-      {
-        "ticker": "APP",
-        "price": 473.18
-      },
-      {
-        "ticker": "DDOG",
-        "price": 129.29
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 236.67
-      },
-      {
-        "ticker": "GDDY",
-        "price": 88.6
-      },
-      {
-        "ticker": "MSFT",
-        "price": 424.16
-      },
-      {
-        "ticker": "ORCL",
-        "price": 181.17
-      },
-      {
-        "ticker": "NVDA",
-        "price": 199.88
-      },
-      {
-        "ticker": "A",
-        "price": 122.09
-      },
-      {
-        "ticker": "UBER",
-        "price": 77.26
-      }
-    ]
-  },
-  {
     "date": "2026-04-22",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "ISRG",
         "price": 377.02
+      }
+    ]
+  },
+  {
+    "date": "2026-09-16",
+    "picks": [
+      {
+        "ticker": "TPR",
+        "price": 120.24
+      },
+      {
+        "ticker": "MRVL",
+        "price": 229.0
+      },
+      {
+        "ticker": "APP",
+        "price": 329.69
+      },
+      {
+        "ticker": "EXE",
+        "price": 90.89
+      },
+      {
+        "ticker": "ECHO",
+        "price": 94.36
+      },
+      {
+        "ticker": "RDDT",
+        "price": 159.46
+      },
+      {
+        "ticker": "CHRW",
+        "price": 154.15
+      },
+      {
+        "ticker": "XYL",
+        "price": 107.68
+      },
+      {
+        "ticker": "TRMB",
+        "price": 58.23
+      },
+      {
+        "ticker": "MLM",
+        "price": 507.14
       }
     ]
   }
