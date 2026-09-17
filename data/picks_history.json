@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-22",
-    "picks": [
-      {
-        "ticker": "ORCL",
-        "price": 187.5
-      },
-      {
-        "ticker": "ADBE",
-        "price": 255.94
-      },
-      {
-        "ticker": "DDOG",
-        "price": 132.14
-      },
-      {
-        "ticker": "GDDY",
-        "price": 88.4
-      },
-      {
-        "ticker": "DASH",
-        "price": 182.27
-      },
-      {
-        "ticker": "NVDA",
-        "price": 202.5
-      },
-      {
-        "ticker": "APP",
-        "price": 483.71
-      },
-      {
-        "ticker": "CRM",
-        "price": 189.8
-      },
-      {
-        "ticker": "MSFT",
-        "price": 432.92
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 231.1
-      }
-    ]
-  },
-  {
     "date": "2026-04-23",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "MLM",
         "price": 507.14
+      }
+    ]
+  },
+  {
+    "date": "2026-09-17",
+    "picks": [
+      {
+        "ticker": "GNRC",
+        "price": 210.08
+      },
+      {
+        "ticker": "KEYS",
+        "price": 336.77
+      },
+      {
+        "ticker": "CIEN",
+        "price": 355.94
+      },
+      {
+        "ticker": "ORCL",
+        "price": 151.03
+      },
+      {
+        "ticker": "ECHO",
+        "price": 94.71
+      },
+      {
+        "ticker": "MU",
+        "price": 976.86
+      },
+      {
+        "ticker": "GEV",
+        "price": 943.53
+      },
+      {
+        "ticker": "ANET",
+        "price": 202.49
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1596.89
+      },
+      {
+        "ticker": "NVDA",
+        "price": 218.69
       }
     ]
   }
