@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-23",
-    "picks": [
-      {
-        "ticker": "ORCL",
-        "price": 176.28
-      },
-      {
-        "ticker": "DASH",
-        "price": 177.0
-      },
-      {
-        "ticker": "DDOG",
-        "price": 127.86
-      },
-      {
-        "ticker": "MSFT",
-        "price": 415.75
-      },
-      {
-        "ticker": "BLDR",
-        "price": 90.14
-      },
-      {
-        "ticker": "NVDA",
-        "price": 199.64
-      },
-      {
-        "ticker": "APP",
-        "price": 454.17
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 226.87
-      },
-      {
-        "ticker": "NWSA",
-        "price": 26.31
-      },
-      {
-        "ticker": "TTWO",
-        "price": 209.9
-      }
-    ]
-  },
-  {
     "date": "2026-04-27",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "NVDA",
         "price": 218.69
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18",
+    "picks": [
+      {
+        "ticker": "SNDK",
+        "price": 1721.35
+      },
+      {
+        "ticker": "COHR",
+        "price": 308.69
+      },
+      {
+        "ticker": "GNRC",
+        "price": 202.1
+      },
+      {
+        "ticker": "ORCL",
+        "price": 145.84
+      },
+      {
+        "ticker": "STX",
+        "price": 836.74
+      },
+      {
+        "ticker": "MU",
+        "price": 990.29
+      },
+      {
+        "ticker": "ECHO",
+        "price": 91.95
+      },
+      {
+        "ticker": "KLAC",
+        "price": 173.47
+      },
+      {
+        "ticker": "TJX",
+        "price": 127.83
+      },
+      {
+        "ticker": "NVDA",
+        "price": 219.55
       }
     ]
   }
