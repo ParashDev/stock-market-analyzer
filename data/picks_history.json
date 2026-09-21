@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-27",
-    "picks": [
-      {
-        "ticker": "ORCL",
-        "price": 170.25
-      },
-      {
-        "ticker": "MSFT",
-        "price": 420.51
-      },
-      {
-        "ticker": "UBER",
-        "price": 76.31
-      },
-      {
-        "ticker": "META",
-        "price": 676.45
-      },
-      {
-        "ticker": "VST",
-        "price": 161.09
-      },
-      {
-        "ticker": "DASH",
-        "price": 179.2
-      },
-      {
-        "ticker": "EXE",
-        "price": 98.39
-      },
-      {
-        "ticker": "DDOG",
-        "price": 129.4
-      },
-      {
-        "ticker": "NVDA",
-        "price": 209.93
-      },
-      {
-        "ticker": "TTD",
-        "price": 23.5
-      }
-    ]
-  },
-  {
     "date": "2026-04-28",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "NVDA",
         "price": 219.55
+      }
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "picks": [
+      {
+        "ticker": "MU",
+        "price": 1040.55
+      },
+      {
+        "ticker": "COHR",
+        "price": 322.7
+      },
+      {
+        "ticker": "GNRC",
+        "price": 204.55
+      },
+      {
+        "ticker": "STX",
+        "price": 872.63
+      },
+      {
+        "ticker": "AKAM",
+        "price": 115.94
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1262.57
+      },
+      {
+        "ticker": "NVDA",
+        "price": 227.29
+      },
+      {
+        "ticker": "P",
+        "price": 113.03
+      },
+      {
+        "ticker": "ECHO",
+        "price": 95.41
+      },
+      {
+        "ticker": "APP",
+        "price": 329.71
       }
     ]
   }
