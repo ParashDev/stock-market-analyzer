@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-28",
-    "picks": [
-      {
-        "ticker": "DDOG",
-        "price": 133.56
-      },
-      {
-        "ticker": "MSFT",
-        "price": 426.19
-      },
-      {
-        "ticker": "NVDA",
-        "price": 211.39
-      },
-      {
-        "ticker": "APP",
-        "price": 456.42
-      },
-      {
-        "ticker": "META",
-        "price": 675.17
-      },
-      {
-        "ticker": "VST",
-        "price": 160.04
-      },
-      {
-        "ticker": "XYL",
-        "price": 118.47
-      },
-      {
-        "ticker": "DASH",
-        "price": 175.56
-      },
-      {
-        "ticker": "NEM",
-        "price": 111.76
-      },
-      {
-        "ticker": "PNR",
-        "price": 84.45
-      }
-    ]
-  },
-  {
     "date": "2026-04-29",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "APP",
         "price": 329.71
+      }
+    ]
+  },
+  {
+    "date": "2026-09-22",
+    "picks": [
+      {
+        "ticker": "MPWR",
+        "price": 1378.28
+      },
+      {
+        "ticker": "COHR",
+        "price": 309.64
+      },
+      {
+        "ticker": "MU",
+        "price": 1080.83
+      },
+      {
+        "ticker": "NVDA",
+        "price": 228.73
+      },
+      {
+        "ticker": "SNPS",
+        "price": 410.0
+      },
+      {
+        "ticker": "GNRC",
+        "price": 206.73
+      },
+      {
+        "ticker": "AKAM",
+        "price": 119.78
+      },
+      {
+        "ticker": "STX",
+        "price": 892.99
+      },
+      {
+        "ticker": "P",
+        "price": 109.02
+      },
+      {
+        "ticker": "AZO",
+        "price": 2970.92
       }
     ]
   }
