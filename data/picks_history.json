@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-29",
-    "picks": [
-      {
-        "ticker": "NVDA",
-        "price": 210.8
-      },
-      {
-        "ticker": "FICO",
-        "price": 1056.28
-      },
-      {
-        "ticker": "MA",
-        "price": 525.64
-      },
-      {
-        "ticker": "TTD",
-        "price": 24.17
-      },
-      {
-        "ticker": "MSFT",
-        "price": 424.48
-      },
-      {
-        "ticker": "TMUS",
-        "price": 195.63
-      },
-      {
-        "ticker": "META",
-        "price": 666.92
-      },
-      {
-        "ticker": "EXE",
-        "price": 101.28
-      },
-      {
-        "ticker": "DDOG",
-        "price": 130.18
-      },
-      {
-        "ticker": "VST",
-        "price": 159.03
-      }
-    ]
-  },
-  {
     "date": "2026-04-30",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "AZO",
         "price": 2970.92
+      }
+    ]
+  },
+  {
+    "date": "2026-09-23",
+    "picks": [
+      {
+        "ticker": "SNPS",
+        "price": 413.89
+      },
+      {
+        "ticker": "NVDA",
+        "price": 224.8
+      },
+      {
+        "ticker": "MU",
+        "price": 1075.84
+      },
+      {
+        "ticker": "COHR",
+        "price": 304.3
+      },
+      {
+        "ticker": "AKAM",
+        "price": 117.68
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1323.67
+      },
+      {
+        "ticker": "GNRC",
+        "price": 204.42
+      },
+      {
+        "ticker": "WDC",
+        "price": 464.87
+      },
+      {
+        "ticker": "VRT",
+        "price": 252.15
+      },
+      {
+        "ticker": "RCL",
+        "price": 228.21
       }
     ]
   }
