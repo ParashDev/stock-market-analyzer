@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-04-30",
-    "picks": [
-      {
-        "ticker": "TECH",
-        "price": 55.32
-      },
-      {
-        "ticker": "GPN",
-        "price": 71.96
-      },
-      {
-        "ticker": "DDOG",
-        "price": 132.19
-      },
-      {
-        "ticker": "GDDY",
-        "price": 86.79
-      },
-      {
-        "ticker": "MSFT",
-        "price": 407.78
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 226.26
-      },
-      {
-        "ticker": "LLY",
-        "price": 934.6
-      },
-      {
-        "ticker": "WYNN",
-        "price": 107.11
-      },
-      {
-        "ticker": "NVDA",
-        "price": 199.57
-      },
-      {
-        "ticker": "RVTY",
-        "price": 86.62
-      }
-    ]
-  },
-  {
     "date": "2026-05-04",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "RCL",
         "price": 228.21
+      }
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "picks": [
+      {
+        "ticker": "AKAM",
+        "price": 113.62
+      },
+      {
+        "ticker": "MU",
+        "price": 1064.77
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1343.99
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1764.29
+      },
+      {
+        "ticker": "SNPS",
+        "price": 422.29
+      },
+      {
+        "ticker": "WDC",
+        "price": 459.13
+      },
+      {
+        "ticker": "GNRC",
+        "price": 198.16
+      },
+      {
+        "ticker": "AMAT",
+        "price": 469.54
+      },
+      {
+        "ticker": "CDNS",
+        "price": 319.18
+      },
+      {
+        "ticker": "NVDA",
+        "price": 223.41
       }
     ]
   }
