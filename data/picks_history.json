@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-04",
-    "picks": [
-      {
-        "ticker": "APP",
-        "price": 477.53
-      },
-      {
-        "ticker": "GDDY",
-        "price": 88.84
-      },
-      {
-        "ticker": "ORCL",
-        "price": 180.74
-      },
-      {
-        "ticker": "CRM",
-        "price": 187.53
-      },
-      {
-        "ticker": "GPN",
-        "price": 72.96
-      },
-      {
-        "ticker": "FICO",
-        "price": 1059.52
-      },
-      {
-        "ticker": "ARES",
-        "price": 121.56
-      },
-      {
-        "ticker": "DASH",
-        "price": 173.76
-      },
-      {
-        "ticker": "DDOG",
-        "price": 142.08
-      },
-      {
-        "ticker": "MSFT",
-        "price": 419.89
-      }
-    ]
-  },
-  {
     "date": "2026-05-06",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "NVDA",
         "price": 223.41
+      }
+    ]
+  },
+  {
+    "date": "2026-09-25",
+    "picks": [
+      {
+        "ticker": "AKAM",
+        "price": 116.23
+      },
+      {
+        "ticker": "MU",
+        "price": 1077.53
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1365.46
+      },
+      {
+        "ticker": "GNRC",
+        "price": 207.59
+      },
+      {
+        "ticker": "MCHP",
+        "price": 77.85
+      },
+      {
+        "ticker": "JBL",
+        "price": 322.82
+      },
+      {
+        "ticker": "ON",
+        "price": 77.32
+      },
+      {
+        "ticker": "FLEX",
+        "price": 116.88
+      },
+      {
+        "ticker": "NXPI",
+        "price": 238.46
+      },
+      {
+        "ticker": "CARR",
+        "price": 56.55
       }
     ]
   }
