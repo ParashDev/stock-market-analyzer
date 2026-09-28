@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-06",
-    "picks": [
-      {
-        "ticker": "UBER",
-        "price": 77.49
-      },
-      {
-        "ticker": "UAL",
-        "price": 97.57
-      },
-      {
-        "ticker": "ORCL",
-        "price": 184.78
-      },
-      {
-        "ticker": "GPN",
-        "price": 72.74
-      },
-      {
-        "ticker": "APP",
-        "price": 459.79
-      },
-      {
-        "ticker": "IQV",
-        "price": 177.7
-      },
-      {
-        "ticker": "DIS",
-        "price": 108.66
-      },
-      {
-        "ticker": "A",
-        "price": 118.32
-      },
-      {
-        "ticker": "RCL",
-        "price": 277.53
-      },
-      {
-        "ticker": "WYNN",
-        "price": 108.06
-      }
-    ]
-  },
-  {
     "date": "2026-05-07",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "CARR",
         "price": 56.55
+      }
+    ]
+  },
+  {
+    "date": "2026-09-28",
+    "picks": [
+      {
+        "ticker": "MU",
+        "price": 1053.93
+      },
+      {
+        "ticker": "JBL",
+        "price": 319.6
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1347.49
+      },
+      {
+        "ticker": "MCHP",
+        "price": 77.68
+      },
+      {
+        "ticker": "NVDA",
+        "price": 229.99
+      },
+      {
+        "ticker": "GNRC",
+        "price": 205.02
+      },
+      {
+        "ticker": "NXPI",
+        "price": 236.68
+      },
+      {
+        "ticker": "ON",
+        "price": 76.06
+      },
+      {
+        "ticker": "FIX",
+        "price": 1658.21
+      },
+      {
+        "ticker": "AMAT",
+        "price": 485.58
       }
     ]
   }
