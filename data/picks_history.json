@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-07",
-    "picks": [
-      {
-        "ticker": "APP",
-        "price": 498.87
-      },
-      {
-        "ticker": "WDAY",
-        "price": 130.88
-      },
-      {
-        "ticker": "AXON",
-        "price": 426.89
-      },
-      {
-        "ticker": "GEN",
-        "price": 20.19
-      },
-      {
-        "ticker": "FICO",
-        "price": 1128.39
-      },
-      {
-        "ticker": "DASH",
-        "price": 171.35
-      },
-      {
-        "ticker": "IQV",
-        "price": 178.64
-      },
-      {
-        "ticker": "ADSK",
-        "price": 251.04
-      },
-      {
-        "ticker": "PTC",
-        "price": 147.65
-      },
-      {
-        "ticker": "UAL",
-        "price": 99.7
-      }
-    ]
-  },
-  {
     "date": "2026-05-11",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "AMAT",
         "price": 485.58
+      }
+    ]
+  },
+  {
+    "date": "2026-09-29",
+    "picks": [
+      {
+        "ticker": "CCL",
+        "price": 24.91
+      },
+      {
+        "ticker": "AMAT",
+        "price": 502.2
+      },
+      {
+        "ticker": "RCL",
+        "price": 257.7
+      },
+      {
+        "ticker": "GNRC",
+        "price": 209.56
+      },
+      {
+        "ticker": "MCHP",
+        "price": 79.23
+      },
+      {
+        "ticker": "FICO",
+        "price": 624.31
+      },
+      {
+        "ticker": "MU",
+        "price": 1070.01
+      },
+      {
+        "ticker": "MLM",
+        "price": 478.88
+      },
+      {
+        "ticker": "NCLH",
+        "price": 14.74
+      },
+      {
+        "ticker": "NVDA",
+        "price": 229.06
       }
     ]
   }
