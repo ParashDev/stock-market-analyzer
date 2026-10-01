@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-12",
-    "picks": [
-      {
-        "ticker": "ZBRA",
-        "price": 256.32
-      },
-      {
-        "ticker": "GEN",
-        "price": 22.02
-      },
-      {
-        "ticker": "ORCL",
-        "price": 186.1
-      },
-      {
-        "ticker": "APP",
-        "price": 485.48
-      },
-      {
-        "ticker": "NWSA",
-        "price": 26.41
-      },
-      {
-        "ticker": "GDDY",
-        "price": 87.5
-      },
-      {
-        "ticker": "UBER",
-        "price": 75.66
-      },
-      {
-        "ticker": "PTC",
-        "price": 145.72
-      },
-      {
-        "ticker": "STE",
-        "price": 206.94
-      },
-      {
-        "ticker": "AXON",
-        "price": 399.81
-      }
-    ]
-  },
-  {
     "date": "2026-05-13",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "JBL",
         "price": 292.08
+      }
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "picks": [
+      {
+        "ticker": "COHR",
+        "price": 318.19
+      },
+      {
+        "ticker": "CIEN",
+        "price": 375.38
+      },
+      {
+        "ticker": "MU",
+        "price": 1090.72
+      },
+      {
+        "ticker": "CCL",
+        "price": 24.92
+      },
+      {
+        "ticker": "GNRC",
+        "price": 206.3
+      },
+      {
+        "ticker": "ON",
+        "price": 78.58
+      },
+      {
+        "ticker": "AMAT",
+        "price": 528.43
+      },
+      {
+        "ticker": "MCHP",
+        "price": 78.97
+      },
+      {
+        "ticker": "RCL",
+        "price": 267.41
+      },
+      {
+        "ticker": "CHRW",
+        "price": 151.67
       }
     ]
   }
