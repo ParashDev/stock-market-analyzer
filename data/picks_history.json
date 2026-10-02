@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-13",
-    "picks": [
-      {
-        "ticker": "ZBRA",
-        "price": 246.19
-      },
-      {
-        "ticker": "GEN",
-        "price": 22.86
-      },
-      {
-        "ticker": "APP",
-        "price": 454.74
-      },
-      {
-        "ticker": "NWSA",
-        "price": 26.7
-      },
-      {
-        "ticker": "ANET",
-        "price": 146.91
-      },
-      {
-        "ticker": "GDDY",
-        "price": 83.28
-      },
-      {
-        "ticker": "ORCL",
-        "price": 189.91
-      },
-      {
-        "ticker": "APTV",
-        "price": 56.12
-      },
-      {
-        "ticker": "PTC",
-        "price": 141.4
-      },
-      {
-        "ticker": "AXON",
-        "price": 371.73
-      }
-    ]
-  },
-  {
     "date": "2026-05-14",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "CHRW",
         "price": 151.67
+      }
+    ]
+  },
+  {
+    "date": "2026-10-02",
+    "picks": [
+      {
+        "ticker": "MPWR",
+        "price": 1431.65
+      },
+      {
+        "ticker": "GNRC",
+        "price": 215.41
+      },
+      {
+        "ticker": "CCL",
+        "price": 25.71
+      },
+      {
+        "ticker": "CIEN",
+        "price": 385.68
+      },
+      {
+        "ticker": "CHRW",
+        "price": 157.92
+      },
+      {
+        "ticker": "MCHP",
+        "price": 81.8
+      },
+      {
+        "ticker": "COHR",
+        "price": 334.51
+      },
+      {
+        "ticker": "AKAM",
+        "price": 111.99
+      },
+      {
+        "ticker": "EME",
+        "price": 792.74
+      },
+      {
+        "ticker": "Q",
+        "price": 131.66
       }
     ]
   }
