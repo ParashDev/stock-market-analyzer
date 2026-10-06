@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-14",
-    "picks": [
-      {
-        "ticker": "GEN",
-        "price": 23.0
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 249.0
-      },
-      {
-        "ticker": "APTV",
-        "price": 55.8
-      },
-      {
-        "ticker": "NWSA",
-        "price": 26.37
-      },
-      {
-        "ticker": "ORCL",
-        "price": 186.88
-      },
-      {
-        "ticker": "XYZ",
-        "price": 70.37
-      },
-      {
-        "ticker": "RCL",
-        "price": 269.04
-      },
-      {
-        "ticker": "UAL",
-        "price": 96.22
-      },
-      {
-        "ticker": "A",
-        "price": 114.8
-      },
-      {
-        "ticker": "NEM",
-        "price": 116.42
-      }
-    ]
-  },
-  {
     "date": "2026-05-15",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "Q",
         "price": 131.66
+      }
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "picks": [
+      {
+        "ticker": "VST",
+        "price": 161.49
+      },
+      {
+        "ticker": "TRMB",
+        "price": 60.89
+      },
+      {
+        "ticker": "GNRC",
+        "price": 224.21
+      },
+      {
+        "ticker": "AVGO",
+        "price": 380.49
+      },
+      {
+        "ticker": "CCL",
+        "price": 26.48
+      },
+      {
+        "ticker": "EME",
+        "price": 827.95
+      },
+      {
+        "ticker": "ECHO",
+        "price": 98.49
+      },
+      {
+        "ticker": "ADSK",
+        "price": 226.7
+      },
+      {
+        "ticker": "NVDA",
+        "price": 240.19
+      },
+      {
+        "ticker": "FIX",
+        "price": 1820.2
       }
     ]
   }
