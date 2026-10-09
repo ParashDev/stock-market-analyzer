@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-19",
-    "picks": [
-      {
-        "ticker": "NOW",
-        "price": 105.5
-      },
-      {
-        "ticker": "WDAY",
-        "price": 133.49
-      },
-      {
-        "ticker": "CRM",
-        "price": 184.43
-      },
-      {
-        "ticker": "FICO",
-        "price": 1218.62
-      },
-      {
-        "ticker": "ADSK",
-        "price": 248.01
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 251.46
-      },
-      {
-        "ticker": "INTU",
-        "price": 411.13
-      },
-      {
-        "ticker": "EPAM",
-        "price": 104.53
-      },
-      {
-        "ticker": "ADBE",
-        "price": 261.22
-      },
-      {
-        "ticker": "EXE",
-        "price": 100.14
-      }
-    ]
-  },
-  {
     "date": "2026-05-20",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "STZ",
         "price": 122.25
+      }
+    ]
+  },
+  {
+    "date": "2026-10-09",
+    "picks": [
+      {
+        "ticker": "VST",
+        "price": 160.45
+      },
+      {
+        "ticker": "CCI",
+        "price": 77.66
+      },
+      {
+        "ticker": "ADSK",
+        "price": 235.13
+      },
+      {
+        "ticker": "RDDT",
+        "price": 161.42
+      },
+      {
+        "ticker": "GNRC",
+        "price": 224.85
+      },
+      {
+        "ticker": "AMT",
+        "price": 179.79
+      },
+      {
+        "ticker": "SBAC",
+        "price": 181.48
+      },
+      {
+        "ticker": "CCL",
+        "price": 26.17
+      },
+      {
+        "ticker": "T",
+        "price": 22.16
+      },
+      {
+        "ticker": "TMUS",
+        "price": 148.78
       }
     ]
   }
