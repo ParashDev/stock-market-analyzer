@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-20",
-    "picks": [
-      {
-        "ticker": "NOW",
-        "price": 100.99
-      },
-      {
-        "ticker": "GPN",
-        "price": 69.96
-      },
-      {
-        "ticker": "FICO",
-        "price": 1208.77
-      },
-      {
-        "ticker": "WDAY",
-        "price": 126.32
-      },
-      {
-        "ticker": "HAS",
-        "price": 88.92
-      },
-      {
-        "ticker": "ADBE",
-        "price": 250.05
-      },
-      {
-        "ticker": "CRM",
-        "price": 176.85
-      },
-      {
-        "ticker": "VRSK",
-        "price": 169.46
-      },
-      {
-        "ticker": "TDG",
-        "price": 1198.86
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 244.77
-      }
-    ]
-  },
-  {
     "date": "2026-05-21",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "TMUS",
         "price": 148.78
+      }
+    ]
+  },
+  {
+    "date": "2026-10-12",
+    "picks": [
+      {
+        "ticker": "GNRC",
+        "price": 218.37
+      },
+      {
+        "ticker": "VST",
+        "price": 158.13
+      },
+      {
+        "ticker": "MRVL",
+        "price": 265.86
+      },
+      {
+        "ticker": "CIEN",
+        "price": 405.01
+      },
+      {
+        "ticker": "CCL",
+        "price": 26.48
+      },
+      {
+        "ticker": "FLEX",
+        "price": 117.24
+      },
+      {
+        "ticker": "RDDT",
+        "price": 159.93
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1319.23
+      },
+      {
+        "ticker": "ADSK",
+        "price": 233.54
+      },
+      {
+        "ticker": "NRG",
+        "price": 106.37
       }
     ]
   }
