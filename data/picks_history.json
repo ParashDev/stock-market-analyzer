@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-21",
-    "picks": [
-      {
-        "ticker": "APP",
-        "price": 495.18
-      },
-      {
-        "ticker": "NOW",
-        "price": 101.42
-      },
-      {
-        "ticker": "GPN",
-        "price": 70.92
-      },
-      {
-        "ticker": "UAL",
-        "price": 96.52
-      },
-      {
-        "ticker": "FICO",
-        "price": 1238.54
-      },
-      {
-        "ticker": "VEEV",
-        "price": 160.9
-      },
-      {
-        "ticker": "WDAY",
-        "price": 122.52
-      },
-      {
-        "ticker": "ADSK",
-        "price": 241.28
-      },
-      {
-        "ticker": "GDDY",
-        "price": 91.49
-      },
-      {
-        "ticker": "CTSH",
-        "price": 51.31
-      }
-    ]
-  },
-  {
     "date": "2026-05-22",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "NRG",
         "price": 106.37
+      }
+    ]
+  },
+  {
+    "date": "2026-10-13",
+    "picks": [
+      {
+        "ticker": "VST",
+        "price": 162.81
+      },
+      {
+        "ticker": "GNRC",
+        "price": 210.69
+      },
+      {
+        "ticker": "CCL",
+        "price": 26.79
+      },
+      {
+        "ticker": "ORCL",
+        "price": 143.77
+      },
+      {
+        "ticker": "RDDT",
+        "price": 157.94
+      },
+      {
+        "ticker": "DECK",
+        "price": 84.46
+      },
+      {
+        "ticker": "EXE",
+        "price": 92.61
+      },
+      {
+        "ticker": "FIS",
+        "price": 35.41
+      },
+      {
+        "ticker": "PCG",
+        "price": 13.25
+      },
+      {
+        "ticker": "FSLR",
+        "price": 186.41
       }
     ]
   }
