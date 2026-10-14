@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-22",
-    "picks": [
-      {
-        "ticker": "VST",
-        "price": 155.16
-      },
-      {
-        "ticker": "WDAY",
-        "price": 127.36
-      },
-      {
-        "ticker": "NOW",
-        "price": 100.38
-      },
-      {
-        "ticker": "GPN",
-        "price": 73.49
-      },
-      {
-        "ticker": "UAL",
-        "price": 99.14
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 252.0
-      },
-      {
-        "ticker": "TMO",
-        "price": 448.1
-      },
-      {
-        "ticker": "CTSH",
-        "price": 52.42
-      },
-      {
-        "ticker": "FIS",
-        "price": 44.06
-      },
-      {
-        "ticker": "A",
-        "price": 114.5
-      }
-    ]
-  },
-  {
     "date": "2026-05-29",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "FSLR",
         "price": 186.41
+      }
+    ]
+  },
+  {
+    "date": "2026-10-14",
+    "picks": [
+      {
+        "ticker": "CCL",
+        "price": 25.91
+      },
+      {
+        "ticker": "HOOD",
+        "price": 102.18
+      },
+      {
+        "ticker": "EXE",
+        "price": 91.67
+      },
+      {
+        "ticker": "JBL",
+        "price": 294.52
+      },
+      {
+        "ticker": "VST",
+        "price": 151.29
+      },
+      {
+        "ticker": "IDXX",
+        "price": 524.52
+      },
+      {
+        "ticker": "GEV",
+        "price": 933.16
+      },
+      {
+        "ticker": "CARR",
+        "price": 53.81
+      },
+      {
+        "ticker": "DECK",
+        "price": 81.61
+      },
+      {
+        "ticker": "VMC",
+        "price": 239.34
       }
     ]
   }
