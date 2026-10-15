@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-05-29",
-    "picks": [
-      {
-        "ticker": "CRM",
-        "price": 190.24
-      },
-      {
-        "ticker": "AXON",
-        "price": 435.55
-      },
-      {
-        "ticker": "VEEV",
-        "price": 170.31
-      },
-      {
-        "ticker": "SW",
-        "price": 40.99
-      },
-      {
-        "ticker": "CRH",
-        "price": 110.85
-      },
-      {
-        "ticker": "MSFT",
-        "price": 444.16
-      },
-      {
-        "ticker": "IQV",
-        "price": 180.35
-      },
-      {
-        "ticker": "NKE",
-        "price": 46.53
-      },
-      {
-        "ticker": "WDAY",
-        "price": 139.42
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 246.13
-      }
-    ]
-  },
-  {
     "date": "2026-06-01",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "VMC",
         "price": 239.34
+      }
+    ]
+  },
+  {
+    "date": "2026-10-15",
+    "picks": [
+      {
+        "ticker": "ADSK",
+        "price": 241.83
+      },
+      {
+        "ticker": "INTU",
+        "price": 328.69
+      },
+      {
+        "ticker": "CCL",
+        "price": 26.32
+      },
+      {
+        "ticker": "DECK",
+        "price": 86.33
+      },
+      {
+        "ticker": "IDXX",
+        "price": 543.52
+      },
+      {
+        "ticker": "ZTS",
+        "price": 78.58
+      },
+      {
+        "ticker": "RDDT",
+        "price": 156.46
+      },
+      {
+        "ticker": "CSGP",
+        "price": 32.03
+      },
+      {
+        "ticker": "TRMB",
+        "price": 60.36
+      },
+      {
+        "ticker": "IP",
+        "price": 34.16
       }
     ]
   }
