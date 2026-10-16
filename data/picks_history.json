@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-01",
-    "picks": [
-      {
-        "ticker": "ADSK",
-        "price": 246.95
-      },
-      {
-        "ticker": "VEEV",
-        "price": 187.9
-      },
-      {
-        "ticker": "ACN",
-        "price": 196.35
-      },
-      {
-        "ticker": "ROP",
-        "price": 344.02
-      },
-      {
-        "ticker": "NVDA",
-        "price": 221.94
-      },
-      {
-        "ticker": "SW",
-        "price": 41.4
-      },
-      {
-        "ticker": "WYNN",
-        "price": 106.34
-      },
-      {
-        "ticker": "AXON",
-        "price": 479.33
-      },
-      {
-        "ticker": "CTSH",
-        "price": 57.33
-      },
-      {
-        "ticker": "INTU",
-        "price": 357.08
-      }
-    ]
-  },
-  {
     "date": "2026-06-02",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "IP",
         "price": 34.16
+      }
+    ]
+  },
+  {
+    "date": "2026-10-16",
+    "picks": [
+      {
+        "ticker": "EXE",
+        "price": 93.42
+      },
+      {
+        "ticker": "CCL",
+        "price": 26.67
+      },
+      {
+        "ticker": "DECK",
+        "price": 86.08
+      },
+      {
+        "ticker": "IDXX",
+        "price": 564.63
+      },
+      {
+        "ticker": "EQT",
+        "price": 54.04
+      },
+      {
+        "ticker": "ADSK",
+        "price": 239.74
+      },
+      {
+        "ticker": "INTU",
+        "price": 323.48
+      },
+      {
+        "ticker": "NXPI",
+        "price": 233.12
+      },
+      {
+        "ticker": "APTV",
+        "price": 45.63
+      },
+      {
+        "ticker": "RDDT",
+        "price": 157.82
       }
     ]
   }
