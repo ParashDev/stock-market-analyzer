@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-02",
-    "picks": [
-      {
-        "ticker": "CRM",
-        "price": 198.45
-      },
-      {
-        "ticker": "VEEV",
-        "price": 180.64
-      },
-      {
-        "ticker": "NVDA",
-        "price": 225.12
-      },
-      {
-        "ticker": "ACN",
-        "price": 184.98
-      },
-      {
-        "ticker": "ADBE",
-        "price": 261.89
-      },
-      {
-        "ticker": "SW",
-        "price": 41.88
-      },
-      {
-        "ticker": "AXON",
-        "price": 478.0
-      },
-      {
-        "ticker": "IQV",
-        "price": 182.37
-      },
-      {
-        "ticker": "WY",
-        "price": 24.34
-      },
-      {
-        "ticker": "CTSH",
-        "price": 54.33
-      }
-    ]
-  },
-  {
     "date": "2026-06-03",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "RDDT",
         "price": 157.82
+      }
+    ]
+  },
+  {
+    "date": "2026-10-19",
+    "picks": [
+      {
+        "ticker": "EXE",
+        "price": 93.48
+      },
+      {
+        "ticker": "DECK",
+        "price": 87.36
+      },
+      {
+        "ticker": "CCL",
+        "price": 26.29
+      },
+      {
+        "ticker": "TPR",
+        "price": 117.13
+      },
+      {
+        "ticker": "IDXX",
+        "price": 558.95
+      },
+      {
+        "ticker": "ADSK",
+        "price": 240.1
+      },
+      {
+        "ticker": "TMUS",
+        "price": 157.94
+      },
+      {
+        "ticker": "TRMB",
+        "price": 59.92
+      },
+      {
+        "ticker": "ALGN",
+        "price": 149.41
+      },
+      {
+        "ticker": "INTU",
+        "price": 326.39
       }
     ]
   }
