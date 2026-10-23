@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-08",
-    "picks": [
-      {
-        "ticker": "AXON",
-        "price": 483.56
-      },
-      {
-        "ticker": "APH",
-        "price": 143.76
-      },
-      {
-        "ticker": "DHR",
-        "price": 185.31
-      },
-      {
-        "ticker": "ABT",
-        "price": 90.49
-      },
-      {
-        "ticker": "WY",
-        "price": 24.17
-      },
-      {
-        "ticker": "COR",
-        "price": 274.33
-      },
-      {
-        "ticker": "HPE",
-        "price": 50.63
-      },
-      {
-        "ticker": "FICO",
-        "price": 1191.55
-      },
-      {
-        "ticker": "PCG",
-        "price": 16.59
-      },
-      {
-        "ticker": "NWSA",
-        "price": 26.95
-      }
-    ]
-  },
-  {
     "date": "2026-06-09",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "CRH",
         "price": 86.29
+      }
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "picks": [
+      {
+        "ticker": "CCL",
+        "price": 26.16
+      },
+      {
+        "ticker": "XYL",
+        "price": 109.2
+      },
+      {
+        "ticker": "ECHO",
+        "price": 88.96
+      },
+      {
+        "ticker": "FIX",
+        "price": 1173.85
+      },
+      {
+        "ticker": "HAL",
+        "price": 35.15
+      },
+      {
+        "ticker": "EXE",
+        "price": 94.13
+      },
+      {
+        "ticker": "TRMB",
+        "price": 63.75
+      },
+      {
+        "ticker": "GEN",
+        "price": 25.02
+      },
+      {
+        "ticker": "CPRT",
+        "price": 28.97
+      },
+      {
+        "ticker": "RCL",
+        "price": 277.65
       }
     ]
   }
