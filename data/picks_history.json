@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-11",
-    "picks": [
-      {
-        "ticker": "FICO",
-        "price": 1180.44
-      },
-      {
-        "ticker": "DELL",
-        "price": 379.12
-      },
-      {
-        "ticker": "HPE",
-        "price": 45.11
-      },
-      {
-        "ticker": "TMUS",
-        "price": 186.81
-      },
-      {
-        "ticker": "J",
-        "price": 125.15
-      },
-      {
-        "ticker": "WYNN",
-        "price": 105.54
-      },
-      {
-        "ticker": "ZTS",
-        "price": 79.97
-      },
-      {
-        "ticker": "NKE",
-        "price": 44.48
-      },
-      {
-        "ticker": "WDAY",
-        "price": 132.86
-      },
-      {
-        "ticker": "TRMB",
-        "price": 49.13
-      }
-    ]
-  },
-  {
     "date": "2026-06-12",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "ADSK",
         "price": 242.97
+      }
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "picks": [
+      {
+        "ticker": "VRT",
+        "price": 238.24
+      },
+      {
+        "ticker": "ECHO",
+        "price": 93.45
+      },
+      {
+        "ticker": "NXPI",
+        "price": 245.67
+      },
+      {
+        "ticker": "EXE",
+        "price": 92.86
+      },
+      {
+        "ticker": "XYL",
+        "price": 88.03
+      },
+      {
+        "ticker": "BSX",
+        "price": 43.35
+      },
+      {
+        "ticker": "LII",
+        "price": 334.12
+      },
+      {
+        "ticker": "AVGO",
+        "price": 347.72
+      },
+      {
+        "ticker": "LITE",
+        "price": 895.49
+      },
+      {
+        "ticker": "CPRT",
+        "price": 28.75
       }
     ]
   }
