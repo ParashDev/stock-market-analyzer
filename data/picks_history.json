@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-12",
-    "picks": [
-      {
-        "ticker": "HPE",
-        "price": 48.26
-      },
-      {
-        "ticker": "NKE",
-        "price": 45.21
-      },
-      {
-        "ticker": "CMG",
-        "price": 31.98
-      },
-      {
-        "ticker": "FICO",
-        "price": 1172.53
-      },
-      {
-        "ticker": "POOL",
-        "price": 195.18
-      },
-      {
-        "ticker": "OMC",
-        "price": 76.38
-      },
-      {
-        "ticker": "GPC",
-        "price": 102.34
-      },
-      {
-        "ticker": "WYNN",
-        "price": 108.08
-      },
-      {
-        "ticker": "AXON",
-        "price": 435.84
-      },
-      {
-        "ticker": "ZTS",
-        "price": 79.99
-      }
-    ]
-  },
-  {
     "date": "2026-06-15",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "CPRT",
         "price": 28.75
+      }
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "picks": [
+      {
+        "ticker": "VRT",
+        "price": 247.29
+      },
+      {
+        "ticker": "ECHO",
+        "price": 97.7
+      },
+      {
+        "ticker": "CRH",
+        "price": 89.33
+      },
+      {
+        "ticker": "CMG",
+        "price": 31.23
+      },
+      {
+        "ticker": "CVNA",
+        "price": 68.33
+      },
+      {
+        "ticker": "ORCL",
+        "price": 137.17
+      },
+      {
+        "ticker": "LITE",
+        "price": 932.47
+      },
+      {
+        "ticker": "Q",
+        "price": 121.64
+      },
+      {
+        "ticker": "GNRC",
+        "price": 204.09
+      },
+      {
+        "ticker": "FLEX",
+        "price": 94.27
       }
     ]
   }
