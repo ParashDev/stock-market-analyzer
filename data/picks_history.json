@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-17",
-    "picks": [
-      {
-        "ticker": "VST",
-        "price": 160.9
-      },
-      {
-        "ticker": "BKNG",
-        "price": 173.77
-      },
-      {
-        "ticker": "HPE",
-        "price": 50.1
-      },
-      {
-        "ticker": "DASH",
-        "price": 171.5
-      },
-      {
-        "ticker": "CEG",
-        "price": 272.18
-      },
-      {
-        "ticker": "NEM",
-        "price": 111.48
-      },
-      {
-        "ticker": "NRG",
-        "price": 134.3
-      },
-      {
-        "ticker": "POOL",
-        "price": 200.67
-      },
-      {
-        "ticker": "AVGO",
-        "price": 399.1
-      },
-      {
-        "ticker": "OMC",
-        "price": 76.98
-      }
-    ]
-  },
-  {
     "date": "2026-06-18",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "WY",
         "price": 21.29
+      }
+    ]
+  },
+  {
+    "date": "2026-11-03",
+    "picks": [
+      {
+        "ticker": "ECHO",
+        "price": 102.12
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1338.8
+      },
+      {
+        "ticker": "HWM",
+        "price": 225.24
+      },
+      {
+        "ticker": "CRH",
+        "price": 94.36
+      },
+      {
+        "ticker": "TPR",
+        "price": 121.4
+      },
+      {
+        "ticker": "CBRE",
+        "price": 136.89
+      },
+      {
+        "ticker": "CHTR",
+        "price": 114.6
+      },
+      {
+        "ticker": "APH",
+        "price": 83.95
+      },
+      {
+        "ticker": "WY",
+        "price": 20.67
+      },
+      {
+        "ticker": "FSLR",
+        "price": 187.46
       }
     ]
   }
