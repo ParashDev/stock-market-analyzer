@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-18",
-    "picks": [
-      {
-        "ticker": "VST",
-        "price": 158.83
-      },
-      {
-        "ticker": "GPC",
-        "price": 106.12
-      },
-      {
-        "ticker": "HPE",
-        "price": 48.2
-      },
-      {
-        "ticker": "DASH",
-        "price": 165.66
-      },
-      {
-        "ticker": "CRH",
-        "price": 109.41
-      },
-      {
-        "ticker": "BKNG",
-        "price": 171.63
-      },
-      {
-        "ticker": "COF",
-        "price": 200.87
-      },
-      {
-        "ticker": "NEM",
-        "price": 105.67
-      },
-      {
-        "ticker": "SW",
-        "price": 43.42
-      },
-      {
-        "ticker": "OMC",
-        "price": 76.31
-      }
-    ]
-  },
-  {
     "date": "2026-06-22",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "FSLR",
         "price": 187.46
+      }
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "picks": [
+      {
+        "ticker": "TTWO",
+        "price": 211.28
+      },
+      {
+        "ticker": "FSLR",
+        "price": 195.36
+      },
+      {
+        "ticker": "UBER",
+        "price": 71.26
+      },
+      {
+        "ticker": "DASH",
+        "price": 198.24
+      },
+      {
+        "ticker": "BKNG",
+        "price": 171.46
+      },
+      {
+        "ticker": "WYNN",
+        "price": 82.25
+      },
+      {
+        "ticker": "UAL",
+        "price": 116.36
+      },
+      {
+        "ticker": "TPR",
+        "price": 124.38
+      },
+      {
+        "ticker": "CHTR",
+        "price": 119.56
+      },
+      {
+        "ticker": "APP",
+        "price": 272.32
       }
     ]
   }
