@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-22",
-    "picks": [
-      {
-        "ticker": "DASH",
-        "price": 173.93
-      },
-      {
-        "ticker": "VST",
-        "price": 167.24
-      },
-      {
-        "ticker": "HPE",
-        "price": 48.22
-      },
-      {
-        "ticker": "CRH",
-        "price": 111.85
-      },
-      {
-        "ticker": "CVNA",
-        "price": 67.01
-      },
-      {
-        "ticker": "COF",
-        "price": 201.79
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 244.98
-      },
-      {
-        "ticker": "NRG",
-        "price": 136.75
-      },
-      {
-        "ticker": "GPC",
-        "price": 106.17
-      },
-      {
-        "ticker": "BKNG",
-        "price": 168.41
-      }
-    ]
-  },
-  {
     "date": "2026-06-23",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "APP",
         "price": 272.32
+      }
+    ]
+  },
+  {
+    "date": "2026-11-05",
+    "picks": [
+      {
+        "ticker": "APP",
+        "price": 352.64
+      },
+      {
+        "ticker": "FSLR",
+        "price": 194.16
+      },
+      {
+        "ticker": "TTWO",
+        "price": 210.98
+      },
+      {
+        "ticker": "CRH",
+        "price": 94.32
+      },
+      {
+        "ticker": "BKNG",
+        "price": 166.28
+      },
+      {
+        "ticker": "CHTR",
+        "price": 117.43
+      },
+      {
+        "ticker": "WY",
+        "price": 21.35
+      },
+      {
+        "ticker": "NVDA",
+        "price": 182.7
+      },
+      {
+        "ticker": "NWSA",
+        "price": 26.97
+      },
+      {
+        "ticker": "UAL",
+        "price": 109.39
       }
     ]
   }
