@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-23",
-    "picks": [
-      {
-        "ticker": "HPE",
-        "price": 47.22
-      },
-      {
-        "ticker": "VST",
-        "price": 164.24
-      },
-      {
-        "ticker": "AXON",
-        "price": 435.4
-      },
-      {
-        "ticker": "DASH",
-        "price": 173.99
-      },
-      {
-        "ticker": "CRH",
-        "price": 110.22
-      },
-      {
-        "ticker": "WYNN",
-        "price": 104.78
-      },
-      {
-        "ticker": "CCL",
-        "price": 28.25
-      },
-      {
-        "ticker": "COF",
-        "price": 200.62
-      },
-      {
-        "ticker": "ABT",
-        "price": 90.25
-      },
-      {
-        "ticker": "PCG",
-        "price": 16.75
-      }
-    ]
-  },
-  {
     "date": "2026-06-24",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "UAL",
         "price": 109.39
+      }
+    ]
+  },
+  {
+    "date": "2026-11-06",
+    "picks": [
+      {
+        "ticker": "WYNN",
+        "price": 84.17
+      },
+      {
+        "ticker": "CHTR",
+        "price": 119.81
+      },
+      {
+        "ticker": "TTWO",
+        "price": 216.15
+      },
+      {
+        "ticker": "FSLR",
+        "price": 201.07
+      },
+      {
+        "ticker": "CRH",
+        "price": 94.97
+      },
+      {
+        "ticker": "UAL",
+        "price": 112.3
+      },
+      {
+        "ticker": "BKNG",
+        "price": 164.19
+      },
+      {
+        "ticker": "AXON",
+        "price": 319.17
+      },
+      {
+        "ticker": "MCHP",
+        "price": 57.09
+      },
+      {
+        "ticker": "WY",
+        "price": 21.03
       }
     ]
   }
