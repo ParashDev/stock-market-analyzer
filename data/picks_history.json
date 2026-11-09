@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-24",
-    "picks": [
-      {
-        "ticker": "AXON",
-        "price": 455.52
-      },
-      {
-        "ticker": "HPE",
-        "price": 48.92
-      },
-      {
-        "ticker": "DASH",
-        "price": 174.87
-      },
-      {
-        "ticker": "IQV",
-        "price": 183.05
-      },
-      {
-        "ticker": "DHR",
-        "price": 187.34
-      },
-      {
-        "ticker": "TMO",
-        "price": 489.88
-      },
-      {
-        "ticker": "BKNG",
-        "price": 183.31
-      },
-      {
-        "ticker": "WYNN",
-        "price": 105.86
-      },
-      {
-        "ticker": "PCG",
-        "price": 17.04
-      },
-      {
-        "ticker": "MKC",
-        "price": 48.28
-      }
-    ]
-  },
-  {
     "date": "2026-06-25",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "WY",
         "price": 21.03
+      }
+    ]
+  },
+  {
+    "date": "2026-11-09",
+    "picks": [
+      {
+        "ticker": "MPWR",
+        "price": 1388.05
+      },
+      {
+        "ticker": "WYNN",
+        "price": 86.7
+      },
+      {
+        "ticker": "CHTR",
+        "price": 121.2
+      },
+      {
+        "ticker": "ANET",
+        "price": 186.17
+      },
+      {
+        "ticker": "Q",
+        "price": 125.09
+      },
+      {
+        "ticker": "TMUS",
+        "price": 168.71
+      },
+      {
+        "ticker": "TTWO",
+        "price": 207.4
+      },
+      {
+        "ticker": "FSLR",
+        "price": 191.61
+      },
+      {
+        "ticker": "ECHO",
+        "price": 101.19
+      },
+      {
+        "ticker": "UBER",
+        "price": 71.17
       }
     ]
   }
