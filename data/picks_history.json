@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-26",
-    "picks": [
-      {
-        "ticker": "NRG",
-        "price": 147.45
-      },
-      {
-        "ticker": "PODD",
-        "price": 159.67
-      },
-      {
-        "ticker": "EQT",
-        "price": 53.38
-      },
-      {
-        "ticker": "DASH",
-        "price": 177.98
-      },
-      {
-        "ticker": "HPE",
-        "price": 44.24
-      },
-      {
-        "ticker": "VEEV",
-        "price": 165.86
-      },
-      {
-        "ticker": "AXON",
-        "price": 456.72
-      },
-      {
-        "ticker": "XYL",
-        "price": 116.47
-      },
-      {
-        "ticker": "PCG",
-        "price": 17.18
-      },
-      {
-        "ticker": "DHR",
-        "price": 195.15
-      }
-    ]
-  },
-  {
     "date": "2026-06-29",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "Q",
         "price": 122.79
+      }
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "picks": [
+      {
+        "ticker": "AVGO",
+        "price": 350.42
+      },
+      {
+        "ticker": "COHR",
+        "price": 238.46
+      },
+      {
+        "ticker": "ECHO",
+        "price": 103.26
+      },
+      {
+        "ticker": "WYNN",
+        "price": 85.04
+      },
+      {
+        "ticker": "AMAT",
+        "price": 400.51
+      },
+      {
+        "ticker": "NRG",
+        "price": 98.21
+      },
+      {
+        "ticker": "CHTR",
+        "price": 134.62
+      },
+      {
+        "ticker": "UAL",
+        "price": 118.78
+      },
+      {
+        "ticker": "ANET",
+        "price": 197.32
+      },
+      {
+        "ticker": "ORCL",
+        "price": 128.8
       }
     ]
   }
