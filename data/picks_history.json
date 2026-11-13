@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-06-30",
-    "picks": [
-      {
-        "ticker": "DASH",
-        "price": 186.21
-      },
-      {
-        "ticker": "NRG",
-        "price": 148.91
-      },
-      {
-        "ticker": "MU",
-        "price": 1141.69
-      },
-      {
-        "ticker": "CMG",
-        "price": 33.33
-      },
-      {
-        "ticker": "XYL",
-        "price": 117.2
-      },
-      {
-        "ticker": "PODD",
-        "price": 155.85
-      },
-      {
-        "ticker": "UBER",
-        "price": 74.06
-      },
-      {
-        "ticker": "ZBRA",
-        "price": 255.89
-      },
-      {
-        "ticker": "GDDY",
-        "price": 85.1
-      },
-      {
-        "ticker": "DHR",
-        "price": 190.62
-      }
-    ]
-  },
-  {
     "date": "2026-07-01",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "TMUS",
         "price": 171.41
+      }
+    ]
+  },
+  {
+    "date": "2026-11-13",
+    "picks": [
+      {
+        "ticker": "MPWR",
+        "price": 1394.46
+      },
+      {
+        "ticker": "AVGO",
+        "price": 346.45
+      },
+      {
+        "ticker": "ECHO",
+        "price": 99.85
+      },
+      {
+        "ticker": "ANET",
+        "price": 196.9
+      },
+      {
+        "ticker": "ON",
+        "price": 71.3
+      },
+      {
+        "ticker": "VRT",
+        "price": 201.5
+      },
+      {
+        "ticker": "COHR",
+        "price": 217.54
+      },
+      {
+        "ticker": "STX",
+        "price": 525.7
+      },
+      {
+        "ticker": "WYNN",
+        "price": 85.28
+      },
+      {
+        "ticker": "TER",
+        "price": 251.18
       }
     ]
   }
