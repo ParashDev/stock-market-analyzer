@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-07-02",
-    "picks": [
-      {
-        "ticker": "EFX",
-        "price": 172.07
-      },
-      {
-        "ticker": "PLTR",
-        "price": 129.3
-      },
-      {
-        "ticker": "NOC",
-        "price": 549.01
-      },
-      {
-        "ticker": "NOW",
-        "price": 106.32
-      },
-      {
-        "ticker": "UHS",
-        "price": 158.33
-      },
-      {
-        "ticker": "PODD",
-        "price": 164.48
-      },
-      {
-        "ticker": "TYL",
-        "price": 318.1
-      },
-      {
-        "ticker": "NFLX",
-        "price": 77.65
-      },
-      {
-        "ticker": "NWSA",
-        "price": 26.64
-      },
-      {
-        "ticker": "REGN",
-        "price": 654.27
-      }
-    ]
-  },
-  {
     "date": "2026-07-06",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "CRH",
         "price": 92.37
+      }
+    ]
+  },
+  {
+    "date": "2026-11-17",
+    "picks": [
+      {
+        "ticker": "PCG",
+        "price": 13.61
+      },
+      {
+        "ticker": "CHRW",
+        "price": 137.35
+      },
+      {
+        "ticker": "TMUS",
+        "price": 168.85
+      },
+      {
+        "ticker": "ECHO",
+        "price": 99.06
+      },
+      {
+        "ticker": "WY",
+        "price": 20.24
+      },
+      {
+        "ticker": "CRM",
+        "price": 195.4
+      },
+      {
+        "ticker": "CRH",
+        "price": 90.94
+      },
+      {
+        "ticker": "COF",
+        "price": 186.46
+      },
+      {
+        "ticker": "AVGO",
+        "price": 337.77
+      },
+      {
+        "ticker": "MPWR",
+        "price": 1304.02
       }
     ]
   }
