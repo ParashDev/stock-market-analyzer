@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-07-06",
-    "picks": [
-      {
-        "ticker": "CMG",
-        "price": 33.99
-      },
-      {
-        "ticker": "UHS",
-        "price": 157.83
-      },
-      {
-        "ticker": "VEEV",
-        "price": 191.13
-      },
-      {
-        "ticker": "OMC",
-        "price": 79.26
-      },
-      {
-        "ticker": "PODD",
-        "price": 157.64
-      },
-      {
-        "ticker": "JKHY",
-        "price": 146.0
-      },
-      {
-        "ticker": "CVNA",
-        "price": 69.51
-      },
-      {
-        "ticker": "PLTR",
-        "price": 132.5
-      },
-      {
-        "ticker": "COIN",
-        "price": 166.58
-      },
-      {
-        "ticker": "KKR",
-        "price": 96.18
-      }
-    ]
-  },
-  {
     "date": "2026-07-07",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "MPWR",
         "price": 1304.02
+      }
+    ]
+  },
+  {
+    "date": "2026-11-18",
+    "picks": [
+      {
+        "ticker": "GNRC",
+        "price": 204.52
+      },
+      {
+        "ticker": "AVGO",
+        "price": 356.04
+      },
+      {
+        "ticker": "TTWO",
+        "price": 216.4
+      },
+      {
+        "ticker": "PCG",
+        "price": 13.7
+      },
+      {
+        "ticker": "UNH",
+        "price": 345.23
+      },
+      {
+        "ticker": "AKAM",
+        "price": 92.02
+      },
+      {
+        "ticker": "ANET",
+        "price": 192.86
+      },
+      {
+        "ticker": "WYNN",
+        "price": 83.64
+      },
+      {
+        "ticker": "HWM",
+        "price": 221.29
+      },
+      {
+        "ticker": "CRH",
+        "price": 92.5
       }
     ]
   }
