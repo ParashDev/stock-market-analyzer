@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-07-09",
-    "picks": [
-      {
-        "ticker": "DASH",
-        "price": 193.19
-      },
-      {
-        "ticker": "MU",
-        "price": 1020.21
-      },
-      {
-        "ticker": "VEEV",
-        "price": 188.07
-      },
-      {
-        "ticker": "HPE",
-        "price": 47.32
-      },
-      {
-        "ticker": "VST",
-        "price": 157.74
-      },
-      {
-        "ticker": "JKHY",
-        "price": 147.41
-      },
-      {
-        "ticker": "OMC",
-        "price": 79.5
-      },
-      {
-        "ticker": "NRG",
-        "price": 140.87
-      },
-      {
-        "ticker": "PCG",
-        "price": 17.11
-      },
-      {
-        "ticker": "MPWR",
-        "price": 1392.16
-      }
-    ]
-  },
-  {
     "date": "2026-07-10",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "INTU",
         "price": 275.22
+      }
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "picks": [
+      {
+        "ticker": "MPWR",
+        "price": 1333.88
+      },
+      {
+        "ticker": "GNRC",
+        "price": 204.75
+      },
+      {
+        "ticker": "APH",
+        "price": 77.41
+      },
+      {
+        "ticker": "COHR",
+        "price": 215.81
+      },
+      {
+        "ticker": "NRG",
+        "price": 97.72
+      },
+      {
+        "ticker": "WYNN",
+        "price": 83.34
+      },
+      {
+        "ticker": "PWR",
+        "price": 609.0
+      },
+      {
+        "ticker": "WDC",
+        "price": 297.25
+      },
+      {
+        "ticker": "TMUS",
+        "price": 166.36
+      },
+      {
+        "ticker": "PCG",
+        "price": 14.08
       }
     ]
   }
