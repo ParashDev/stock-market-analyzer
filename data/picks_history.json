@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-07-13",
-    "picks": [
-      {
-        "ticker": "DASH",
-        "price": 189.57
-      },
-      {
-        "ticker": "CRM",
-        "price": 171.22
-      },
-      {
-        "ticker": "META",
-        "price": 656.73
-      },
-      {
-        "ticker": "HPE",
-        "price": 47.24
-      },
-      {
-        "ticker": "PNR",
-        "price": 76.53
-      },
-      {
-        "ticker": "CEG",
-        "price": 257.57
-      },
-      {
-        "ticker": "PODD",
-        "price": 162.06
-      },
-      {
-        "ticker": "INTU",
-        "price": 289.76
-      },
-      {
-        "ticker": "FIS",
-        "price": 41.93
-      },
-      {
-        "ticker": "VST",
-        "price": 158.12
-      }
-    ]
-  },
-  {
     "date": "2026-07-14",
     "picks": [
       {
@@ -4046,6 +4001,51 @@
       {
         "ticker": "GNRC",
         "price": 198.36
+      }
+    ]
+  },
+  {
+    "date": "2026-11-25",
+    "picks": [
+      {
+        "ticker": "TTWO",
+        "price": 227.26
+      },
+      {
+        "ticker": "WYNN",
+        "price": 86.12
+      },
+      {
+        "ticker": "CBRE",
+        "price": 138.01
+      },
+      {
+        "ticker": "CRH",
+        "price": 97.38
+      },
+      {
+        "ticker": "TMUS",
+        "price": 166.45
+      },
+      {
+        "ticker": "WY",
+        "price": 20.56
+      },
+      {
+        "ticker": "SW",
+        "price": 41.71
+      },
+      {
+        "ticker": "CHRW",
+        "price": 144.9
+      },
+      {
+        "ticker": "BA",
+        "price": 164.71
+      },
+      {
+        "ticker": "F",
+        "price": 12.18
       }
     ]
   }
