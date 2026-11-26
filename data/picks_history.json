@@ -4008,44 +4008,44 @@
     "date": "2026-11-25",
     "picks": [
       {
-        "ticker": "TTWO",
-        "price": 227.26
-      },
-      {
         "ticker": "WYNN",
-        "price": 86.12
+        "price": 86.08
       },
       {
         "ticker": "CBRE",
-        "price": 138.01
+        "price": 137.89
       },
       {
-        "ticker": "CRH",
-        "price": 97.38
+        "ticker": "TTWO",
+        "price": 227.34
       },
       {
         "ticker": "TMUS",
-        "price": 166.45
+        "price": 166.25
+      },
+      {
+        "ticker": "CRH",
+        "price": 97.3
       },
       {
         "ticker": "WY",
-        "price": 20.56
+        "price": 20.52
       },
       {
-        "ticker": "SW",
-        "price": 41.71
+        "ticker": "AXON",
+        "price": 343.05
       },
       {
         "ticker": "CHRW",
-        "price": 144.9
+        "price": 144.82
       },
       {
-        "ticker": "BA",
-        "price": 164.71
+        "ticker": "SW",
+        "price": 41.65
       },
       {
         "ticker": "F",
-        "price": 12.18
+        "price": 12.17
       }
     ]
   }
